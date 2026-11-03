@@ -49,3 +49,24 @@ Indirizzo: <https://sapomnia.github.io/longevity/persone-lista-attesa-per-posto-
 })();
 </script>
 ```
+
+---
+
+## 3. RSA: cosa succederà nel 2050?
+
+Indirizzo: <https://sapomnia.github.io/longevity/rsa-posti-oggi-e-over-65-al-2050.html>
+
+```html
+<iframe id="longevity-rsa-posti-oggi-e-over-65-al-2050" src="https://sapomnia.github.io/longevity/rsa-posti-oggi-e-over-65-al-2050.html" title="RSA: cosa succederà nel 2050?" loading="lazy" scrolling="no" style="width:100%;height:620px;border:0;display:block"></iframe>
+<script>
+(function () {
+  var iframe = document.getElementById('longevity-rsa-posti-oggi-e-over-65-al-2050');
+  window.addEventListener('message', function (evento) {
+    if (evento.origin !== 'https://sapomnia.github.io' || evento.source !== iframe.contentWindow) return;
+    var dati = evento.data || {};
+    var altezza = parseInt(dati.altezza || dati.height, 10);
+    if (altezza > 100 && altezza < 8000) iframe.style.height = altezza + 'px';
+  });
+})();
+</script>
+```

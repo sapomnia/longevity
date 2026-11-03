@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RSA: cosa succederà nel 2050?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #fff; }
+  body { font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; color: #000; }
+  .wrap {
+    width: 100%; max-width: 610px; min-height: 610px; margin: 0 auto;
+    padding: 14px 12px 10px; display: flex; flex-direction: column; background: #fff;
+  }
+  h1 { font-size: 20px; font-weight: 700; margin: 0 0 3px; line-height: 1.2; }
+  .sub { font-size: 14px; margin: 0 0 8px; color: #222; line-height: 1.3; }
+  .chart { flex: 1; min-height: 330px; position: relative; }
+  .chart svg { display: block; width: 100%; height: 100%; position: absolute; inset: 0; overflow: visible; }
+  .axis text { font-family: inherit; font-size: 11px; fill: #444; }
+  .axis .domain { display: none; }
+  .axis .tick line { stroke: #e3e3e3; }
+  .axis-title { font-size: 11.5px; fill: #222; }
+  .dot { fill: #174d99; fill-opacity: .82; stroke: #fff; stroke-width: 1; }
+  .dot.on { fill-opacity: 1; stroke: #0d1f43; stroke-width: 1.5; }
+  .hit { fill: transparent; cursor: pointer; }
+  .lab { font-size: 12px; fill: #000; pointer-events: none; }
+  .lab.halo { stroke: #fff; stroke-width: 3; stroke-linejoin: round; fill: #fff; }
+  .size-leg circle { fill: none; stroke: #777; stroke-width: 1; }
+  .size-leg text { font-size: 10.5px; fill: #444; }
+  .size-leg line { stroke: #999; stroke-dasharray: 2 2; }
+  .notes { font-size: 10.5px; line-height: 1.35; color: #333; margin-top: 6px; }
+  .notes p { margin: 0 0 3px; }
+  .notes .src { font-style: italic; }
+  .tip {
+    position: absolute; pointer-events: none; background: #fff; border: 1px solid #ccc;
+    border-radius: 4px; padding: 7px 9px; font-size: 12.5px; line-height: 1.45;
+    box-shadow: 0 2px 6px rgba(0,0,0,.15); opacity: 0; transition: opacity .12s; z-index: 5;
+    white-space: nowrap;
+  }
+  .tip b { font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="wrap" id="wrap">
+  <h1>RSA: cosa succederà nel 2050?</h1>
+  <p class="sub">Confronto tra i posti disponibili oggi e l'aumento della popolazione over 65 al 2050</p>
+  <div class="chart" id="chart"><div class="tip" id="tip"></div></div>
+  <div class="notes">
+    <p>La dimensione dei punti è proporzionale al numero di posti letto disponibili nel 2026.</p>
+    <p>* Per la provincia autonoma di Bolzano il dato sui posti letto comprende una sola struttura (116 posti) e potrebbe essere incompleto.</p>
+    <p class="src">Fonte: elaborazione SkyTg24 su dati Asl e Istat 2026 (previsioni demografiche, scenario mediano)</p>
+  </div>
+</div>
+<script>
+const EMBED_ID = 'longevity-rsa-posti-oggi-e-over-65-al-2050';
+const DATA = [{"nome": "Valle d'Aosta", "etichetta": "Valle d'Aosta", "posti": 68, "res26": 32198, "res50": 39702, "tasso": 21.12, "aumento": 23.31}, {"nome": "Lombardia", "etichetta": "Lombardia", "posti": 63911, "res26": 2432886, "res50": 3311198, "tasso": 262.7, "aumento": 36.1}, {"nome": "Provincia autonoma di Bolzano", "etichetta": "Bolzano*", "posti": 116, "res26": 116140, "res50": 177307, "tasso": 9.99, "aumento": 52.67}, {"nome": "Provincia autonoma di Trento", "etichetta": "Trento", "posti": 5001, "res26": 134676, "res50": 184897, "tasso": 371.34, "aumento": 37.29}, {"nome": "Emilia Romagna", "etichetta": "Emilia Romagna", "posti": 20493, "res26": 1128330, "res50": 1484886, "tasso": 181.62, "aumento": 31.6}, {"nome": "Toscana", "etichetta": "Toscana", "posti": 14372, "res26": 990223, "res50": 1199904, "tasso": 145.14, "aumento": 21.18}, {"nome": "Marche", "etichetta": "Marche", "posti": 4281, "res26": 399103, "res50": 501266, "tasso": 107.27, "aumento": 25.6}, {"nome": "Umbria", "etichetta": "Umbria", "posti": 959, "res26": 236206, "res50": 287373, "tasso": 40.6, "aumento": 21.66}, {"nome": "Molise", "etichetta": "Molise", "posti": 428, "res26": 79536, "res50": 88584, "tasso": 53.81, "aumento": 11.38}, {"nome": "Basilicata", "etichetta": "Basilicata", "posti": 261, "res26": 139604, "res50": 160270, "tasso": 18.7, "aumento": 14.8}];
+const it = d3.formatLocale({decimal: ',', thousands: '.', grouping: [3], currency: ['€', '']});
+const nInt = it.format(',.0f'), nDec = it.format(',.2f'), nTick = it.format(',');
+
+const wrapEl = document.getElementById('wrap');
+const chartEl = document.getElementById('chart');
+const tip = d3.select('#tip');
+const svg = d3.select('#chart').append('svg');
+const gX = svg.append('g').attr('class', 'axis');
+const gY = svg.append('g').attr('class', 'axis');
+const gTitles = svg.append('g');
+const gLeg = svg.append('g').attr('class', 'size-leg');
+const gDots = svg.append('g');
+const gLabs = svg.append('g');
+const gHit = svg.append('g');
+
+function tipHtml(d) {
+  return `<b>${d.nome}</b><br>` +
+    `Posti letto 2026: <b>${nInt(d.posti)}</b><br>` +
+    `Residenti 2026: <b>${nInt(d.res26)}</b><br>` +
+    `Residenti 2050: <b>${nInt(d.res50)}</b><br>` +
+    `Posti ogni 10mila over 65 2026: <b>${nDec(d.tasso)}</b><br>` +
+    `Aumento % over 65 2026-2050: <b>${nDec(d.aumento)}%</b>`;
+}
+function showTip(event, d) {
+  gDots.selectAll('circle').classed('on', o => o === d);
+  tip.html(tipHtml(d)).style('opacity', 1);
+  const [mx, my] = d3.pointer(event, chartEl);
+  const tw = tip.node().offsetWidth, th = tip.node().offsetHeight, cw = chartEl.clientWidth;
+  let x = mx + 14, y = my - th - 10;
+  if (x + tw > cw) x = Math.max(0, mx - tw - 14);
+  if (y < 0) y = my + 16;
+  tip.style('left', x + 'px').style('top', y + 'px');
+}
+function hideTip() { tip.style('opacity', 0); gDots.selectAll('circle').classed('on', false); }
+
+let lastHeight = 0;
+function sendHeight() {
+  const h = Math.ceil(wrapEl.getBoundingClientRect().height);
+  if (h !== lastHeight && window.parent !== window) {
+    lastHeight = h;
+    window.parent.postMessage({altezza: h, height: h, id: EMBED_ID}, '*');
+  }
+}
+
+function overlap(a, b) {
+  return a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
+}
+
+function draw() {
+  const W = chartEl.clientWidth, H = chartEl.clientHeight;
+  const narrow = W < 450;
+  svg.attr('viewBox', `0 0 ${W} ${H}`);
+  const m = {top: 12, right: 16, bottom: 40, left: 46};
+
+  const x = d3.scaleLinear().domain([0, Math.ceil(d3.max(DATA, d => d.aumento) / 10) * 10]).range([m.left, W - m.right]);
+  const y = d3.scaleLinear().domain([0, d3.max(DATA, d => d.tasso)]).nice().range([H - m.bottom, m.top]);
+  // Area dei punti proporzionale ai posti letto disponibili nel 2026
+  const r = d3.scaleSqrt().domain([0, d3.max(DATA, d => d.posti)]).range([0, narrow ? 26 : 36]);
+  const MIN_R = 2.5;
+  const rad = d => Math.max(MIN_R, r(d.posti));
+
+  gX.attr('transform', `translate(0,${H - m.bottom})`)
+    .call(d3.axisBottom(x).ticks(narrow ? 4 : 6).tickFormat(d => nTick(d) + '%').tickSize(-(H - m.top - m.bottom)).tickPadding(6));
+  gY.attr('transform', `translate(${m.left},0)`)
+    .call(d3.axisLeft(y).ticks(narrow ? 5 : 8).tickFormat(nTick).tickSize(-(W - m.left - m.right)).tickPadding(6));
+  svg.selectAll('.axis .tick line').attr('stroke', '#e3e3e3');
+
+  gTitles.selectAll('*').remove();
+  gTitles.append('text').attr('class', 'axis-title').attr('x', W - m.right).attr('y', H - 6)
+    .attr('text-anchor', 'end').text('Aumento % degli over 65 tra il 2026 e il 2050');
+  gTitles.append('text').attr('class', 'axis-title')
+    .attr('transform', `translate(12,${m.top}) rotate(-90)`).attr('text-anchor', 'end')
+    .text('Posti letto ogni 10mila over 65 (2026)');
+
+  // Legenda delle dimensioni, nell'angolo in alto a sinistra (zona vuota del grafico)
+  gLeg.selectAll('*').remove();
+  const legVals = [50000, 10000, 1000];
+  const R = r(legVals[0]);
+  const lx = m.left + 14 + R, base = m.top + 16 + 2 * R;
+  gLeg.append('text').attr('x', m.left + 12).attr('y', m.top + 8).text('Posti letto disponibili nel 2026');
+  legVals.forEach(v => {
+    const rv = r(v);
+    gLeg.append('circle').attr('cx', lx).attr('cy', base - rv).attr('r', rv);
+    gLeg.append('line').attr('x1', lx).attr('x2', lx + R + 8).attr('y1', base - 2 * rv).attr('y2', base - 2 * rv);
+    gLeg.append('text').attr('x', lx + R + 11).attr('y', base - 2 * rv + 3.5).text(nInt(v));
+  });
+  const legBox = {x: m.left, y: m.top, w: 2 * R + 80, h: 2 * R + 22};
+
+  const sorted = [...DATA].sort((a, b) => b.posti - a.posti);  // le bolle grandi sotto
+  gDots.selectAll('circle').data(sorted, d => d.nome).join('circle').attr('class', 'dot')
+    .attr('cx', d => x(d.aumento)).attr('cy', d => y(d.tasso)).attr('r', rad);
+  gHit.selectAll('circle').data([...sorted].reverse(), d => d.nome).join('circle').attr('class', 'hit')
+    .attr('cx', d => x(d.aumento)).attr('cy', d => y(d.tasso)).attr('r', d => Math.max(10, rad(d)))
+    .on('pointerenter pointermove', showTip).on('pointerleave', hideTip);
+
+  // Etichette: per ogni punto la prima posizione libera tra quelle candidate
+  const fs = narrow ? 11 : 12;
+  const probe = svg.append('text').attr('class', 'lab').style('font-size', fs + 'px');
+  const circles = DATA.map(d => ({x: x(d.aumento) - rad(d), y: y(d.tasso) - rad(d), w: 2 * rad(d), h: 2 * rad(d), d}));
+  const placed = [legBox];
+  const pos = new Map();
+  [...DATA].sort((a, b) => a.posti - b.posti).forEach(d => {
+    probe.text(d.etichetta);
+    const tw = probe.node().getComputedTextLength(), th = fs;
+    const cx = x(d.aumento), cy = y(d.tasso), rr = rad(d) + 3;
+    const cands = [
+      [cx + rr, cy + th * 0.35, 'start'], [cx - rr, cy + th * 0.35, 'end'],
+      [cx, cy - rr - 2, 'middle'], [cx, cy + rr + th, 'middle'],
+      [cx + rr * 0.7, cy - rr * 0.7 - 1, 'start'], [cx + rr * 0.7, cy + rr * 0.7 + th, 'start'],
+      [cx - rr * 0.7, cy - rr * 0.7 - 1, 'end'], [cx - rr * 0.7, cy + rr * 0.7 + th, 'end'],
+    ];
+    let best = null;
+    for (const [lxp, lyp, anchor] of cands) {
+      const bx = anchor === 'start' ? lxp : anchor === 'end' ? lxp - tw : lxp - tw / 2;
+      const box = {x: bx - 1, y: lyp - th + 1, w: tw + 2, h: th + 1};
+      const inside = box.x >= m.left && box.x + box.w <= W - m.right + 4 && box.y >= m.top - 4 && box.y + box.h <= H - m.bottom;
+      const free = !placed.some(p => overlap(box, p)) && !circles.some(c => c.d !== d && overlap(box, c));
+      if (inside && free) { best = {lxp, lyp, anchor, box}; break; }
+      if (!best && inside) best = {lxp, lyp, anchor, box, fallback: true};
+    }
+    best = best || {lxp: cx + rr, lyp: cy + th * 0.35, anchor: 'start', box: {x: 0, y: 0, w: 0, h: 0}};
+    placed.push(best.box);
+    pos.set(d.nome, best);
+  });
+  probe.remove();
+
+  gLabs.selectAll('g').data(DATA, d => d.nome).join(enter => {
+    const g = enter.append('g');
+    g.append('text').attr('class', 'lab halo');
+    g.append('text').attr('class', 'lab');
+    return g;
+  }).each(function (d) {
+    const p = pos.get(d.nome);
+    d3.select(this).selectAll('text').attr('x', p.lxp).attr('y', p.lyp)
+      .attr('text-anchor', p.anchor).style('font-size', fs + 'px').text(d.etichetta);
+  });
+
+  sendHeight();
+}
+
+document.addEventListener('pointerdown', e => { if (!e.target.classList.contains('hit')) hideTip(); });
+let lastW = 0, lastH = 0;
+new ResizeObserver(() => {
+  const w = chartEl.clientWidth, h = chartEl.clientHeight;
+  if (w !== lastW || h !== lastH) { lastW = w; lastH = h; draw(); }
+}).observe(chartEl);
+new ResizeObserver(sendHeight).observe(wrapEl);
+document.fonts && document.fonts.ready.then(draw);
+draw();
+</script>
+</body>
+</html>
