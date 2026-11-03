@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>I posti letto nelle RSA italiane</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #fff; }
+  body { font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; color: #000; }
+  .wrap {
+    width: 100%; max-width: 610px; height: 610px; margin: 0 auto;
+    padding: 14px 12px 10px; display: flex; flex-direction: column; background: #fff;
+  }
+  h1 { font-size: 20px; font-weight: 700; margin: 0 0 3px; line-height: 1.2; }
+  .sub { font-size: 14px; margin: 0 0 10px; color: #222; line-height: 1.3; }
+  .controls { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; font-size: 13px; }
+  .controls label { color: #222; }
+  select {
+    font-family: inherit; font-size: 13px; padding: 5px 28px 5px 9px; border: 1px solid #bbb;
+    border-radius: 4px; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23174d99'/%3E%3C/svg%3E") no-repeat right 9px center;
+    -webkit-appearance: none; appearance: none; color: #000; cursor: pointer; max-width: 100%;
+  }
+  select:focus { outline: 2px solid #5296d0; outline-offset: 1px; }
+  .chart { flex: 1; min-height: 0; position: relative; }
+  .chart svg { display: block; width: 100%; height: 100%; }
+  .axis text { font-family: inherit; font-size: 11px; fill: #444; }
+  .axis .domain { display: none; }
+  .axis .tick line { stroke: #e3e3e3; }
+  .label { font-size: 12px; fill: #000; }
+  .label.hl { font-weight: 700; fill: #e71e25; }
+  .bar { cursor: pointer; }
+  .notes { font-size: 10.5px; line-height: 1.35; color: #333; margin-top: 6px; }
+  .notes p { margin: 0 0 3px; }
+  .notes .src { font-style: italic; }
+  .tip {
+    position: absolute; pointer-events: none; background: #fff; border: 1px solid #ccc;
+    border-radius: 4px; padding: 7px 9px; font-size: 12.5px; line-height: 1.45;
+    box-shadow: 0 2px 6px rgba(0,0,0,.15); opacity: 0; transition: opacity .12s; z-index: 5;
+    white-space: nowrap;
+  }
+  .tip b { font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="wrap" id="wrap">
+  <h1>I posti letto nelle RSA italiane</h1>
+  <p class="sub">Posti ogni 10mila residenti over 65</p>
+  <div class="controls">
+    <label for="sel">Mostra:</label>
+    <select id="sel"></select>
+  </div>
+  <div class="chart" id="chart"><div class="tip" id="tip"></div></div>
+  <div class="notes">
+    <p>Le province per cui non sono disponibili dati sui posti letto non sono mostrate e i loro residenti over 65 sono esclusi dal calcolo dei valori regionali e della media nazionale. Per la Sardegna è mostrato solo il dato regionale perché i dati sui posti letto seguono la vecchia suddivisione provinciale, diversa da quella attuale usata per i residenti.</p>
+    <p class="src">Fonte: elaborazione SkyTg24 su dati Asl e Istat 2026</p>
+  </div>
+</div>
+<script>
+const DATA = {"italia": {"nome": "Media nazionale", "posti": 197295, "residenti": 12717277, "tasso": 155.14}, "regioni": [{"nome": "Abruzzo", "posti": 300, "residenti": 79943, "tasso": 37.53}, {"nome": "Basilicata", "posti": 261, "residenti": 139604, "tasso": 18.7}, {"nome": "Calabria", "posti": 355, "residenti": 124875, "tasso": 28.43}, {"nome": "Campania", "posti": 1796, "residenti": 1153176, "tasso": 15.57}, {"nome": "Emilia Romagna", "posti": 20493, "residenti": 1128330, "tasso": 181.62}, {"nome": "Friuli Venezia Giulia", "posti": 4991, "residenti": 252091, "tasso": 197.98}, {"nome": "Lazio", "posti": 7584, "residenti": 1263610, "tasso": 60.02}, {"nome": "Liguria", "posti": 5938, "residenti": 444450, "tasso": 133.6}, {"nome": "Lombardia", "posti": 63911, "residenti": 2432886, "tasso": 262.7}, {"nome": "Marche", "posti": 4281, "residenti": 399103, "tasso": 107.27}, {"nome": "Molise", "posti": 428, "residenti": 79536, "tasso": 53.81}, {"nome": "Piemonte", "posti": 34928, "residenti": 1062199, "tasso": 328.83}, {"nome": "Puglia", "posti": 6172, "residenti": 833423, "tasso": 74.06}, {"nome": "Sardegna", "posti": 1130, "residenti": 436597, "tasso": 25.88}, {"nome": "Sicilia", "posti": 634, "residenti": 421719, "tasso": 15.03}, {"nome": "Toscana", "posti": 14372, "residenti": 990223, "tasso": 145.14}, {"nome": "Trentino Alto Adige", "posti": 5117, "residenti": 250816, "tasso": 204.01}, {"nome": "Umbria", "posti": 959, "residenti": 236206, "tasso": 40.6}, {"nome": "Valle d'Aosta", "posti": 68, "residenti": 32198, "tasso": 21.12}, {"nome": "Veneto", "posti": 23577, "residenti": 956292, "tasso": 246.55}], "province": [{"nome": "Pescara", "regione": "Abruzzo", "posti": 300, "residenti": 79943, "tasso": 37.53}, {"nome": "Matera", "regione": "Basilicata", "posti": 99, "residenti": 48646, "tasso": 20.35}, {"nome": "Potenza", "regione": "Basilicata", "posti": 162, "residenti": 90958, "tasso": 17.81}, {"nome": "Catanzaro", "regione": "Calabria", "posti": 134, "residenti": 87060, "tasso": 15.39}, {"nome": "Crotone", "regione": "Calabria", "posti": 221, "residenti": 37815, "tasso": 58.44}, {"nome": "Avellino", "regione": "Campania", "posti": 111, "residenti": 98223, "tasso": 11.3}, {"nome": "Caserta", "regione": "Campania", "posti": 363, "residenti": 184118, "tasso": 19.72}, {"nome": "Napoli", "regione": "Campania", "posti": 243, "residenti": 620253, "tasso": 3.92}, {"nome": "Salerno", "regione": "Campania", "posti": 1079, "residenti": 250582, "tasso": 43.06}, {"nome": "Bologna", "regione": "Emilia Romagna", "posti": 4046, "residenti": 257924, "tasso": 156.87}, {"nome": "Ferrara", "regione": "Emilia Romagna", "posti": 1499, "residenti": 100072, "tasso": 149.79}, {"nome": "Forlì Cesena", "regione": "Emilia Romagna", "posti": 1981, "residenti": 101905, "tasso": 194.4}, {"nome": "Modena", "regione": "Emilia Romagna", "posti": 3409, "residenti": 172244, "tasso": 197.92}, {"nome": "Parma", "regione": "Emilia Romagna", "posti": 2327, "residenti": 109060, "tasso": 213.37}, {"nome": "Piacenza", "regione": "Emilia Romagna", "posti": 1620, "residenti": 73896, "tasso": 219.23}, {"nome": "Ravenna", "regione": "Emilia Romagna", "posti": 1893, "residenti": 103134, "tasso": 183.55}, {"nome": "Reggio Emilia", "regione": "Emilia Romagna", "posti": 2606, "residenti": 123763, "tasso": 210.56}, {"nome": "Rimini", "regione": "Emilia Romagna", "posti": 1112, "residenti": 86332, "tasso": 128.81}, {"nome": "Gorizia", "regione": "Friuli Venezia Giulia", "posti": 865, "residenti": 38018, "tasso": 227.52}, {"nome": "Trieste", "regione": "Friuli Venezia Giulia", "posti": 1669, "residenti": 66371, "tasso": 251.47}, {"nome": "Udine", "regione": "Friuli Venezia Giulia", "posti": 2457, "residenti": 147702, "tasso": 166.35}, {"nome": "Latina", "regione": "Lazio", "posti": 766, "residenti": 134330, "tasso": 57.02}, {"nome": "Rieti", "regione": "Lazio", "posti": 265, "residenti": 41743, "tasso": 63.48}, {"nome": "Roma", "regione": "Lazio", "posti": 5751, "residenti": 1005326, "tasso": 57.21}, {"nome": "Viterbo", "regione": "Lazio", "posti": 802, "residenti": 82211, "tasso": 97.55}, {"nome": "Genova", "regione": "Liguria", "posti": 935, "residenti": 241773, "tasso": 38.67}, {"nome": "Imperia", "regione": "Liguria", "posti": 1898, "residenti": 60692, "tasso": 312.73}, {"nome": "La Spezia", "regione": "Liguria", "posti": 526, "residenti": 60819, "tasso": 86.49}, {"nome": "Savona", "regione": "Liguria", "posti": 2579, "residenti": 81166, "tasso": 317.74}, {"nome": "Bergamo", "regione": "Lombardia", "posti": 6702, "residenti": 260863, "tasso": 256.92}, {"nome": "Brescia", "regione": "Lombardia", "posti": 7178, "residenti": 299610, "tasso": 239.58}, {"nome": "Como", "regione": "Lombardia", "posti": 5416, "residenti": 148963, "tasso": 363.58}, {"nome": "Cremona", "regione": "Lombardia", "posti": 3437, "residenti": 91539, "tasso": 375.47}, {"nome": "Lecco", "regione": "Lombardia", "posti": 2203, "residenti": 87071, "tasso": 253.01}, {"nome": "Lodi", "regione": "Lombardia", "posti": 1356, "residenti": 54078, "tasso": 250.75}, {"nome": "Mantova", "regione": "Lombardia", "posti": 3184, "residenti": 102057, "tasso": 311.98}, {"nome": "Milano", "regione": "Lombardia", "posti": 15713, "residenti": 764375, "tasso": 205.57}, {"nome": "Monza e della Brianza", "regione": "Lombardia", "posti": 4447, "residenti": 213778, "tasso": 208.02}, {"nome": "Pavia", "regione": "Lombardia", "posti": 6500, "residenti": 139060, "tasso": 467.42}, {"nome": "Sondrio", "regione": "Lombardia", "posti": 1791, "residenti": 47047, "tasso": 380.68}, {"nome": "Varese", "regione": "Lombardia", "posti": 5984, "residenti": 224445, "tasso": 266.61}, {"nome": "Ancona", "regione": "Marche", "posti": 3670, "residenti": 123650, "tasso": 296.81}, {"nome": "Ascoli Piceno", "regione": "Marche", "posti": 198, "residenti": 55764, "tasso": 35.51}, {"nome": "Fermo", "regione": "Marche", "posti": 108, "residenti": 46254, "tasso": 23.35}, {"nome": "Macerata", "regione": "Marche", "posti": 109, "residenti": 82142, "tasso": 13.27}, {"nome": "Pesaro e Urbino", "regione": "Marche", "posti": 196, "residenti": 91293, "tasso": 21.47}, {"nome": "Campobasso", "regione": "Molise", "posti": 201, "residenti": 57252, "tasso": 35.11}, {"nome": "Isernia", "regione": "Molise", "posti": 227, "residenti": 22284, "tasso": 101.87}, {"nome": "Alessandria", "regione": "Piemonte", "posti": 3707, "residenti": 117892, "tasso": 314.44}, {"nome": "Asti", "regione": "Piemonte", "posti": 3228, "residenti": 57951, "tasso": 557.02}, {"nome": "Biella", "regione": "Piemonte", "posti": 1497, "residenti": 51537, "tasso": 290.47}, {"nome": "Cuneo", "regione": "Piemonte", "posti": 5390, "residenti": 149598, "tasso": 360.3}, {"nome": "Torino", "regione": "Piemonte", "posti": 18742, "residenti": 593342, "tasso": 315.87}, {"nome": "Verbano Cusio Ossola", "regione": "Piemonte", "posti": 955, "residenti": 44556, "tasso": 214.34}, {"nome": "Vercelli", "regione": "Piemonte", "posti": 1409, "residenti": 47323, "tasso": 297.74}, {"nome": "Bari", "regione": "Puglia", "posti": 2476, "residenti": 301510, "tasso": 82.12}, {"nome": "Barletta Andria Trani", "regione": "Puglia", "posti": 641, "residenti": 85539, "tasso": 74.94}, {"nome": "Brindisi", "regione": "Puglia", "posti": 617, "residenti": 97913, "tasso": 63.02}, {"nome": "Foggia", "regione": "Puglia", "posti": 1008, "residenti": 142672, "tasso": 70.65}, {"nome": "Lecce", "regione": "Puglia", "posti": 1430, "residenti": 205789, "tasso": 69.49}, {"nome": "Cagliari", "regione": "Sardegna", "posti": 324, "residenti": 111224, "tasso": 29.13}, {"nome": "Nuoro", "regione": "Sardegna", "posti": 100, "residenti": 55581, "tasso": 17.99}, {"nome": "Oristano", "regione": "Sardegna", "posti": 124, "residenti": 45059, "tasso": 27.52}, {"nome": "Sassari", "regione": "Sardegna", "posti": 362, "residenti": 125520, "tasso": 28.84}, {"nome": "Sud Sardegna", "regione": "Sardegna", "posti": 220, "residenti": 99213, "tasso": 22.17}, {"nome": "Agrigento", "regione": "Sicilia", "posti": 40, "residenti": 101845, "tasso": 3.93}, {"nome": "Caltanissetta", "regione": "Sicilia", "posti": 58, "residenti": 59955, "tasso": 9.67}, {"nome": "Messina", "regione": "Sicilia", "posti": 340, "residenti": 155437, "tasso": 21.87}, {"nome": "Trapani", "regione": "Sicilia", "posti": 196, "residenti": 104482, "tasso": 18.76}, {"nome": "Arezzo", "regione": "Toscana", "posti": 1205, "residenti": 90588, "tasso": 133.02}, {"nome": "Firenze", "regione": "Toscana", "posti": 4727, "residenti": 263219, "tasso": 179.58}, {"nome": "Grosseto", "regione": "Toscana", "posti": 830, "residenti": 63655, "tasso": 130.39}, {"nome": "Livorno", "regione": "Toscana", "posti": 1041, "residenti": 93157, "tasso": 111.75}, {"nome": "Lucca", "regione": "Toscana", "posti": 1297, "residenti": 105140, "tasso": 123.36}, {"nome": "Massa Carrara", "regione": "Toscana", "posti": 946, "residenti": 55042, "tasso": 171.87}, {"nome": "Pisa", "regione": "Toscana", "posti": 1428, "residenti": 108591, "tasso": 131.5}, {"nome": "Pistoia", "regione": "Toscana", "posti": 565, "residenti": 78622, "tasso": 71.86}, {"nome": "Prato", "regione": "Toscana", "posti": 963, "residenti": 61074, "tasso": 157.68}, {"nome": "Siena", "regione": "Toscana", "posti": 1370, "residenti": 71135, "tasso": 192.59}, {"nome": "Bolzano", "regione": "Trentino Alto Adige", "posti": 116, "residenti": 116140, "tasso": 9.99}, {"nome": "Trento", "regione": "Trentino Alto Adige", "posti": 5001, "residenti": 134676, "tasso": 371.34}, {"nome": "Perugia", "regione": "Umbria", "posti": 902, "residenti": 173087, "tasso": 52.11}, {"nome": "Terni", "regione": "Umbria", "posti": 57, "residenti": 63119, "tasso": 9.03}, {"nome": "Aosta", "regione": "Valle d'Aosta", "posti": 68, "residenti": 32198, "tasso": 21.12}, {"nome": "Padova", "regione": "Veneto", "posti": 3562, "residenti": 234399, "tasso": 151.96}, {"nome": "Rovigo", "regione": "Veneto", "posti": 2364, "residenti": 65881, "tasso": 358.83}, {"nome": "Venezia", "regione": "Veneto", "posti": 5672, "residenti": 224615, "tasso": 252.52}, {"nome": "Verona", "regione": "Veneto", "posti": 5749, "residenti": 222874, "tasso": 257.95}, {"nome": "Vicenza", "regione": "Veneto", "posti": 6230, "residenti": 208523, "tasso": 298.77}]};
+const BLUE = '#174d99', RED = '#e71e25';
+const SOLO_REGIONALE = ['Sardegna'];
+const it = d3.formatLocale({decimal: ',', thousands: '.', grouping: [3], currency: ['€', '']});
+const nInt = it.format(',.0f'), nDec = it.format(',.2f'), nTick = it.format(',');
+
+const sel = d3.select('#sel');
+const regioniMenu = DATA.regioni.map(d => d.nome)
+  .filter(n => !SOLO_REGIONALE.includes(n)).sort((a, b) => a.localeCompare(b, 'it'));
+sel.selectAll('option').data(['Tutte le regioni', ...regioniMenu]).join('option')
+  .attr('value', d => d).text(d => d);
+
+const chartEl = document.getElementById('chart');
+const tip = d3.select('#tip');
+const svg = d3.select('#chart').append('svg');
+const gGrid = svg.append('g').attr('class', 'axis');
+const gBars = svg.append('g');
+const gLabels = svg.append('g');
+
+function rows() {
+  const v = sel.property('value');
+  const base = v === 'Tutte le regioni'
+    ? DATA.regioni.map(d => ({...d, tipo: 'regione'}))
+    : DATA.province.filter(d => d.regione === v).map(d => ({...d, tipo: 'provincia'}));
+  return [...base, {...DATA.italia, tipo: 'italia'}].sort((a, b) => b.tasso - a.tasso);
+}
+
+function wrapLabel(text, width) {
+  text.each(function () {
+    const t = d3.select(this), words = t.text().split(/\s+/);
+    t.text(null);
+    let line = [], lines = [];
+    const probe = t.append('tspan');
+    words.forEach(w => {
+      line.push(w); probe.text(line.join(' '));
+      if (probe.node().getComputedTextLength() > width && line.length > 1) {
+        line.pop(); lines.push(line.join(' ')); line = [w];
+      }
+    });
+    lines.push(line.join(' ')); probe.remove();
+    const lh = 1.1, y0 = -((lines.length - 1) * lh) / 2;
+    lines.forEach((l, i) => t.append('tspan').attr('x', t.attr('x')).attr('dy', (i === 0 ? y0 + 0.35 : lh) + 'em').text(l));
+  });
+}
+
+function tipHtml(d) {
+  const nome = d.tipo === 'provincia' ? `${d.nome} (${d.regione})` : d.nome;
+  return `<b>${nome}</b><br>Posti disponibili: <b>${nInt(d.posti)}</b><br>` +
+         `Residenti: <b>${nInt(d.residenti)}</b><br>Posti ogni 10mila over 65: <b>${nDec(d.tasso)}</b>`;
+}
+
+function showTip(event, d) {
+  tip.html(tipHtml(d)).style('opacity', 1);
+  const [mx, my] = d3.pointer(event, chartEl);
+  const tw = tip.node().offsetWidth, th = tip.node().offsetHeight, cw = chartEl.clientWidth;
+  let x = mx + 12, y = my - th - 8;
+  if (x + tw > cw) x = Math.max(0, mx - tw - 12);
+  if (y < 0) y = my + 14;
+  tip.style('left', x + 'px').style('top', y + 'px');
+}
+function hideTip() { tip.style('opacity', 0); }
+
+function draw(animate) {
+  const W = chartEl.clientWidth, H = chartEl.clientHeight;
+  svg.attr('viewBox', `0 0 ${W} ${H}`);
+  const data = rows();
+  const left = W < 450 ? 112 : 150, m = {top: 22, right: 14, bottom: 4, left};
+  const n = data.length;
+  const maxBand = 34;
+  const innerH = Math.min(H - m.top - m.bottom, n * maxBand);
+  const x = d3.scaleLinear().domain([0, d3.max(data, d => d.tasso)]).nice().range([m.left, W - m.right]);
+  const y = d3.scaleBand().domain(data.map(d => d.nome)).range([m.top, m.top + innerH]).padding(0.22);
+  const t = svg.transition().duration(animate ? 550 : 0);
+
+  gGrid.attr('transform', `translate(0,${m.top - 6})`).transition(t)
+    .call(d3.axisTop(x).ticks(W < 450 ? 4 : 6).tickFormat(nTick).tickSize(-(innerH + 6)).tickPadding(4));
+  gGrid.selectAll('.tick line').attr('stroke', '#e3e3e3');
+
+  gBars.selectAll('rect').data(data, d => d.nome).join(
+      enter => enter.append('rect').attr('class', 'bar').attr('x', x(0)).attr('width', 0)
+        .attr('y', d => y(d.nome)).attr('height', y.bandwidth()),
+      update => update,
+      exit => exit.transition(t).attr('width', 0).remove())
+    .attr('fill', d => d.tipo === 'italia' ? RED : BLUE)
+    .on('pointerenter pointermove', showTip).on('pointerleave', hideTip)
+    .transition(t)
+    .attr('x', x(0)).attr('y', d => y(d.nome)).attr('height', y.bandwidth())
+    .attr('width', d => Math.max(1, x(d.tasso) - x(0)));
+
+  gLabels.selectAll('text').data(data, d => d.nome).join('text')
+    .attr('class', d => 'label' + (d.tipo === 'italia' ? ' hl' : ''))
+    .attr('x', m.left - 8).attr('text-anchor', 'end')
+    .text(d => d.nome)
+    .call(wrapLabel, m.left - 14)
+    .attr('transform', d => `translate(0,${y(d.nome) + y.bandwidth() / 2})`);
+}
+
+sel.on('change', () => { hideTip(); draw(true); });
+document.addEventListener('pointerdown', e => { if (!e.target.classList.contains('bar')) hideTip(); });
+new ResizeObserver(() => draw(false)).observe(chartEl);
+draw(false);
+</script>
+</body>
+</html>
