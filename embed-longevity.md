@@ -31,12 +31,12 @@ Indirizzo: <https://sapomnia.github.io/longevity/posti-rsa-ogni-10mila-over-65.h
 
 ---
 
-## 2. RSA, i posti letto e le liste d&#x27;attesa
+## 2. RSA, i posti letto e le liste d'attesa
 
 Indirizzo: <https://sapomnia.github.io/longevity/persone-lista-attesa-per-posto-letto.html>
 
 ```html
-<iframe id="longevity-persone-lista-attesa-per-posto-letto" src="https://sapomnia.github.io/longevity/persone-lista-attesa-per-posto-letto.html" title="RSA, i posti letto e le liste d&#x27;attesa" loading="lazy" scrolling="no" style="width:100%;height:800px;border:0;display:block"></iframe>
+<iframe id="longevity-persone-lista-attesa-per-posto-letto" src="https://sapomnia.github.io/longevity/persone-lista-attesa-per-posto-letto.html" title="RSA, i posti letto e le liste d'attesa" loading="lazy" scrolling="no" style="width:100%;height:800px;border:0;display:block"></iframe>
 <script>
 (function () {
   var iframe = document.getElementById('longevity-persone-lista-attesa-per-posto-letto');
