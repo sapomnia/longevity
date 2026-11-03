@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RSA, i posti letto e le liste d&#x27;attesa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #fff; }
+  body { font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; color: #000; }
+  .wrap {
+    width: 100%; max-width: 610px; min-height: 610px; margin: 0 auto;
+    padding: 14px 12px 10px; display: flex; flex-direction: column; background: #fff;
+  }
+  h1 { font-size: 20px; font-weight: 700; margin: 0 0 3px; line-height: 1.2; }
+  .sub { font-size: 14px; margin: 0 0 10px; color: #222; line-height: 1.3; }
+  .controls { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; font-size: 13px; }
+  .controls label { color: #222; }
+  select {
+    font-family: inherit; font-size: 13px; padding: 5px 28px 5px 9px; border: 1px solid #bbb;
+    border-radius: 4px; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23174d99'/%3E%3C/svg%3E") no-repeat right 9px center;
+    -webkit-appearance: none; appearance: none; color: #000; cursor: pointer; max-width: 100%;
+  }
+  select:focus { outline: 2px solid #5296d0; outline-offset: 1px; }
+  .chart { flex: 1; min-height: 0; position: relative; }
+  .chart svg { display: block; width: 100%; height: 100%; position: absolute; inset: 0; }
+  .axis text { font-family: inherit; font-size: 11px; fill: #444; }
+  .axis .domain { display: none; }
+  .axis .tick line { stroke: #e3e3e3; }
+  .label { fill: #000; }
+  .label.hl { font-weight: 700; fill: #e71e25; }
+  .bar { cursor: pointer; }
+  .notes { font-size: 10.5px; line-height: 1.35; color: #333; margin-top: 6px; }
+  .notes p { margin: 0 0 3px; }
+  .notes .src { font-style: italic; }
+  .tip {
+    position: absolute; pointer-events: none; background: #fff; border: 1px solid #ccc;
+    border-radius: 4px; padding: 7px 9px; font-size: 12.5px; line-height: 1.45;
+    box-shadow: 0 2px 6px rgba(0,0,0,.15); opacity: 0; transition: opacity .12s; z-index: 5;
+    white-space: nowrap;
+  }
+  .tip b { font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="wrap" id="wrap">
+  <h1>RSA, i posti letto e le liste d&#x27;attesa</h1>
+  <p class="sub">Persone in lista d&#x27;attesa per ogni posto letto disponibile</p>
+  <div class="controls">
+    <label for="sel">Mostra:</label>
+    <select id="sel"></select>
+  </div>
+  <div class="chart" id="chart"><div class="tip" id="tip"></div></div>
+  <div class="notes">
+    <p>In Lombardia (tranne la provincia di Bergamo), in Friuli Venezia Giulia e nelle province di Roma, Rieti e Lecce i dati si riferiscono alle liste d&#x27;attesa delle singole case di riposo: una persona può essere in lista in più strutture e comparire più volte, per cui il numero effettivo di persone in attesa potrebbe essere sovrastimato.</p>
+    <p>Il rapporto è calcolato solo sui posti letto delle Asl che hanno comunicato le liste d&#x27;attesa: a Roma mancano le Asl Roma 1 e Roma 2, a Vicenza la Ulss 8 Berica. Le province senza dati sulle liste d&#x27;attesa non sono mostrate e i loro posti letto sono esclusi dal calcolo dei valori regionali e della media nazionale. Per la Sardegna è mostrato solo il dato regionale perché i dati seguono la vecchia suddivisione provinciale.</p>
+    <p class="src">Fonte: elaborazione SkyTg24 su dati Asl 2026</p>
+  </div>
+</div>
+<script>
+const EMBED_ID = 'longevity-persone-lista-attesa-per-posto-letto';
+const CONFIG = {"a": "Posti disponibili", "b": "Persone in lista d'attesa", "tasso": "Persone in lista d'attesa per posto letto", "soloRegionale": ["Sardegna"]};
+const DATA = {"italia": {"nome": "Media nazionale", "a": 183504, "b": 187317, "tasso": 1.02}, "regioni": [{"nome": "Basilicata", "a": 261, "b": 74, "tasso": 0.28}, {"nome": "Calabria", "a": 355, "b": 122, "tasso": 0.34}, {"nome": "Campania", "a": 1322, "b": 63, "tasso": 0.05}, {"nome": "Emilia Romagna", "a": 20493, "b": 12778, "tasso": 0.62}, {"nome": "Friuli Venezia Giulia", "a": 2534, "b": 1747, "tasso": 0.69}, {"nome": "Lazio", "a": 4844, "b": 5749, "tasso": 1.19}, {"nome": "Liguria", "a": 5003, "b": 2873, "tasso": 0.57}, {"nome": "Lombardia", "a": 63911, "b": 137459, "tasso": 2.15}, {"nome": "Marche", "a": 4281, "b": 2662, "tasso": 0.62}, {"nome": "Molise", "a": 428, "b": 42, "tasso": 0.1}, {"nome": "Piemonte", "a": 34928, "b": 10009, "tasso": 0.29}, {"nome": "Puglia", "a": 6172, "b": 3880, "tasso": 0.63}, {"nome": "Sardegna", "a": 224, "b": 27, "tasso": 0.12}, {"nome": "Sicilia", "a": 634, "b": 27, "tasso": 0.04}, {"nome": "Toscana", "a": 14372, "b": 1854, "tasso": 0.13}, {"nome": "Trentino Alto Adige", "a": 5001, "b": 1008, "tasso": 0.2}, {"nome": "Umbria", "a": 959, "b": 639, "tasso": 0.67}, {"nome": "Valle d'Aosta", "a": 68, "b": 0, "tasso": 0.0}, {"nome": "Veneto", "a": 17714, "b": 6304, "tasso": 0.36}], "province": [{"nome": "Matera", "regione": "Basilicata", "a": 99, "b": 63, "tasso": 0.64}, {"nome": "Potenza", "regione": "Basilicata", "a": 162, "b": 11, "tasso": 0.07}, {"nome": "Catanzaro", "regione": "Calabria", "a": 134, "b": 75, "tasso": 0.56}, {"nome": "Crotone", "regione": "Calabria", "a": 221, "b": 47, "tasso": 0.21}, {"nome": "Napoli", "regione": "Campania", "a": 243, "b": 0, "tasso": 0.0}, {"nome": "Salerno", "regione": "Campania", "a": 1079, "b": 63, "tasso": 0.06}, {"nome": "Bologna", "regione": "Emilia Romagna", "a": 4046, "b": 2225, "tasso": 0.55}, {"nome": "Ferrara", "regione": "Emilia Romagna", "a": 1499, "b": 916, "tasso": 0.61}, {"nome": "Forlì Cesena", "regione": "Emilia Romagna", "a": 1981, "b": 1418, "tasso": 0.72}, {"nome": "Modena", "regione": "Emilia Romagna", "a": 3409, "b": 1888, "tasso": 0.55}, {"nome": "Parma", "regione": "Emilia Romagna", "a": 2327, "b": 1366, "tasso": 0.59}, {"nome": "Piacenza", "regione": "Emilia Romagna", "a": 1620, "b": 784, "tasso": 0.48}, {"nome": "Ravenna", "regione": "Emilia Romagna", "a": 1893, "b": 1658, "tasso": 0.88}, {"nome": "Reggio Emilia", "regione": "Emilia Romagna", "a": 2606, "b": 1636, "tasso": 0.63}, {"nome": "Rimini", "regione": "Emilia Romagna", "a": 1112, "b": 887, "tasso": 0.8}, {"nome": "Gorizia", "regione": "Friuli Venezia Giulia", "a": 865, "b": 608, "tasso": 0.7}, {"nome": "Trieste", "regione": "Friuli Venezia Giulia", "a": 1669, "b": 1139, "tasso": 0.68}, {"nome": "Rieti", "regione": "Lazio", "a": 265, "b": 433, "tasso": 1.63}, {"nome": "Roma", "regione": "Lazio", "a": 3777, "b": 4888, "tasso": 1.29}, {"nome": "Viterbo", "regione": "Lazio", "a": 802, "b": 428, "tasso": 0.53}, {"nome": "Imperia", "regione": "Liguria", "a": 1898, "b": 947, "tasso": 0.5}, {"nome": "La Spezia", "regione": "Liguria", "a": 526, "b": 383, "tasso": 0.73}, {"nome": "Savona", "regione": "Liguria", "a": 2579, "b": 1543, "tasso": 0.6}, {"nome": "Bergamo", "regione": "Lombardia", "a": 6702, "b": 2663, "tasso": 0.4}, {"nome": "Brescia", "regione": "Lombardia", "a": 7178, "b": 35059, "tasso": 4.88}, {"nome": "Como", "regione": "Lombardia", "a": 5416, "b": 8501, "tasso": 1.57}, {"nome": "Cremona", "regione": "Lombardia", "a": 3437, "b": 7048, "tasso": 2.05}, {"nome": "Lecco", "regione": "Lombardia", "a": 2203, "b": 8218, "tasso": 3.73}, {"nome": "Lodi", "regione": "Lombardia", "a": 1356, "b": 12838, "tasso": 9.47}, {"nome": "Mantova", "regione": "Lombardia", "a": 3184, "b": 5916, "tasso": 1.86}, {"nome": "Milano", "regione": "Lombardia", "a": 15713, "b": 19389, "tasso": 1.23}, {"nome": "Monza e della Brianza", "regione": "Lombardia", "a": 4447, "b": 10415, "tasso": 2.34}, {"nome": "Pavia", "regione": "Lombardia", "a": 6500, "b": 7086, "tasso": 1.09}, {"nome": "Sondrio", "regione": "Lombardia", "a": 1791, "b": 12602, "tasso": 7.04}, {"nome": "Varese", "regione": "Lombardia", "a": 5984, "b": 7724, "tasso": 1.29}, {"nome": "Ancona", "regione": "Marche", "a": 3670, "b": 2562, "tasso": 0.7}, {"nome": "Ascoli Piceno", "regione": "Marche", "a": 198, "b": 53, "tasso": 0.27}, {"nome": "Fermo", "regione": "Marche", "a": 108, "b": 14, "tasso": 0.13}, {"nome": "Macerata", "regione": "Marche", "a": 109, "b": 20, "tasso": 0.18}, {"nome": "Pesaro e Urbino", "regione": "Marche", "a": 196, "b": 13, "tasso": 0.07}, {"nome": "Campobasso", "regione": "Molise", "a": 201, "b": 37, "tasso": 0.18}, {"nome": "Isernia", "regione": "Molise", "a": 227, "b": 5, "tasso": 0.02}, {"nome": "Alessandria", "regione": "Piemonte", "a": 3707, "b": 1338, "tasso": 0.36}, {"nome": "Asti", "regione": "Piemonte", "a": 3228, "b": 612, "tasso": 0.19}, {"nome": "Biella", "regione": "Piemonte", "a": 1497, "b": 369, "tasso": 0.25}, {"nome": "Cuneo", "regione": "Piemonte", "a": 5390, "b": 2301, "tasso": 0.43}, {"nome": "Torino", "regione": "Piemonte", "a": 18742, "b": 4679, "tasso": 0.25}, {"nome": "Verbano Cusio Ossola", "regione": "Piemonte", "a": 955, "b": 600, "tasso": 0.63}, {"nome": "Vercelli", "regione": "Piemonte", "a": 1409, "b": 110, "tasso": 0.08}, {"nome": "Bari", "regione": "Puglia", "a": 2476, "b": 1658, "tasso": 0.67}, {"nome": "Barletta Andria Trani", "regione": "Puglia", "a": 641, "b": 401, "tasso": 0.63}, {"nome": "Brindisi", "regione": "Puglia", "a": 617, "b": 422, "tasso": 0.68}, {"nome": "Foggia", "regione": "Puglia", "a": 1008, "b": 369, "tasso": 0.37}, {"nome": "Lecce", "regione": "Puglia", "a": 1430, "b": 1030, "tasso": 0.72}, {"nome": "Nuoro", "regione": "Sardegna", "a": 100, "b": 4, "tasso": 0.04}, {"nome": "Oristano", "regione": "Sardegna", "a": 124, "b": 23, "tasso": 0.19}, {"nome": "Agrigento", "regione": "Sicilia", "a": 40, "b": 0, "tasso": 0.0}, {"nome": "Caltanissetta", "regione": "Sicilia", "a": 58, "b": 19, "tasso": 0.33}, {"nome": "Messina", "regione": "Sicilia", "a": 340, "b": 0, "tasso": 0.0}, {"nome": "Trapani", "regione": "Sicilia", "a": 196, "b": 8, "tasso": 0.04}, {"nome": "Arezzo", "regione": "Toscana", "a": 1205, "b": 212, "tasso": 0.18}, {"nome": "Firenze", "regione": "Toscana", "a": 4727, "b": 592, "tasso": 0.13}, {"nome": "Grosseto", "regione": "Toscana", "a": 830, "b": 48, "tasso": 0.06}, {"nome": "Livorno", "regione": "Toscana", "a": 1041, "b": 85, "tasso": 0.08}, {"nome": "Lucca", "regione": "Toscana", "a": 1297, "b": 143, "tasso": 0.11}, {"nome": "Massa Carrara", "regione": "Toscana", "a": 946, "b": 38, "tasso": 0.04}, {"nome": "Pisa", "regione": "Toscana", "a": 1428, "b": 193, "tasso": 0.14}, {"nome": "Pistoia", "regione": "Toscana", "a": 565, "b": 113, "tasso": 0.2}, {"nome": "Prato", "regione": "Toscana", "a": 963, "b": 213, "tasso": 0.22}, {"nome": "Siena", "regione": "Toscana", "a": 1370, "b": 217, "tasso": 0.16}, {"nome": "Trento", "regione": "Trentino Alto Adige", "a": 5001, "b": 1008, "tasso": 0.2}, {"nome": "Perugia", "regione": "Umbria", "a": 902, "b": 619, "tasso": 0.69}, {"nome": "Terni", "regione": "Umbria", "a": 57, "b": 20, "tasso": 0.35}, {"nome": "Aosta", "regione": "Valle d'Aosta", "a": 68, "b": 0, "tasso": 0.0}, {"nome": "Padova", "regione": "Veneto", "a": 3562, "b": 1282, "tasso": 0.36}, {"nome": "Venezia", "regione": "Veneto", "a": 5672, "b": 2512, "tasso": 0.44}, {"nome": "Verona", "regione": "Veneto", "a": 5749, "b": 1744, "tasso": 0.3}, {"nome": "Vicenza", "regione": "Veneto", "a": 2731, "b": 766, "tasso": 0.28}]};
+const BLUE = '#174d99', RED = '#e71e25';
+const it = d3.formatLocale({decimal: ',', thousands: '.', grouping: [3], currency: ['€', '']});
+const nInt = it.format(',.0f'), nDec = it.format(',.2f'), nTick = it.format(',');
+
+const sel = d3.select('#sel');
+const regioniMenu = DATA.regioni.map(d => d.nome)
+  .filter(n => !CONFIG.soloRegionale.includes(n)).sort((a, b) => a.localeCompare(b, 'it'));
+sel.selectAll('option').data(['Tutte le regioni', ...regioniMenu]).join('option')
+  .attr('value', d => d).text(d => d);
+
+const wrapEl = document.getElementById('wrap');
+const chartEl = document.getElementById('chart');
+const tip = d3.select('#tip');
+const svg = d3.select('#chart').append('svg');
+const gGrid = svg.append('g').attr('class', 'axis');
+const gBars = svg.append('g');
+const gLabels = svg.append('g');
+
+function rows() {
+  const v = sel.property('value');
+  const base = v === 'Tutte le regioni'
+    ? DATA.regioni.map(d => ({...d, tipo: 'regione'}))
+    : DATA.province.filter(d => d.regione === v).map(d => ({...d, tipo: 'provincia'}));
+  return [...base, {...DATA.italia, tipo: 'italia'}].sort((a, b) => b.tasso - a.tasso);
+}
+
+function wrapLabel(text, width) {
+  text.each(function () {
+    const t = d3.select(this), words = t.text().split(/\s+/);
+    t.text(null);
+    let line = [], lines = [];
+    const probe = t.append('tspan');
+    words.forEach(w => {
+      line.push(w); probe.text(line.join(' '));
+      if (probe.node().getComputedTextLength() > width && line.length > 1) {
+        line.pop(); lines.push(line.join(' ')); line = [w];
+      }
+    });
+    lines.push(line.join(' ')); probe.remove();
+    const lh = 1.1, y0 = -((lines.length - 1) * lh) / 2;
+    lines.forEach((l, i) => t.append('tspan').attr('x', t.attr('x')).attr('dy', (i === 0 ? y0 + 0.35 : lh) + 'em').text(l));
+  });
+}
+
+function tipHtml(d) {
+  const nome = d.tipo === 'provincia' ? `${d.nome} (${d.regione})` : d.nome;
+  return `<b>${nome}</b><br>${CONFIG.a}: <b>${nInt(d.a)}</b><br>` +
+         `${CONFIG.b}: <b>${nInt(d.b)}</b><br>${CONFIG.tasso}: <b>${nDec(d.tasso)}</b>`;
+}
+
+function showTip(event, d) {
+  tip.html(tipHtml(d)).style('opacity', 1);
+  const [mx, my] = d3.pointer(event, chartEl);
+  const tw = tip.node().offsetWidth, th = tip.node().offsetHeight, cw = chartEl.clientWidth;
+  let x = mx + 12, y = my - th - 8;
+  if (x + tw > cw) x = Math.max(0, mx - tw - 12);
+  if (y < 0) y = my + 14;
+  tip.style('left', x + 'px').style('top', y + 'px');
+}
+function hideTip() { tip.style('opacity', 0); }
+
+// Altezza comunicata alla pagina che ospita l'iframe
+let lastHeight = 0;
+function sendHeight() {
+  const h = Math.ceil(wrapEl.getBoundingClientRect().height);
+  if (h !== lastHeight && window.parent !== window) {
+    lastHeight = h;
+    window.parent.postMessage({altezza: h, height: h, id: EMBED_ID}, '*');
+  }
+}
+
+function draw(animate) {
+  const data = rows();
+  const n = data.length;
+  const W = chartEl.clientWidth;
+  const minBand = W < 450 ? 20 : 16;
+  const m = {top: 22, right: 14, bottom: 4};
+  chartEl.style.minHeight = (n * minBand + m.top + m.bottom) + 'px';
+  const H = chartEl.clientHeight;
+  svg.attr('viewBox', `0 0 ${W} ${H}`);
+
+  const fs = W < 450 ? 11 : 12;
+  const probe = svg.append('text').style('font-size', fs + 'px');
+  const longest = d3.max(data, d => {
+    probe.attr('class', 'label' + (d.tipo === 'italia' ? ' hl' : '')).text(d.nome);
+    return probe.node().getComputedTextLength();
+  });
+  probe.remove();
+  m.left = Math.ceil(Math.min(longest + 16, W * 0.45));
+  gLabels.style('font-size', fs + 'px');
+
+  const maxBand = 34;
+  const innerH = Math.min(H - m.top - m.bottom, n * maxBand);
+  const x = d3.scaleLinear().domain([0, d3.max(data, d => d.tasso)]).nice().range([m.left, W - m.right]);
+  const y = d3.scaleBand().domain(data.map(d => d.nome)).range([m.top, m.top + innerH]).padding(0.22);
+  const t = svg.transition().duration(animate ? 550 : 0);
+
+  gGrid.attr('transform', `translate(0,${m.top - 6})`).transition(t)
+    .call(d3.axisTop(x).ticks(W < 450 ? 4 : 6).tickFormat(nTick).tickSize(-(innerH + 6)).tickPadding(4));
+  gGrid.selectAll('.tick line').attr('stroke', '#e3e3e3');
+
+  gBars.selectAll('rect').data(data, d => d.nome).join(
+      enter => enter.append('rect').attr('class', 'bar').attr('x', x(0)).attr('width', 0)
+        .attr('y', d => y(d.nome)).attr('height', y.bandwidth()),
+      update => update,
+      exit => exit.transition(t).attr('width', 0).remove())
+    .attr('fill', d => d.tipo === 'italia' ? RED : BLUE)
+    .on('pointerenter pointermove', showTip).on('pointerleave', hideTip)
+    .transition(t)
+    .attr('x', x(0)).attr('y', d => y(d.nome)).attr('height', y.bandwidth())
+    .attr('width', d => Math.max(1, x(d.tasso) - x(0)));
+
+  gLabels.selectAll('text').data(data, d => d.nome).join('text')
+    .attr('class', d => 'label' + (d.tipo === 'italia' ? ' hl' : ''))
+    .attr('x', m.left - 8).attr('text-anchor', 'end')
+    .text(d => d.nome)
+    .call(wrapLabel, m.left - 14)
+    .attr('transform', d => `translate(0,${y(d.nome) + y.bandwidth() / 2})`);
+
+  sendHeight();
+}
+
+sel.on('change', () => { hideTip(); draw(true); });
+document.addEventListener('pointerdown', e => { if (!e.target.classList.contains('bar')) hideTip(); });
+let lastW = 0, lastH = 0;
+new ResizeObserver(() => {
+  const w = chartEl.clientWidth, h = chartEl.clientHeight;
+  if (w !== lastW || h !== lastH) { lastW = w; lastH = h; draw(false); }
+}).observe(chartEl);
+new ResizeObserver(sendHeight).observe(wrapEl);
+document.fonts && document.fonts.ready.then(() => draw(false));
+draw(false);
+</script>
+</body>
+</html>

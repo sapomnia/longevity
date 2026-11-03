@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Longevity – grafici</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #fff; color: #000; font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; }
+  main { max-width: 700px; margin: 0 auto; padding: 28px 16px 60px; }
+  header { border-bottom: 3px solid #174d99; padding-bottom: 12px; margin-bottom: 8px; }
+  header h1 { font-size: 26px; margin: 0 0 4px; }
+  header p { margin: 0; color: #444; font-size: 14px; line-height: 1.45; }
+  section { padding: 28px 0; border-bottom: 1px solid #e3e3e3; }
+  h2 { font-size: 17px; margin: 0 0 14px; display: flex; align-items: center; gap: 10px; }
+  .n { background: #174d99; color: #fff; font-size: 13px; width: 24px; height: 24px; border-radius: 50%;
+        display: inline-flex; align-items: center; justify-content: center; flex: none; }
+  .frame { border: 1px solid #e3e3e3; max-width: 612px; }
+  .preview { width: 100%; border: 0; display: block; }
+  .embed { margin-top: 14px; border: 1px solid #d5d5d5; border-radius: 6px; overflow: hidden; }
+  .embed .bar { display: flex; align-items: center; gap: 12px; padding: 7px 10px; background: #f4f6fa;
+                 border-bottom: 1px solid #d5d5d5; font-size: 13px; }
+  .embed .bar span { font-weight: 500; flex: 1; }
+  .embed .bar a { color: #174d99; }
+  .embed button { font: inherit; font-weight: 500; color: #fff; background: #174d99; border: 0; border-radius: 4px;
+                   padding: 5px 14px; cursor: pointer; }
+  .embed button.ok { background: #109d49; }
+  pre { margin: 0; padding: 10px 12px; font-family: 'Roboto Mono', Menlo, monospace; font-size: 11.5px;
+         line-height: 1.5; white-space: pre-wrap; word-break: break-all; max-height: 170px; overflow: auto; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Longevity</h1>
+    <p>Grafici del progetto. Sotto ogni grafico c'è il codice da incollare nell'articolo: iframe e script vanno
+    incollati insieme, l'altezza si adatta da sola al dispositivo.</p>
+  </header>
+  <section>
+    <h2><span class="n">1</span>I posti letto nelle RSA italiane</h2>
+    <div class="frame"><iframe class="preview" src="posti-rsa-ogni-10mila-over-65.html" title="I posti letto nelle RSA italiane" scrolling="no" style="height:700px"></iframe></div>
+    <div class="embed">
+      <div class="bar"><span>Codice di embed</span><a href="posti-rsa-ogni-10mila-over-65.html" target="_blank" rel="noopener">Apri il grafico</a><button type="button">Copia</button></div>
+      <pre><code>&lt;iframe id=&quot;longevity-posti-rsa-ogni-10mila-over-65&quot; src=&quot;https://sapomnia.github.io/longevity/posti-rsa-ogni-10mila-over-65.html&quot; title=&quot;I posti letto nelle RSA italiane&quot; loading=&quot;lazy&quot; scrolling=&quot;no&quot; style=&quot;width:100%;height:700px;border:0;display:block&quot;&gt;&lt;/iframe&gt;
+&lt;script&gt;
+(function () {
+  var iframe = document.getElementById(&#x27;longevity-posti-rsa-ogni-10mila-over-65&#x27;);
+  window.addEventListener(&#x27;message&#x27;, function (evento) {
+    if (evento.origin !== &#x27;https://sapomnia.github.io&#x27; || evento.source !== iframe.contentWindow) return;
+    var dati = evento.data || {};
+    var altezza = parseInt(dati.altezza || dati.height, 10);
+    if (altezza &gt; 100 &amp;&amp; altezza &lt; 8000) iframe.style.height = altezza + &#x27;px&#x27;;
+  });
+})();
+&lt;/script&gt;</code></pre>
+    </div>
+  </section>
+  <section>
+    <h2><span class="n">2</span>RSA, i posti letto e le liste d&#x27;attesa</h2>
+    <div class="frame"><iframe class="preview" src="persone-lista-attesa-per-posto-letto.html" title="RSA, i posti letto e le liste d&#x27;attesa" scrolling="no" style="height:800px"></iframe></div>
+    <div class="embed">
+      <div class="bar"><span>Codice di embed</span><a href="persone-lista-attesa-per-posto-letto.html" target="_blank" rel="noopener">Apri il grafico</a><button type="button">Copia</button></div>
+      <pre><code>&lt;iframe id=&quot;longevity-persone-lista-attesa-per-posto-letto&quot; src=&quot;https://sapomnia.github.io/longevity/persone-lista-attesa-per-posto-letto.html&quot; title=&quot;RSA, i posti letto e le liste d&amp;#x27;attesa&quot; loading=&quot;lazy&quot; scrolling=&quot;no&quot; style=&quot;width:100%;height:800px;border:0;display:block&quot;&gt;&lt;/iframe&gt;
+&lt;script&gt;
+(function () {
+  var iframe = document.getElementById(&#x27;longevity-persone-lista-attesa-per-posto-letto&#x27;);
+  window.addEventListener(&#x27;message&#x27;, function (evento) {
+    if (evento.origin !== &#x27;https://sapomnia.github.io&#x27; || evento.source !== iframe.contentWindow) return;
+    var dati = evento.data || {};
+    var altezza = parseInt(dati.altezza || dati.height, 10);
+    if (altezza &gt; 100 &amp;&amp; altezza &lt; 8000) iframe.style.height = altezza + &#x27;px&#x27;;
+  });
+})();
+&lt;/script&gt;</code></pre>
+    </div>
+  </section>
+</main>
+<script>
+  // Copia del codice di embed
+  document.querySelectorAll('.embed').forEach(function (box) {
+    var btn = box.querySelector('button');
+    btn.addEventListener('click', function () {
+      var text = box.querySelector('code').textContent;
+      var done = function () { btn.textContent = 'Copiato'; btn.classList.add('ok');
+        setTimeout(function () { btn.textContent = 'Copia'; btn.classList.remove('ok'); }, 1600); };
+      if (navigator.clipboard) navigator.clipboard.writeText(text).then(done);
+      else { var t = document.createElement('textarea'); t.value = text; document.body.appendChild(t);
+        t.select(); document.execCommand('copy'); t.remove(); done(); }
+    });
+  });
+  // Altezza delle anteprime comunicata dai grafici
+  window.addEventListener('message', function (e) {
+    var h = parseInt((e.data || {}).altezza, 10);
+    if (!(h > 100 && h < 8000)) return;
+    document.querySelectorAll('iframe.preview').forEach(function (f) {
+      if (f.contentWindow === e.source) f.style.height = h + 'px';
+    });
+  });
+</script>
+</body>
+</html>

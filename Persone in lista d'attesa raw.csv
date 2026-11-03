@@ -1,0 +1,963 @@
+Regione	Provincia	Azienda	Data estrazione	Tipologia	Persone in lista d'attesa
+Valle d'Aosta	Aosta	Azienda USL Valle d'Aosta	01/06/2026	Totale	0
+Piemonte	Biella	Asl di Biella	05/06/2026	Urgente	12
+Piemonte	Biella	Asl di Biella	05/06/2026	Non urgente	139
+Piemonte	Biella	Asl di Biella	05/06/2026	Differibile	218
+Piemonte	Torino	Asl Città di Torino	28/05/2026	Totale	2027
+Piemonte	Verbania	Asl VCO	26/05/2026	Totale	600
+Liguria	La Spezia	Asl 5 Spezzino	27/05/2026	Rsa mantenimento	255
+Liguria	La Spezia	Asl 5 Spezzino	27/05/2026	Residenza protetta	85
+Liguria	La Spezia	Asl 5 Spezzino	27/05/2026	Nucleo Protesico	43
+Piemonte	Torino	Asl Torino 4	31/12/2025	Urgente	124
+Piemonte	Torino	Asl Torino 4	31/12/2025	Non urgente	435
+Piemonte	Asti	Asl di Asti	16/06/2026	Totale	612
+Liguria	Imperia	Asl 1 Imperiese	17/06/2026	Totale	947
+Piemonte	Vercelli	Asl di Vercelli	20/05/2026	Totale	110
+Lombardia	Bergamo	Ats di Bergamo	30/04/2026	Totale	2663
+Piemonte	Cuneo	Asl di Cuneo 2	11/08/2026	Totale	486
+Piemonte	Alessandria	Asl di Alessandria	31/05/2026	Urgenti	137
+Piemonte	Alessandria	Asl di Alessandria	31/05/2026	Differibili	1201
+Lombardia	Brescia	Ats di Brescia	31/05/2026	Maschi	9811
+Lombardia	Brescia	Ats di Brescia	31/05/2026	Femmine	22346
+Piemonte	Torino	Asl Torino 3	20/05/2026	Totale	1635
+Piemonte	Cuneo	Asl di Cuneo 1	12/08/2026	Distretto Nord Est	330
+Piemonte	Cuneo	Asl di Cuneo 1	10/08/2026	Distretto Sud Ovest	759
+Piemonte	Cuneo	Asl di Cuneo 1	14/07/2026	Distretto Nord Ovest	372
+Piemonte	Cuneo	Asl di Cuneo 1	10/07/2026	Distretto Sud Est	354
+Lombardia	Monza Brianza	Ats Brianza	11/08/2026	Lista ordinaria	103
+Lombardia	Monza Brianza	Ats Brianza	14/08/2026	Lista ordinaria	36
+Lombardia	Monza Brianza	Ats Brianza	10/08/2026	Lista ordinaria	40
+Lombardia	Monza Brianza	Ats Brianza	13/07/2026	Lista ordinaria	262
+Lombardia	Monza Brianza	Ats Brianza	14/08/2026	Lista ordinaria	599
+Lombardia	Lecco	Ats Brianza	19/08/2026	Lista ordinaria	310
+Lombardia	Lecco	Ats Brianza	17/08/2026	Lista ordinaria	102
+Lombardia	Monza Brianza	Ats Brianza	12/08/2026	Lista ordinaria	291
+Lombardia	Monza Brianza	Ats Brianza	13/07/2026	Lista ordinaria	24
+Lombardia	Lecco	Ats Brianza	13/07/2026	Lista ordinaria	243
+Lombardia	Lecco	Ats Brianza	11/08/2026	Lista ordinaria	830
+Lombardia	Lecco	Ats Brianza	10/08/2026	Lista ordinaria	660
+Lombardia	Lecco	Ats Brianza	10/08/2026	Lista ordinaria	38
+Lombardia	Lecco	Ats Brianza	10/08/2026	Lista ordinaria	78
+Lombardia	Lecco	Ats Brianza	11/08/2026	Lista ordinaria	215
+Lombardia	Monza Brianza	Ats Brianza	25/11/2025	Lista ordinaria	139
+Lombardia	Monza Brianza	Ats Brianza	10/08/2026	Lista ordinaria	474
+Lombardia	Lecco	Ats Brianza	14/08/2026	Lista ordinaria	269
+Lombardia	Lecco	Ats Brianza	29/07/2026	Lista ordinaria	74
+Lombardia	Monza Brianza	Ats Brianza	13/08/2026	Lista ordinaria	210
+Lombardia	Monza Brianza	Ats Brianza	13/08/2026	Lista ordinaria	809
+Lombardia	Monza Brianza	Ats Brianza	14/08/2026	Lista ordinaria	717
+Lombardia	Monza Brianza	Ats Brianza	12/08/2026	Lista ordinaria	200
+Lombardia	Monza Brianza	Ats Brianza	19/08/2026	Lista ordinaria	153
+Lombardia	Lecco	Ats Brianza	10/08/2026	Lista ordinaria	263
+Lombardia	Lecco	Ats Brianza	18/08/2026	Lista ordinaria	370
+Lombardia	Lecco	Ats Brianza	17/08/2026	Lista ordinaria	273
+Lombardia	Lecco	Ats Brianza	18/08/2026	Lista ordinaria	172
+Lombardia	Monza Brianza	Ats Brianza	19/08/2026	Lista ordinaria	681
+Lombardia	Monza Brianza	Ats Brianza	11/08/2026	Lista ordinaria	199
+Lombardia	Monza Brianza	Ats Brianza	13/07/2026	Lista ordinaria	13
+Lombardia	Monza Brianza	Ats Brianza	13/08/2026	Lista ordinaria	125
+Lombardia	Monza Brianza	Ats Brianza	13/07/2026	Lista ordinaria	74
+Lombardia	Lecco	Ats Brianza	11/08/2026	Lista ordinaria	242
+Lombardia	Lecco	Ats Brianza	10/08/2026	Lista ordinaria	30
+Lombardia	Monza Brianza	Ats Brianza	10/07/2026	Lista ordinaria	402
+Lombardia	Monza Brianza	Ats Brianza	11/08/2026	Lista ordinaria	352
+Lombardia	Monza Brianza	Ats Brianza	12/08/2026	Lista ordinaria	96
+Lombardia	Monza Brianza	Ats Brianza	11/08/2026	Lista ordinaria	200
+Lombardia	Monza Brianza	Ats Brianza	22/07/2026	Lista ordinaria	85
+Lombardia	Monza Brianza	Ats Brianza	22/07/2026	Lista ordinaria	15
+Lombardia	Monza Brianza	Ats Brianza	10/08/2026	Lista ordinaria	187
+Lombardia	Monza Brianza	Ats Brianza	13/07/2026	Lista ordinaria	281
+Lombardia	Monza Brianza	Ats Brianza	13/07/2026	Lista ordinaria	7
+Lombardia	Monza Brianza	Ats Brianza	11/08/2026	Lista ordinaria	591
+Lombardia	Lecco	Ats Brianza	19/08/2026	Lista ordinaria	139
+Lombardia	Lecco	Ats Brianza	11/08/2026	Lista ordinaria	799
+Lombardia	Lecco	Ats Brianza	19/08/2026	Lista ordinaria	338
+Lombardia	Lecco	Ats Brianza	11/08/2026	Lista ordinaria	738
+Lombardia	Monza Brianza	Ats Brianza	11/08/2026	Lista ordinaria	88
+Lombardia	Monza Brianza	Ats Brianza	14/08/2026	Lista ordinaria	72
+Lombardia	Monza Brianza	Ats Brianza	11/08/2026	Lista ordinaria	307
+Lombardia	Lecco	Ats Brianza	12/08/2026	Lista ordinaria	322
+Lombardia	Monza Brianza	Ats Brianza	13/07/2026	Lista ordinaria	14
+Lombardia	Lecco	Ats Brianza	17/08/2026	Lista ordinaria	400
+Lombardia	Monza Brianza	Ats Brianza	13/07/2026	Lista ordinaria	10
+Lombardia	Lecco	Ats Brianza	13/08/2026	Lista ordinaria	28
+Lombardia	Monza Brianza	Ats Brianza	12/08/2026	Lista ordinaria	200
+Lombardia	Monza Brianza	Ats Brianza	19/08/2026	Lista ordinaria	257
+Lombardia	Monza Brianza	Ats Brianza	24/07/2026	Lista ordinaria	107
+Lombardia	Monza Brianza	Ats Brianza	11/08/2026	Lista ordinaria	8
+Lombardia	Lecco	Ats Brianza	13/07/2026	Lista ordinaria	629
+Lombardia	Monza Brianza	Ats Brianza	14/07/2026	Lista ordinaria	28
+Lombardia	Monza Brianza	Ats Brianza	13/07/2026	Lista ordinaria	39
+Lombardia	Monza Brianza	Ats Brianza	12/08/2026	Lista ordinaria	465
+Lombardia	Monza Brianza	Ats Brianza	11/08/2026	Lista ordinaria	62
+Lombardia	Monza Brianza	Ats Brianza	11/08/2026	Lista Alzheimer	0
+Lombardia	Monza Brianza	Ats Brianza	14/08/2026	Lista Alzheimer	19
+Lombardia	Monza Brianza	Ats Brianza	10/08/2026	Lista Alzheimer	0
+Lombardia	Monza Brianza	Ats Brianza	13/07/2026	Lista Alzheimer	0
+Lombardia	Monza Brianza	Ats Brianza	14/08/2026	Lista Alzheimer	0
+Lombardia	Lecco	Ats Brianza	19/08/2026	Lista Alzheimer	0
+Lombardia	Lecco	Ats Brianza	17/08/2026	Lista Alzheimer	0
+Lombardia	Monza Brianza	Ats Brianza	12/08/2026	Lista Alzheimer	85
+Lombardia	Monza Brianza	Ats Brianza	13/07/2026	Lista Alzheimer	0
+Lombardia	Lecco	Ats Brianza	13/07/2026	Lista Alzheimer	0
+Lombardia	Lecco	Ats Brianza	11/08/2026	Lista Alzheimer	0
+Lombardia	Lecco	Ats Brianza	10/08/2026	Lista Alzheimer	121
+Lombardia	Lecco	Ats Brianza	10/08/2026	Lista Alzheimer	0
+Lombardia	Lecco	Ats Brianza	10/08/2026	Lista Alzheimer	42
+Lombardia	Lecco	Ats Brianza	11/08/2026	Lista Alzheimer	0
+Lombardia	Monza Brianza	Ats Brianza	25/11/2025	Lista Alzheimer	104
+Lombardia	Monza Brianza	Ats Brianza	10/08/2026	Lista Alzheimer	154
+Lombardia	Lecco	Ats Brianza	14/08/2026	Lista Alzheimer	0
+Lombardia	Lecco	Ats Brianza	29/07/2026	Lista Alzheimer	0
+Lombardia	Monza Brianza	Ats Brianza	13/08/2026	Lista Alzheimer	54
+Lombardia	Monza Brianza	Ats Brianza	13/08/2026	Lista Alzheimer	137
+Lombardia	Monza Brianza	Ats Brianza	14/08/2026	Lista Alzheimer	177
+Lombardia	Monza Brianza	Ats Brianza	12/08/2026	Lista Alzheimer	0
+Lombardia	Monza Brianza	Ats Brianza	19/08/2026	Lista Alzheimer	0
+Lombardia	Lecco	Ats Brianza	10/08/2026	Lista Alzheimer	0
+Lombardia	Lecco	Ats Brianza	18/08/2026	Lista Alzheimer	0
+Lombardia	Lecco	Ats Brianza	17/08/2026	Lista Alzheimer	0
+Lombardia	Lecco	Ats Brianza	18/08/2026	Lista Alzheimer	0
+Lombardia	Monza Brianza	Ats Brianza	19/08/2026	Lista Alzheimer	0
+Lombardia	Monza Brianza	Ats Brianza	11/08/2026	Lista Alzheimer	83
+Lombardia	Monza Brianza	Ats Brianza	13/07/2026	Lista Alzheimer	0
+Lombardia	Monza Brianza	Ats Brianza	13/08/2026	Lista Alzheimer	0
+Lombardia	Monza Brianza	Ats Brianza	13/07/2026	Lista Alzheimer	3
+Lombardia	Lecco	Ats Brianza	11/08/2026	Lista Alzheimer	60
+Lombardia	Lecco	Ats Brianza	10/08/2026	Lista Alzheimer	10
+Lombardia	Monza Brianza	Ats Brianza	10/07/2026	Lista Alzheimer	160
+Lombardia	Monza Brianza	Ats Brianza	11/08/2026	Lista Alzheimer	0
+Lombardia	Monza Brianza	Ats Brianza	12/08/2026	Lista Alzheimer	81
+Lombardia	Monza Brianza	Ats Brianza	11/08/2026	Lista Alzheimer	0
+Lombardia	Monza Brianza	Ats Brianza	22/07/2026	Lista Alzheimer	0
+Lombardia	Monza Brianza	Ats Brianza	22/07/2026	Lista Alzheimer	0
+Lombardia	Monza Brianza	Ats Brianza	10/08/2026	Lista Alzheimer	0
+Lombardia	Monza Brianza	Ats Brianza	13/07/2026	Lista Alzheimer	0
+Lombardia	Monza Brianza	Ats Brianza	13/07/2026	Lista Alzheimer	0
+Lombardia	Monza Brianza	Ats Brianza	11/08/2026	Lista Alzheimer	63
+Lombardia	Lecco	Ats Brianza	19/08/2026	Lista Alzheimer	0
+Lombardia	Lecco	Ats Brianza	11/08/2026	Lista Alzheimer	0
+Lombardia	Lecco	Ats Brianza	19/08/2026	Lista Alzheimer	0
+Lombardia	Lecco	Ats Brianza	11/08/2026	Lista Alzheimer	118
+Lombardia	Monza Brianza	Ats Brianza	11/08/2026	Lista Alzheimer	0
+Lombardia	Monza Brianza	Ats Brianza	14/08/2026	Lista Alzheimer	0
+Lombardia	Monza Brianza	Ats Brianza	11/08/2026	Lista Alzheimer	0
+Lombardia	Lecco	Ats Brianza	12/08/2026	Lista Alzheimer	0
+Lombardia	Monza Brianza	Ats Brianza	13/07/2026	Lista Alzheimer	0
+Lombardia	Lecco	Ats Brianza	17/08/2026	Lista Alzheimer	0
+Lombardia	Monza Brianza	Ats Brianza	13/07/2026	Lista Alzheimer	12
+Lombardia	Lecco	Ats Brianza	13/08/2026	Lista Alzheimer	0
+Lombardia	Monza Brianza	Ats Brianza	12/08/2026	Lista Alzheimer	101
+Lombardia	Monza Brianza	Ats Brianza	19/08/2026	Lista Alzheimer	70
+Lombardia	Monza Brianza	Ats Brianza	24/07/2026	Lista Alzheimer	0
+Lombardia	Monza Brianza	Ats Brianza	11/08/2026	Lista Alzheimer	3
+Lombardia	Lecco	Ats Brianza	13/07/2026	Lista Alzheimer	305
+Lombardia	Monza Brianza	Ats Brianza	14/07/2026	Lista Alzheimer	0
+Lombardia	Monza Brianza	Ats Brianza	13/07/2026	Lista Alzheimer	0
+Lombardia	Monza Brianza	Ats Brianza	12/08/2026	Lista Alzheimer	87
+Lombardia	Monza Brianza	Ats Brianza	11/08/2026	Lista Alzheimer	0
+Piemonte	Torino	Asl Torino 5	31/05/2026	Differibile	335
+Piemonte	Torino	Asl Torino 5	31/05/2026	Non urgente	53
+Piemonte	Torino	Asl Torino 5	31/05/2026	Urgente	70
+Liguria	Savona	Asl 2 Savonese	29/07/2026	Totale	1543
+Lombardia	Pavia	Ats Pavia	27/01/2026	Totale	63
+Lombardia	Pavia	Ats Pavia	18/03/2026	Totale	90
+Lombardia	Pavia	Ats Pavia	14/04/2025	Totale	6
+Lombardia	Pavia	Ats Pavia	04/08/2026	Totale	11
+Lombardia	Pavia	Ats Pavia	22/05/2025	Totale	104
+Lombardia	Pavia	Ats Pavia	08/07/2026	Totale	30
+Lombardia	Pavia	Ats Pavia	17/07/2026	Totale	28
+Lombardia	Pavia	Ats Pavia	16/04/2025	Totale	3
+Lombardia	Pavia	Ats Pavia	24/04/2026	Totale	40
+Lombardia	Pavia	Ats Pavia	21/01/2026	Totale	35
+Lombardia	Pavia	Ats Pavia	15/01/2026	Totale	90
+Lombardia	Pavia	Ats Pavia	16/01/2026	Totale	19
+Lombardia	Pavia	Ats Pavia	24/07/2026	Totale	165
+Lombardia	Pavia	Ats Pavia	23/06/2026	Totale	22
+Lombardia	Pavia	Ats Pavia	28/01/2026	Totale	15
+Lombardia	Pavia	Ats Pavia	13/08/2026	Totale	227
+Lombardia	Pavia	Ats Pavia	17/06/2026	Totale	3
+Lombardia	Pavia	Ats Pavia	16/01/2026	Totale	34
+Lombardia	Pavia	Ats Pavia	18/03/2026	Totale	23
+Lombardia	Pavia	Ats Pavia	11/08/2026	Totale	27
+Lombardia	Pavia	Ats Pavia	16/06/2026	Totale	464
+Lombardia	Pavia	Ats Pavia	05/08/2026	Totale	66
+Lombardia	Pavia	Ats Pavia	10/06/2026	Totale	20
+Lombardia	Pavia	Ats Pavia	22/07/2026	Totale	38
+Lombardia	Pavia	Ats Pavia	16/06/2026	Totale	378
+Lombardia	Pavia	Ats Pavia	06/08/2026	Totale	340
+Lombardia	Pavia	Ats Pavia	19/05/2026	Totale	63
+Lombardia	Pavia	Ats Pavia	19/01/2026	Totale	217
+Lombardia	Pavia	Ats Pavia	01/04/2026	Totale	88
+Lombardia	Pavia	Ats Pavia	29/07/2025	Totale	20
+Lombardia	Pavia	Ats Pavia	01/09/2025	Totale	10
+Lombardia	Pavia	Ats Pavia	17/08/2026	Totale	1188
+Lombardia	Pavia	Ats Pavia	14/05/2026	Totale	5
+Lombardia	Pavia	Ats Pavia	15/01/2026	Totale	1
+Lombardia	Pavia	Ats Pavia	27/01/2026	Totale	167
+Lombardia	Pavia	Ats Pavia	16/01/2026	Totale	17
+Lombardia	Pavia	Ats Pavia	18/02/2026	Totale	3
+Lombardia	Pavia	Ats Pavia	15/01/2026	Totale	14
+Lombardia	Pavia	Ats Pavia	30/06/2026	Totale	40
+Lombardia	Pavia	Ats Pavia	19/08/2026	Totale	0
+Lombardia	Pavia	Ats Pavia	07/08/2026	Totale	201
+Lombardia	Pavia	Ats Pavia	04/08/2025	Totale	130
+Lombardia	Pavia	Ats Pavia	15/07/2026	Totale	122
+Lombardia	Pavia	Ats Pavia	14/08/2026	Totale	90
+Lombardia	Pavia	Ats Pavia	13/05/2026	Totale	172
+Lombardia	Pavia	Ats Pavia	30/04/2026	Totale	12
+Lombardia	Pavia	Ats Pavia	15/07/2026	Totale	75
+Lombardia	Pavia	Ats Pavia	16/09/2025	Totale	0
+Lombardia	Pavia	Ats Pavia	16/04/2026	Totale	8
+Lombardia	Pavia	Ats Pavia	21/07/2026	Totale	70
+Lombardia	Pavia	Ats Pavia	05/08/2026	Totale	15
+Lombardia	Pavia	Ats Pavia	30/04/2026	Totale	184
+Lombardia	Pavia	Ats Pavia	13/05/2026	Totale	68
+Lombardia	Pavia	Ats Pavia	12/08/2026	Totale	250
+Lombardia	Pavia	Ats Pavia	18/03/2026	Totale	80
+Lombardia	Pavia	Ats Pavia	18/03/2026	Totale	80
+Lombardia	Pavia	Ats Pavia	17/06/2026	Totale	1
+Lombardia	Pavia	Ats Pavia	14/08/2026	Totale	95
+Lombardia	Pavia	Ats Pavia	15/01/2026	Totale	57
+Lombardia	Pavia	Ats Pavia	17/07/2026	Totale	127
+Lombardia	Pavia	Ats Pavia	08/07/2026	Totale	9
+Lombardia	Pavia	Ats Pavia	04/03/2026	Totale	155
+Lombardia	Pavia	Ats Pavia	04/03/2026	Totale	150
+Lombardia	Pavia	Ats Pavia	28/07/2026	Totale	45
+Lombardia	Pavia	Ats Pavia	16/06/2026	Totale	434
+Lombardia	Pavia	Ats Pavia	13/02/2026	Totale	0
+Lombardia	Pavia	Ats Pavia	22/06/2026	Totale	0
+Lombardia	Pavia	Ats Pavia	07/05/2026	Totale	10
+Lombardia	Pavia	Ats Pavia	18/05/2026	Totale	0
+Lombardia	Pavia	Ats Pavia	17/08/2026	Totale	65
+Lombardia	Pavia	Ats Pavia	29/01/2026	Totale	8
+Lombardia	Pavia	Ats Pavia	15/01/2026	Totale	11
+Lombardia	Pavia	Ats Pavia	11/05/2026	Totale	11
+Lombardia	Pavia	Ats Pavia	19/08/2026	Totale	0
+Lombardia	Pavia	Ats Pavia	05/02/2026	Totale	101
+Lombardia	Pavia	Ats Pavia	30/07/2025	Totale	10
+Lombardia	Pavia	Ats Pavia	06/07/2026	Totale	0
+Lombardia	Pavia	Ats Pavia	13/04/2026	Totale	4
+Lombardia	Pavia	Ats Pavia	28/07/2025	Totale	48
+Lombardia	Pavia	Ats Pavia	08/07/2026	Totale	14
+Trentino Alto Adige	Trento	Asuit	01/06/2026	Totale	1008
+Veneto	Venezia	Ulss 3 Serenissima	26/05/2026	Totale	2102
+Veneto	Venezia	Ulss 4 Veneto Orientale	05/05/2026	Totale	410
+Lombardia	Brescia	Ats della Montagna	01/07/2026	Totale	126
+Lombardia	Brescia	Ats della Montagna	01/07/2026	Totale	118
+Lombardia	Brescia	Ats della Montagna	01/07/2026	Totale	222
+Lombardia	Brescia	Ats della Montagna	01/07/2026	Totale	118
+Lombardia	Brescia	Ats della Montagna	01/07/2026	Totale	152
+Lombardia	Brescia	Ats della Montagna	01/07/2026	Totale	208
+Lombardia	Brescia	Ats della Montagna	01/07/2026	Totale	356
+Lombardia	Brescia	Ats della Montagna	01/07/2026	Totale	232
+Lombardia	Brescia	Ats della Montagna	01/07/2026	Totale	150
+Lombardia	Brescia	Ats della Montagna	01/07/2026	Totale	72
+Lombardia	Brescia	Ats della Montagna	01/07/2026	Totale	346
+Lombardia	Brescia	Ats della Montagna	01/07/2026	Totale	352
+Lombardia	Brescia	Ats della Montagna	01/07/2026	Totale	368
+Lombardia	Brescia	Ats della Montagna	01/07/2026	Totale	82
+Lombardia	Sondrio	Ats della Montagna	01/07/2026	Totale	542
+Lombardia	Sondrio	Ats della Montagna	01/07/2026	Totale	623
+Lombardia	Sondrio	Ats della Montagna	01/07/2026	Totale	333
+Lombardia	Sondrio	Ats della Montagna	01/07/2026	Totale	496
+Lombardia	Sondrio	Ats della Montagna	01/07/2026	Totale	836
+Lombardia	Sondrio	Ats della Montagna	01/07/2026	Totale	89
+Lombardia	Sondrio	Ats della Montagna	01/07/2026	Totale	664
+Lombardia	Como	Ats della Montagna	01/07/2026	Totale	152
+Lombardia	Sondrio	Ats della Montagna	01/07/2026	Totale	444
+Lombardia	Sondrio	Ats della Montagna	01/07/2026	Totale	369
+Lombardia	Sondrio	Ats della Montagna	01/07/2026	Totale	913
+Lombardia	Sondrio	Ats della Montagna	01/07/2026	Totale	814
+Lombardia	Sondrio	Ats della Montagna	01/07/2026	Totale	556
+Lombardia	Como	Ats della Montagna	01/07/2026	Totale	113
+Lombardia	Sondrio	Ats della Montagna	01/07/2026	Totale	864
+Lombardia	Sondrio	Ats della Montagna	01/07/2026	Totale	375
+Lombardia	Sondrio	Ats della Montagna	01/07/2026	Totale	766
+Lombardia	Sondrio	Ats della Montagna	01/07/2026	Totale	664
+Lombardia	Sondrio	Ats della Montagna	01/07/2026	Totale	298
+Lombardia	Sondrio	Ats della Montagna	01/07/2026	Totale	681
+Lombardia	Sondrio	Ats della Montagna	01/07/2026	Totale	425
+Lombardia	Sondrio	Ats della Montagna	01/07/2026	Totale	690
+Lombardia	Sondrio	Ats della Montagna	01/07/2026	Totale	366
+Lombardia	Sondrio	Ats della Montagna	01/07/2026	Totale	794
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	1
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	1
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	1
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	3
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	3
+Lombardia	Como	Ats Insubria	30/06/2026	Alzheimer	3
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	4
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	4
+Lombardia	Varese	Ats Insubria	30/06/2026	Alzheimer	4
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	5
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	5
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	7
+Lombardia	Varese	Ats Insubria	30/06/2026	Alzheimer	8
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	9
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	9
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	11
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	12
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	12
+Lombardia	Varese	Ats Insubria	30/06/2026	Alzheimer	12
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	13
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	13
+Lombardia	Varese	Ats Insubria	30/06/2026	Alzheimer	13
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	16
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	16
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	16
+Lombardia	Como	Ats Insubria	30/06/2026	Alzheimer	18
+Lombardia	Como	Ats Insubria	30/06/2026	Alzheimer	19
+Lombardia	Como	Ats Insubria	30/06/2026	Alzheimer	19
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	21
+Lombardia	Como	Ats Insubria	30/06/2026	Alzheimer	21
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	24
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	25
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	26
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	27
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	27
+Lombardia	Varese	Ats Insubria	30/06/2026	Alzheimer	32
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	33
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	35
+Lombardia	Varese	Ats Insubria	30/06/2026	Alzheimer	35
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	37
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	37
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	37
+Lombardia	Varese	Ats Insubria	30/06/2026	Alzheimer	37
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	39
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	41
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	42
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	44
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	46
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	57
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	61
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	65
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	67
+Lombardia	Como	Ats Insubria	30/06/2026	Alzheimer	70
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	72
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	74
+Lombardia	Como	Ats Insubria	30/06/2026	Alzheimer	78
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	80
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	83
+Lombardia	Como	Ats Insubria	30/06/2026	Alzheimer	91
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	95
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	95
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	98
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	99
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	100
+Lombardia	Varese	Ats Insubria	30/06/2026	Alzheimer	101
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	103
+Lombardia	Como	Ats Insubria	30/06/2026	Alzheimer	106
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	111
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	115
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	119
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	124
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	125
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	127
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	129
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	130
+Lombardia	Varese	Ats Insubria	30/06/2026	Alzheimer	135
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	137
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	143
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	155
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	160
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	163
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	164
+Lombardia	Varese	Ats Insubria	30/06/2026	Alzheimer	174
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	177
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	199
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	206
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	206
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	207
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	209
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	210
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	211
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	222
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	229
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	249
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	258
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	283
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	289
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	397
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	406
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	482
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	587
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	656
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	682
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	697
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	738
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	767
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	1048
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	86
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	33
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	24
+Lombardia	Como	Ats Insubria	30/06/2026	Non autosufficienti	545
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	253
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	240
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	237
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	158
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	12
+Lombardia	Varese	Ats Insubria	30/06/2026	Non autosufficienti	3
+Lombardia	Varese	Ats Insubria	30/06/2026	Alzheimer	11
+Lombardia	Varese	Ats Insubria	30/06/2026	Alzheimer	13
+Lombardia	Varese	Ats Insubria	30/06/2026	Alzheimer	1
+Lombardia	Cremona	Ats Val Padana	14/08/2026	Totale	22
+Lombardia	Mantova	Ats Val Padana	11/08/2026	Totale	100
+Lombardia	Cremona	Ats Val Padana	29/07/2026	Totale	56
+Lombardia	Mantova	Ats Val Padana	29/07/2026	Totale	150
+Lombardia	Cremona	Ats Val Padana	13/08/2026	Totale	329
+Lombardia	Cremona	Ats Val Padana	26/03/2025	Totale	5
+Lombardia	Cremona	Ats Val Padana	11/07/2026	Totale	2
+Lombardia	Mantova	Ats Val Padana	23/07/2026	Totale	34
+Lombardia	Cremona	Ats Val Padana	29/07/2026	Totale	595
+Lombardia	Cremona	Ats Val Padana	29/07/2026	Totale	592
+Lombardia	Cremona	Ats Val Padana	01/08/2026	Totale	36
+Lombardia	Cremona	Ats Val Padana	14/08/2026	Totale	81
+Lombardia	Cremona	Ats Val Padana	03/08/2026	Totale	180
+Lombardia	Cremona	Ats Val Padana	28/10/2025	Totale	235
+Lombardia	Mantova	Ats Val Padana	10/08/2026	Totale	96
+Lombardia	Mantova	Ats Val Padana	05/08/2026	Totale	112
+Lombardia	Cremona	Ats Val Padana	12/05/2025	Totale	353
+Lombardia	Cremona	Ats Val Padana	05/08/2026	Totale	326
+Lombardia	Cremona	Ats Val Padana	19/06/2025	Totale	175
+Lombardia	Mantova	Ats Val Padana	09/06/2025	Totale	101
+Lombardia	Cremona	Ats Val Padana	05/05/2025	Totale	390
+Lombardia	Cremona	Ats Val Padana	17/07/2026	Totale	72
+Lombardia	Mantova	Ats Val Padana	03/07/2026	Totale	353
+Lombardia	Cremona	Ats Val Padana	10/05/2025	Totale	623
+Lombardia	Mantova	Ats Val Padana	23/07/2026	Totale	211
+Lombardia	Cremona	Ats Val Padana	11/11/2025	Totale	460
+Lombardia	Mantova	Ats Val Padana	24/06/2026	Totale	36
+Lombardia	Mantova	Ats Val Padana	14/08/2026	Totale	82
+Lombardia	Cremona	Ats Val Padana	26/03/2026	Totale	130
+Lombardia	Cremona	Ats Val Padana	29/07/2026	Totale	67
+Lombardia	Mantova	Ats Val Padana	31/01/2025	Totale	77
+Lombardia	Cremona	Ats Val Padana	17/06/2026	Totale	312
+Lombardia	Mantova	Ats Val Padana	01/07/2026	Totale	180
+Lombardia	Mantova	Ats Val Padana	30/06/2026	Totale	89
+Lombardia	Cremona	Ats Val Padana	05/02/2026	Totale	138
+Lombardia	Mantova	Ats Val Padana	14/07/2026	Totale	105
+Lombardia	Cremona	Ats Val Padana	01/08/2026	Totale	112
+Lombardia	Mantova	Ats Val Padana	20/08/2026	Totale	101
+Lombardia	Mantova	Ats Val Padana	09/07/2025	Totale	
+Lombardia	Mantova	Ats Val Padana	12/06/2025	Totale	183
+Lombardia	Mantova	Ats Val Padana	04/08/2026	Totale	75
+Lombardia	Cremona	Ats Val Padana	28/01/2026	Totale	425
+Lombardia	Mantova	Ats Val Padana	07/08/2026	Totale	38
+Lombardia	Cremona	Ats Val Padana	07/08/2025	Totale	25
+Lombardia	Mantova	Ats Val Padana	19/08/2026	Totale	205
+Lombardia	Mantova	Ats Val Padana	07/08/2026	Totale	11
+Lombardia	Cremona	Ats Val Padana	07/05/2025	Totale	209
+Lombardia	Mantova	Ats Val Padana	07/07/2026	Totale	73
+Lombardia	Cremona	Ats Val Padana	10/08/2026	Totale	113
+Lombardia	Cremona	Ats Val Padana	10/08/2026	Totale	113
+Lombardia	Mantova	Ats Val Padana	13/08/2026	Totale	86
+Lombardia	Mantova	Ats Val Padana	07/08/2026	Totale	
+Lombardia	Mantova	Ats Val Padana	17/08/2026	Totale	15
+Lombardia	Mantova	Ats Val Padana	21/05/2026	Totale	30
+Lombardia	Mantova	Ats Val Padana	31/01/2025	Totale	14
+Lombardia	Mantova	Ats Val Padana	17/08/2026	Totale	9
+Lombardia	Mantova	Ats Val Padana	12/06/2026	Totale	68
+Lombardia	Mantova	Ats Val Padana	02/01/2026	Totale	52
+Lombardia	Mantova	Ats Val Padana	19/08/2026	Totale	124
+Lombardia	Mantova	Ats Val Padana	21/07/2026	Totale	69
+Lombardia	Mantova	Ats Val Padana	17/07/2026	Totale	5
+Lombardia	Cremona	Ats Val Padana	06/08/2026	Totale	118
+Lombardia	Mantova	Ats Val Padana	07/08/2026	Totale	17
+Lombardia	Mantova	Ats Val Padana	20/08/2026	Totale	244
+Lombardia	Cremona	Ats Val Padana	17/06/2025	Totale	292
+Lombardia	Mantova	Ats Val Padana	29/07/2026	Totale	105
+Lombardia	Mantova	Ats Val Padana	26/02/2026	Totale	30
+Lombardia	Mantova	Ats Val Padana	17/07/2026	Totale	92
+Lombardia	Mantova	Ats Val Padana	02/07/2025	Totale	127
+Lombardia	Mantova	Ats Val Padana	14/11/2025	Totale	283
+Lombardia	Mantova	Ats Val Padana	27/05/2025	Totale	393
+Lombardia	Mantova	Ats Val Padana	27/05/2025	Totale	393
+Lombardia	Cremona	Ats Val Padana	10/08/2026	Totale	106
+Lombardia	Mantova	Ats Val Padana	31/05/2024	Totale	20
+Lombardia	Mantova	Ats Val Padana	19/08/2026	Totale	164
+Lombardia	Mantova	Ats Val Padana	18/03/2026	Totale	25
+Lombardia	Mantova	Ats Val Padana	06/02/2026	Totale	20
+Lombardia	Mantova	Ats Val Padana	25/05/2026	Totale	213
+Lombardia	Cremona	Ats Val Padana	23/02/2026	Totale	40
+Lombardia	Cremona	Ats Val Padana	10/08/2026	Totale	113
+Lombardia	Mantova	Ats Val Padana	01/05/2026	Totale	168
+Lombardia	Mantova	Ats Val Padana	18/08/2026	Totale	322
+Lombardia	Mantova	Ats Val Padana	13/08/2026	Totale	134
+Lombardia	Mantova	Ats Val Padana	11/07/2026	Totale	110
+Lombardia	Mantova	Ats Val Padana	06/02/2026	Totale	80
+Lombardia	Mantova	Ats Val Padana	06/07/2026	Totale	92
+Lombardia	Cremona	Ats Val Padana	26/05/2025	Totale	13
+Lombardia	Cremona	Ats Val Padana	05/08/2026	Totale	190
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	320
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	156
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	12
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	2
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	9
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	130
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	175
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	21
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	235
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	7
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	0
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	16
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	5
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	8
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	5
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	47
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	14
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	7
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	65
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	7
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	8
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	13
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	32
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	37
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	19
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	5
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	27
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	10
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	8
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	13
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	299
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	205
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	0
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	66
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	48
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	0
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	2
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	0
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	15
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	4
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	8
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	262
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	119
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	84
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	22
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	12
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	13
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	248
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	9
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	9
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	121
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	77
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	56
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	24
+Lombardia	Lodi	Ats di Milano Città metropolitana	20/08/2026	Totale	192
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	19
+Lombardia	Lodi	Ats di Milano Città metropolitana	20/08/2026	Totale	1369
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	86
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	80
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	2
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	3
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	35
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	0
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	0
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	244
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	240
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	235
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	441
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	853
+Lombardia	Lodi	Ats di Milano Città metropolitana	20/08/2026	Totale	378
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	567
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	30
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	133
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	143
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	178
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	426
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	163
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	2
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	6
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	4
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	0
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	0
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	122
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	496
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	122
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	2
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	63
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	10
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	88
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	85
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	184
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	88
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	125
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	226
+Lombardia	Lodi	Ats di Milano Città metropolitana	20/08/2026	Totale	1064
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	206
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	7
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	91
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	292
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	132
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	444
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	0
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	965
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	91
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	58
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	444
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	193
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	131
+Lombardia	Lodi	Ats di Milano Città metropolitana	20/08/2026	Totale	708
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	437
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	958
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	21
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	987
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	136
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	6
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	43
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	166
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	307
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	13
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	158
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	27
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	868
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	131
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	219
+Lombardia	Lodi	Ats di Milano Città metropolitana	20/08/2026	Totale	622
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	75
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	17
+Lombardia	Lodi	Ats di Milano Città metropolitana	20/08/2026	Totale	575
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	37
+Lombardia	Lodi	Ats di Milano Città metropolitana	20/08/2026	Totale	912
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	655
+Lombardia	Lodi	Ats di Milano Città metropolitana	20/08/2026	Totale	1016
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	157
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	45
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	342
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	288
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	348
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	117
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	182
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	133
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	348
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	16
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	26
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	47
+Lombardia	Lodi	Ats di Milano Città metropolitana	20/08/2026	Totale	640
+Lombardia	Lodi	Ats di Milano Città metropolitana	20/08/2026	Totale	1045
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	7
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	10
+Lombardia	Lodi	Ats di Milano Città metropolitana	20/08/2026	Totale	1237
+Lombardia	Lodi	Ats di Milano Città metropolitana	20/08/2026	Totale	1089
+Lombardia	Lodi	Ats di Milano Città metropolitana	20/08/2026	Totale	577
+Lombardia	Lodi	Ats di Milano Città metropolitana	20/08/2026	Totale	577
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	230
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	140
+Lombardia	Milano	Ats di Milano Città metropolitana	20/08/2026	Totale	21
+Lombardia	Lodi	Ats di Milano Città metropolitana	20/08/2026	Totale	837
+Veneto	Padova	Ulss 6 Euganea	31/10/2025	Totale	1282
+Veneto	Vicenza	Ulss 7 Pedemontana	26/05/2026	Distretto 1	365
+Veneto	Vicenza	Ulss 7 Pedemontana	26/05/2026	Distretto 2	401
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	Residenza Ad Maiores	0
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	Residenza Carducci	0
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	Asp Itis	200
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	Residenza Elite	0
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	Residenza Nova Primula	0
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	Residenza Anni Sereni in Viale	0
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	Residenza Casa Verde	0
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	Casa di Riposo San Domenico	81
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	Casa di Riposo Comunale di Muggia	94
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	Centro per L'Anziano - Comune di Trieste	118
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	Residenza La Meridiana	0
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	Casa Emmaus	134
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	Residenza Fiori del Carso	0
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	"Casa ""Livia Ieralla"" Onlus"	106
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	Residenza Futura	0
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	Residenza Hotel Fernetti	0
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	Residenza Insieme a Noi	0
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	Residenza Le Magnolie	121
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	Residenza Nonna Adriana	0
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	Residenza Arcobaleno	0
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	Residenza E.Gregoretti - Comune di Trieste	121
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	Residenza Relax	0
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	Residenza Villa Sissi	0
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	Residenza Senilita'	0
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	Residenza Villa Iris	1
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	Residenza Villa Verde	100
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	Residenza La Perla	0
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	Residenza La Fenice	0
+Friuli Venezia Giulia	Trieste	Asugi	09/06/2026	"Residenza ""F.lli Stuparich"""	63
+Friuli Venezia Giulia	Gorizia	Asugi	09/06/2026	Fider Srl	10
+Friuli Venezia Giulia	Gorizia	Asugi	09/06/2026	Sereni Orizzonti	0
+Friuli Venezia Giulia	Gorizia	Asugi	09/06/2026	Zaffiro	2
+Friuli Venezia Giulia	Gorizia	Asugi	09/06/2026	Rosa Mistica	116
+Friuli Venezia Giulia	Gorizia	Asugi	09/06/2026	Villa San Giusto	107
+Friuli Venezia Giulia	Gorizia	Asugi	09/06/2026	Casa Albergo	206
+Friuli Venezia Giulia	Gorizia	Asugi	09/06/2026	Casa Serena	13
+Friuli Venezia Giulia	Gorizia	Asugi	09/06/2026	Corradini	64
+Friuli Venezia Giulia	Gorizia	Asugi	09/06/2026	Argo - Centro Alzheimer	21
+Friuli Venezia Giulia	Gorizia	Asugi	09/06/2026	Angelo Culot	55
+Friuli Venezia Giulia	Gorizia	Asugi	09/06/2026	La Cjase	10
+Friuli Venezia Giulia	Gorizia	Asugi	09/06/2026	San Salvatore	4
+Emilia Romagna	Piacenza	Ausl Piacenza	31/12/2025	Totale	784
+Emilia Romagna	Parma	Ausl Parma	12/06/2026	Parma	721
+Emilia Romagna	Parma	Ausl Parma	12/06/2026	Fidenza	275
+Emilia Romagna	Parma	Ausl Parma	12/06/2026	Valli Taro e Ceno	180
+Emilia Romagna	Parma	Ausl Parma	12/06/2026	Sud Est	190
+Emilia Romagna	Reggio Emilia	Ausl Reggio Emilia	31/12/2025	Totale	1636
+Emilia Romagna	Modena	Ausl Modena	31/12/2025	Totale	1888
+Emilia Romagna	Bologna	Ausl Bologna	31/12/2025	Totale	1954
+Toscana	Firenze	Azienda Usl Toscana Centro	30/04/2026	Totale	592
+Toscana	Prato	Azienda Usl Toscana Centro	30/04/2026	Totale	213
+Toscana	Pistoia	Azienda Usl Toscana Centro	30/04/2026	Totale	113
+Toscana	Livorno	Azienda Usl Toscana Nord Ovest	31/03/2026	Totale	85
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	31/03/2026	Totale	143
+Toscana	Massa Carrara	Azienda Usl Toscana Nord Ovest	31/03/2026	Totale	38
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	31/03/2026	Totale	193
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	30/06/2026	Totale	212
+Toscana	Grosseto	Azienda Usl Toscana Sud Est	30/06/2026	Totale	48
+Toscana	Siena	Azienda Usl Toscana Sud Est	30/06/2026	Totale	217
+Marche	Pesaro Urbino	Ast Pesaro Urbino	30/06/2026	Totale	13
+Marche	Ancona	Ast Ancona	15/06/2026	Cure intermedie	44
+Marche	Ancona	Ast Ancona	15/06/2026	Residenza Sanitaria Assistenziale per persone con demenze	377
+Marche	Ancona	Ast Ancona	15/06/2026	Residenza Sanitaria Assistenziale per persone non autosufficienti	300
+Marche	Ancona	Ast Ancona	15/06/2026	Residenza Protetta per persone con demenze	156
+Marche	Ancona	Ast Ancona	15/06/2026	Residenza Protetta per Anziani non autosufficienti	1685
+Marche	Macerata	Ast Macerata	05/06/2026	Privata convenzionata	6
+Marche	Macerata	Ast Macerata	05/06/2026	Privata convenzionata	3
+Marche	Macerata	Ast Macerata	05/06/2026	Struttura interna con appalto	6
+Marche	Macerata	Ast Macerata	05/06/2026	Struttura interna	5
+Marche	Fermo	Ast Fermo	15/07/2026	Rsa	14
+Veneto	Verona	Ulss 9 Scaligera	07/07/2026	Totale	1744
+Emilia Romagna	Ravenna	Ausl Romagna	31/12/2025	Ravenna	598
+Emilia Romagna	Ravenna	Ausl Romagna	31/12/2025	Faenza	491
+Emilia Romagna	Ravenna	Ausl Romagna	31/12/2025	Lugo	569
+Emilia Romagna	Forlì Cesena	Ausl Romagna	31/12/2025	Forlì	722
+Emilia Romagna	Forlì Cesena	Ausl Romagna	31/12/2025	Cesena e Valle del Savio	350
+Emilia Romagna	Forlì Cesena	Ausl Romagna	31/12/2025	Rubicone	346
+Emilia Romagna	Rimini	Ausl Romagna	31/12/2025	Rimini	701
+Emilia Romagna	Rimini	Ausl Romagna	31/12/2025	Riccione	186
+Umbria	Perugia	Usl Umbria 1	31/05/2026	Distretto Alto Tevere	131
+Umbria	Perugia	Usl Umbria 1	31/05/2026	Distretto Media valle del Tevere	75
+Umbria	Perugia	Usl Umbria 1	31/05/2026	Distretto Alto Chiascio	112
+Umbria	Perugia	Usl Umbria 1	31/05/2026	Distretto Perugino	215
+Umbria	Perugia	Usl Umbria 1	31/05/2026	Distretto Assisano	71
+Lazio	Roma	Asl Roma 3	18/06/2026	mantenimento A	155
+Lazio	Roma	Asl Roma 3	18/06/2026	R1	17
+Lazio	Roma	Asl Roma 3	18/06/2026	mantenimento B	62
+Lazio	Roma	Asl Roma 3	18/06/2026	mantenimento A	101
+Lazio	Roma	Asl Roma 3	18/06/2026	mantenimento B	37
+Lazio	Roma	Asl Roma 3	18/06/2026	mantenimento A	284
+Lazio	Roma	Asl Roma 3	18/06/2026	semiresidenziale	0
+Lazio	Roma	Asl Roma 3	18/06/2026	mantenimento A	142
+Lazio	Roma	Asl Roma 3	18/06/2026	mantenimento B	54
+Lazio	Roma	Asl Roma 3	18/06/2026	mantenimento A	116
+Lazio	Roma	Asl Roma 3	18/06/2026	mantenimento B	49
+Lazio	Roma	Asl Roma 3	18/06/2026	mantenimento A	147
+Lazio	Roma	Asl Roma 3	18/06/2026	mantenimento B	49
+Lazio	Roma	Asl Roma 3	18/06/2026	mantenimento A	233
+Lazio	Roma	Asl Roma 3	18/06/2026	mantenimento B	96
+Lazio	Roma	Asl Roma 3	18/06/2026	mantenimento A	148
+Lazio	Roma	Asl Roma 3	18/06/2026	estensiva	103
+Lazio	Roma	Asl Roma 3	18/06/2026	R1	14
+Lazio	Roma	Asl Roma 4	22/06/2026	Estensivo per non autosufficienti	6
+Lazio	Roma	Asl Roma 4	22/06/2026	Estensivo per non autosufficienti	0
+Lazio	Roma	Asl Roma 4	22/06/2026	Estensivo per non autosufficienti	1
+Lazio	Roma	Asl Roma 4	22/06/2026	Mantenimento Alto	56
+Lazio	Roma	Asl Roma 4	22/06/2026	Mantenimento Alto	63
+Lazio	Roma	Asl Roma 4	22/06/2026	Mantenimento Alto	91
+Lazio	Roma	Asl Roma 4	22/06/2026	Mantenimento Alto	117
+Lazio	Roma	Asl Roma 4	22/06/2026	Mantenimento Alto	45
+Lazio	Roma	Asl Roma 4	22/06/2026	Mantenimento Alto	116
+Lazio	Roma	Asl Roma 4	22/06/2026	Mantenimento Alto	93
+Lazio	Roma	Asl Roma 4	22/06/2026	Mantenimento Alto	112
+Lazio	Roma	Asl Roma 4	22/06/2026	Mantenimento Alto	49
+Lazio	Roma	Asl Roma 4	22/06/2026	Mantenimento Alto	83
+Lazio	Roma	Asl Roma 4	22/06/2026	Mantenimento Alto	71
+Lazio	Roma	Asl Roma 4	22/06/2026	Mantenimento Basso	16
+Lazio	Roma	Asl Roma 4	22/06/2026	Mantenimento Basso	50
+Lazio	Roma	Asl Roma 4	22/06/2026	Mantenimento Basso	79
+Lazio	Roma	Asl Roma 4	22/06/2026	Mantenimento Basso	74
+Lazio	Roma	Asl Roma 4	22/06/2026	Mantenimento Basso	47
+Lazio	Roma	Asl Roma 4	22/06/2026	Mantenimento Basso	40
+Lazio	Roma	Asl Roma 5	25/05/2026	RSA-Geriatria 1 (padiglione B-C4) / RSA-Geriatria 3 (padiglione I)	23
+Lazio	Roma	Asl Roma 5	25/05/2026	RSA Intensivi	17
+Lazio	Roma	Asl Roma 5	25/05/2026	RSA Estensivi Residenziali	61
+Lazio	Roma	Asl Roma 5	25/05/2026	Mantenimento Alto	8
+Lazio	Roma	Asl Roma 5	25/05/2026	Mantenimento Basso	2
+Lazio	Roma	Asl Roma 5	25/05/2026	RSA Residenziale Estensivo	61
+Lazio	Roma	Asl Roma 5	25/05/2026	Mantenimento Alto	10
+Lazio	Roma	Asl Roma 5	25/05/2026	Mantenimento Alto	1
+Lazio	Roma	Asl Roma 5	25/05/2026	Mantenimento Basso	3
+Lazio	Roma	Asl Roma 5	25/05/2026	Mantenimento Alto	2
+Lazio	Roma	Asl Roma 5	25/05/2026	Mantenimento Alto	3
+Lazio	Roma	Asl Roma 5	25/05/2026	Mantenimento Alto	11
+Lazio	Roma	Asl Roma 5	25/05/2026	Mantenimento Basso	0
+Lazio	Roma	Asl Roma 5	25/05/2026	Mantenimento Alto	12
+Lazio	Roma	Asl Roma 5	25/05/2026	Mantenimento Basso	4
+Lazio	Roma	Asl Roma 5	25/05/2026	RSA Residenziale Estensivo	59
+Lazio	Roma	Asl Roma 5	25/05/2026	Mantenimento Alto	9
+Lazio	Roma	Asl Roma 5	25/05/2026	Mantenimento Alto	24
+Lazio	Roma	Asl Roma 5	25/05/2026	RSA Residenziale Estensivo	59
+Lazio	Roma	Asl Roma 5	25/05/2026	RSA Mantenimento Basso	5
+Lazio	Roma	Asl Roma 5	25/05/2026	RSA Mantenimento Alto	1
+Lazio	Roma	Asl Roma 5	25/05/2026	RSA Mantenimento Basso	6
+Lazio	Roma	Asl Roma 6	31/05/2026	Mantenimento alto (Mant. A.)	62
+Lazio	Roma	Asl Roma 6	31/05/2026	Mantenimento basso (Mant. B.)	15
+Lazio	Roma	Asl Roma 6	31/05/2026	Mantenimento alto (Mant. A.)	32
+Lazio	Roma	Asl Roma 6	31/05/2026	Mantenimento alto (Mant. A.)	38
+Lazio	Roma	Asl Roma 6	31/05/2026	Mantenimento basso (Mant. B.)	18
+Lazio	Roma	Asl Roma 6	31/05/2026	Mantenimento alto (Mant. A.)	88
+Lazio	Roma	Asl Roma 6	31/05/2026	Residenziale estensivo per disturbi cognitivo comportamentali gravi	126
+Lazio	Roma	Asl Roma 6	31/05/2026	Mantenimento alto (Mant. A.)	115
+Lazio	Roma	Asl Roma 6	31/05/2026	Residenziale estensivo per non autosufficienti	75
+Lazio	Roma	Asl Roma 6	31/05/2026	Mantenimento alto (Mant. A.)	44
+Lazio	Roma	Asl Roma 6	31/05/2026	Mantenimento alto (Mant. A.)	20
+Lazio	Roma	Asl Roma 6	31/05/2026	Mantenimento basso (Mant. B.)	25
+Lazio	Roma	Asl Roma 6	31/05/2026	Mantenimento alto (Mant. A.)	32
+Lazio	Roma	Asl Roma 6	31/05/2026	Mantenimento alto (Mant. A.)	198
+Lazio	Roma	Asl Roma 6	31/05/2026	Mantenimento alto (Mant. A.)	123
+Lazio	Roma	Asl Roma 6	31/05/2026	Mantenimento alto (Mant. A.)	127
+Lazio	Roma	Asl Roma 6	31/05/2026	Residenziale estensivo per non autosufficienti	26
+Lazio	Roma	Asl Roma 6	31/05/2026	Mantenimento alto (Mant. A.)	127
+Lazio	Roma	Asl Roma 6	31/05/2026	Mantenimento basso (Mant. B.)	14
+Lazio	Roma	Asl Roma 6	31/05/2026	Mantenimento alto (Mant. A.)	130
+Lazio	Roma	Asl Roma 6	31/05/2026	Mantenimento basso (Mant. B.)	56
+Emilia Romagna	Bologna	Ausl Imola	31/12/2025	CRA	271
+Marche	Ascoli Piceno	Ast Ascoli Piceno	22/05/2026	Residenza Sanitaria Assistenziale per persone non autosufficienti - Distretto AP	39
+Marche	Ascoli Piceno	Ast Ascoli Piceno	22/05/2026	Residenza Sanitaria Assistenziale per persone non autosufficienti - Distretto SBT	14
+Umbria	Perugia	Usl Umbria 2	08/06/2026	Foligno	15
+Umbria	Terni	Usl Umbria 2	08/06/2026	Cascia	2
+Umbria	Terni	Usl Umbria 2	08/06/2026	Terni	18
+Emilia Romagna	Ferrara	Ausl Ferrara	31/12/2025	CRA	916
+Molise	Campobasso	Asrem	26/05/2026	Rsa	20
+Molise	Campobasso	Asrem	23/06/2026	Rsa Livello R2	4
+Molise	Campobasso	Asrem	23/06/2026	Rsa Livello R3	13
+Molise	Isernia	Asrem	01/06/2026	Rsa Livello R3	5
+Lazio	Rieti	Asl Rieti	08/06/2026	Estensivo disturbi cognitivo comportamentali gravi	62
+Lazio	Rieti	Asl Rieti	08/06/2026	Mantenimento alto (Mant. A)	39
+Lazio	Rieti	Asl Rieti	08/06/2026	Mantenimento basso (Mant. B)	20
+Lazio	Rieti	Asl Rieti	08/06/2026	Intensivo	19
+Lazio	Rieti	Asl Rieti	08/06/2026	Estensivo non autosufficienti	106
+Lazio	Rieti	Asl Rieti	08/06/2026	Mantenimento alto (Mant. A)	41
+Lazio	Rieti	Asl Rieti	08/06/2026	Mantenimento basso (Mant. B)	18
+Lazio	Rieti	Asl Rieti	08/06/2026	Estensivo non autosufficienti	97
+Lazio	Rieti	Asl Rieti	08/06/2026	Mantenimento alto (Mant. A)	13
+Lazio	Rieti	Asl Rieti	08/06/2026	Mantenimento basso (Mant. B)	3
+Lazio	Rieti	Asl Rieti	08/06/2026	Mantenimento alto (Mant. A)	7
+Lazio	Rieti	Asl Rieti	08/06/2026	Mantenimento basso (Mant. B)	4
+Lazio	Rieti	Asl Rieti	08/06/2026	Mantenimento basso (Mant. B)	4
+Lazio	Viterbo	Asl Viterbo	11/06/2026	Rsa Mantenimento Alto	165
+Lazio	Viterbo	Asl Viterbo	11/06/2026	RSA Mantenimento Basso	75
+Lazio	Viterbo	Asl Viterbo	11/06/2026	Rsa Estensivo	96
+Lazio	Viterbo	Asl Viterbo	11/06/2026	Rsa Estesnivo DCCG	74
+Lazio	Viterbo	Asl Viterbo	11/06/2026	RI	18
+Campania	Napoli	Asl Napoli 1 Centro	29/05/2026	Rsa	0
+Campania	Salerno	Asl Salerno	10/06/2026	Rsa	63
+Puglia	Bari	Asl Bari	15/06/2026	mantenimento tipo A	868
+Puglia	Bari	Asl Bari	15/06/2026	mantenimento tipo B	320
+Puglia	Bari	Asl Bari	15/06/2026	estensiva anziani tipo A	269
+Puglia	Bari	Asl Bari	15/06/2026	mantenimento ex art. 66 RR 4/2007	150
+Puglia	Bari	Asl Bari	15/06/2026	mantenimento ex RR 3/2005	38
+Puglia	Bari	Asl Bari	15/06/2026	estensiva demenze tipo B	13
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	26/05/2026	Mantenimento Tipo A	254
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	26/05/2026	Mantenimento Tipo B	139
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	26/05/2026	Estensiva Tipo A	5
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	26/05/2026	Estensiva Tipo B	3
+Puglia	Brindisi	Asl Brindisi	22/05/2026	Rsa mantenimento anziani Tipo A	294
+Puglia	Brindisi	Asl Brindisi	22/05/2026	Rsa mantenimento demenze Tipo B	128
+Puglia	Foggia	Asl Foggia	19/06/2026	estensiva anziani tipo A	0
+Puglia	Foggia	Asl Foggia	19/06/2026	estensiva demenze tipo B	13
+Puglia	Foggia	Asl Foggia	19/06/2026	mantenimento tipo A	267
+Puglia	Foggia	Asl Foggia	19/06/2026	mantenimento tipo B	76
+Puglia	Foggia	Asl Foggia	19/06/2026	mantenimento ex art. 66 RR 4/2007	13
+Basilicata	Potenza	Asl Potenza	14/07/2026	//	11
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	5
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	4
+Puglia	Lecce	Asl Lecce	03/06/2026	Estensiva anziani	0
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	6
+Puglia	Lecce	Asl Lecce	03/06/2026	Estensiva anziani	0
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	9
+Puglia	Lecce	Asl Lecce	03/06/2026	Estensiva demenze	2
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	32
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento Demenze	30
+Puglia	Lecce	Asl Lecce	03/06/2026	Estensiva anziani	0
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	7
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento Demenze	9
+Puglia	Lecce	Asl Lecce	03/06/2026	Estensiva demenze	0
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	13
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento Demenze	4
+Puglia	Lecce	Asl Lecce	03/06/2026	Rssa	1
+Puglia	Lecce	Asl Lecce	03/06/2026	Estensiva anziani	0
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	11
+Puglia	Lecce	Asl Lecce	03/06/2026	Estensiva anziani	0
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	7
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento Demenze	4
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	18
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento Demenze	6
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	17
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento Demenze	3
+Puglia	Lecce	Asl Lecce	03/06/2026	Estensiva anziani	0
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	43
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento Demenze	5
+Puglia	Lecce	Asl Lecce	03/06/2026	Estensiva anziani	0
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	7
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento Demenze	5
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	13
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento Demenze	13
+Puglia	Lecce	Asl Lecce	03/06/2026	Estensiva anziani	0
+Puglia	Lecce	Asl Lecce	03/06/2026	Estensiva demenze	1
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	59
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	78
+Puglia	Lecce	Asl Lecce	03/06/2026	Estensiva anziani	0
+Puglia	Lecce	Asl Lecce	03/06/2026	RSA	7
+Puglia	Lecce	Asl Lecce	03/06/2026	RSA alzheimer	1
+Puglia	Lecce	Asl Lecce	03/06/2026	RSA	7
+Puglia	Lecce	Asl Lecce	03/06/2026	RSA alzheimer	1
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	31
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento Demenze	13
+Puglia	Lecce	Asl Lecce	03/06/2026	Estensiva anziani	0
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	29
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	45
+Puglia	Lecce	Asl Lecce	03/06/2026	Estensiva anziani	0
+Puglia	Lecce	Asl Lecce	03/06/2026	RSA	24
+Puglia	Lecce	Asl Lecce	03/06/2026	Rssa	48
+Puglia	Lecce	Asl Lecce	03/06/2026	Rssa	16
+Puglia	Lecce	Asl Lecce	03/06/2026	Rssa	19
+Puglia	Lecce	Asl Lecce	03/06/2026	Estensiva anziani	0
+Puglia	Lecce	Asl Lecce	03/06/2026	Estensiva demenze	0
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	67
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento Demenze	22
+Puglia	Lecce	Asl Lecce	03/06/2026	Estensiva demenze	1
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	14
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	5
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento Demenze	0
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	4
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento Demenze	20
+Puglia	Lecce	Asl Lecce	03/06/2026	Estensiva anziani	0
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	11
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento Demenze	10
+Puglia	Lecce	Asl Lecce	03/06/2026	Estensiva anziani	0
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	2
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	17
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento Demenze	9
+Puglia	Lecce	Asl Lecce	03/06/2026	Estensiva anziani	0
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	42
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento Demenze	27
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	31
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento Demenze	7
+Puglia	Lecce	Asl Lecce	03/06/2026	Estensiva demenze	0
+Puglia	Lecce	Asl Lecce	03/06/2026	Estensiva anziani	0
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	13
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	6
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento Demenze	1
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	14
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento Demenze	14
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	13
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	2
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento Demenze	15
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	8
+Puglia	Lecce	Asl Lecce	03/06/2026	Mantenimento anziani	2
+Basilicata	Matera	Asl Matera	19/07/2026	Setting A	37
+Basilicata	Matera	Asl Matera	19/07/2026	Setting B	26
+Calabria	Catanzaro	Asp Catanzaro	04/06/2026	RSA/A	62
+Calabria	Catanzaro	Asp Catanzaro	04/06/2026	RSA/D	13
+Calabria	Crotone	Asp Crotone	10/06/2026	RSAR2 Anziani	38
+Calabria	Crotone	Asp Crotone	10/06/2026	RSA Disabili	9
+Sicilia	Agrigento	Asp Agrigento	//	//	0
+Sicilia	Caltanissetta	Asp Caltanissetta	18/06/2026	RSA	19
+Sicilia	Messina	Asp Messina	10/03/2026	RSA	0
+Sicilia	Trapani	Asp Trapani	22/05/2026	RSA	8
+Sardegna	Nuoro	Asl Nuoro	//	RSA	4
+Sardegna	Oristano	Asl Oristano	13/05/2026	RSA	23
+Sardegna	Ogliastra	Asl Ogliastra	19/06/2026	RSA	0
