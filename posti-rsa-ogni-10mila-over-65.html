@@ -31,7 +31,7 @@
   .axis text { font-family: inherit; font-size: 11px; fill: #444; }
   .axis .domain { display: none; }
   .axis .tick line { stroke: #e3e3e3; }
-  .label { font-size: 12px; fill: #000; }
+  .label { fill: #000; }
   .label.hl { font-weight: 700; fill: #e71e25; }
   .bar { cursor: pointer; }
   .notes { font-size: 10.5px; line-height: 1.35; color: #333; margin-top: 6px; }
@@ -127,7 +127,16 @@ function draw(animate) {
   const W = chartEl.clientWidth, H = chartEl.clientHeight;
   svg.attr('viewBox', `0 0 ${W} ${H}`);
   const data = rows();
-  const left = W < 450 ? 112 : 150, m = {top: 22, right: 14, bottom: 4, left};
+  const fs = W < 450 ? 11 : 12;
+  const probe = svg.append('text').attr('class', 'label').style('font-size', fs + 'px');
+  const longest = d3.max(data, d => {
+    probe.attr('class', 'label' + (d.tipo === 'italia' ? ' hl' : '')).text(d.nome);
+    return probe.node().getComputedTextLength();
+  });
+  probe.remove();
+  const left = Math.ceil(Math.min(longest + 16, W * 0.45));
+  const m = {top: 22, right: 14, bottom: 4, left};
+  gLabels.style('font-size', fs + 'px');
   const n = data.length;
   const maxBand = 34;
   const innerH = Math.min(H - m.top - m.bottom, n * maxBand);
