@@ -2,7 +2,7 @@
 
 Dati e grafici sulle RSA italiane: posti letto disponibili, persone in lista d'attesa e crescita della popolazione over 65 al 2050.
 
-Progetto di Marta Abbà e Riccardo Saporiti[DA COMPLETARE: testata, autore, link all'articolo].
+Progetto di <a href="https://www.linkedin.com/in/marta-abbà/">Marta Abbà</a> e Riccardo Saporiti.
 
 **Grafici e codici di embed:** <https://sapomnia.github.io/longevity/>
 
@@ -72,4 +72,4 @@ I dati ottenuti dalle singole aziende sanitarie locali in risposta alle istanze 
 
 ## Licenza
 
-[DA COMPLETARE: licenza di dati e codice, condizioni di riuso e citazione]
+Creative Commons Attribution 4.0 International
