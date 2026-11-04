@@ -68,6 +68,8 @@ const DATA = {"italia": {"nome": "Media nazionale", "a": 183504, "b": 187317, "t
 const BLUE = '#174d99', RED = '#e71e25';
 const it = d3.formatLocale({decimal: ',', thousands: '.', grouping: [3], currency: ['€', '']});
 const nInt = it.format(',.0f'), nDec = it.format(',.2f'), nTick = it.format(',');
+const SUF = CONFIG.suffisso || '';
+if (CONFIG.filtro === false) document.querySelector('.controls').style.display = 'none';
 
 const sel = d3.select('#sel');
 const regioniMenu = DATA.regioni.map(d => d.nome)
@@ -110,9 +112,9 @@ function wrapLabel(text, width) {
 }
 
 function tipHtml(d) {
-  const nome = d.tipo === 'provincia' ? `${d.nome} (${d.regione})` : d.nome;
+  const nome = d.tipo === 'provincia' ? `${d.nome} (${d.regione})` : (d.tipo === 'italia' ? d.nome : (d.esteso || d.nome));
   return `<b>${nome}</b><br>${CONFIG.a}: <b>${nInt(d.a)}</b><br>` +
-         `${CONFIG.b}: <b>${nInt(d.b)}</b><br>${CONFIG.tasso}: <b>${nDec(d.tasso)}</b>`;
+         `${CONFIG.b}: <b>${nInt(d.b)}</b><br>${CONFIG.tasso}: <b>${nDec(d.tasso)}${SUF}</b>`;
 }
 
 function showTip(event, d) {
@@ -163,7 +165,7 @@ function draw(animate) {
   const t = svg.transition().duration(animate ? 550 : 0);
 
   gGrid.attr('transform', `translate(0,${m.top - 6})`).transition(t)
-    .call(d3.axisTop(x).ticks(W < 450 ? 4 : 6).tickFormat(nTick).tickSize(-(innerH + 6)).tickPadding(4));
+    .call(d3.axisTop(x).ticks(W < 450 ? 4 : 6).tickFormat(d => nTick(d) + SUF).tickSize(-(innerH + 6)).tickPadding(4));
   gGrid.selectAll('.tick line').attr('stroke', '#e3e3e3');
 
   gBars.selectAll('rect').data(data, d => d.nome).join(

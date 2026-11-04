@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La popolazione over 65 nel 2050</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #fff; }
+  body { font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; color: #000; }
+  .wrap {
+    width: 100%; max-width: 610px; min-height: 610px; margin: 0 auto;
+    padding: 14px 12px 10px; display: flex; flex-direction: column; background: #fff;
+  }
+  h1 { font-size: 20px; font-weight: 700; margin: 0 0 3px; line-height: 1.2; }
+  .sub { font-size: 14px; margin: 0 0 10px; color: #222; line-height: 1.3; }
+  .controls { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; font-size: 13px; }
+  .controls label { color: #222; }
+  select {
+    font-family: inherit; font-size: 13px; padding: 5px 28px 5px 9px; border: 1px solid #bbb;
+    border-radius: 4px; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23174d99'/%3E%3C/svg%3E") no-repeat right 9px center;
+    -webkit-appearance: none; appearance: none; color: #000; cursor: pointer; max-width: 100%;
+  }
+  select:focus { outline: 2px solid #5296d0; outline-offset: 1px; }
+  .chart { flex: 1; min-height: 0; position: relative; }
+  .chart svg { display: block; width: 100%; height: 100%; position: absolute; inset: 0; }
+  .axis text { font-family: inherit; font-size: 11px; fill: #444; }
+  .axis .domain { display: none; }
+  .axis .tick line { stroke: #e3e3e3; }
+  .label { fill: #000; }
+  .label.hl { font-weight: 700; fill: #e71e25; }
+  .bar { cursor: pointer; }
+  .notes { font-size: 10.5px; line-height: 1.35; color: #333; margin-top: 6px; }
+  .notes p { margin: 0 0 3px; }
+  .notes .src { font-style: italic; }
+  .tip {
+    position: absolute; pointer-events: none; background: #fff; border: 1px solid #ccc;
+    border-radius: 4px; padding: 7px 9px; font-size: 12.5px; line-height: 1.45;
+    box-shadow: 0 2px 6px rgba(0,0,0,.15); opacity: 0; transition: opacity .12s; z-index: 5;
+    white-space: nowrap;
+  }
+  .tip b { font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="wrap" id="wrap">
+  <h1>La popolazione over 65 nel 2050</h1>
+  <p class="sub">Aumento percentuale delle persone con più di 65 anni nelle regioni e nelle province autonome</p>
+  <div class="controls">
+    <label for="sel">Mostra:</label>
+    <select id="sel"></select>
+  </div>
+  <div class="chart" id="chart"><div class="tip" id="tip"></div></div>
+  <div class="notes">
+    <p class="src">Fonte: elaborazione SkyTg24 su dati Istat 2026 (previsioni demografiche, scenario mediano)</p>
+  </div>
+</div>
+<script>
+const EMBED_ID = 'longevity-over-65-aumento-2026-2050';
+const CONFIG = {"a": "Residenti over 65 2026", "b": "Residenti over 65 2050", "tasso": "Aumento % over 65 2026-2050", "suffisso": "%", "filtro": false, "soloRegionale": ["Sardegna"]};
+const DATA = {"italia": {"nome": "Media nazionale", "esteso": "Italia", "a": 14820500, "b": 18980633, "tasso": 28.07}, "regioni": [{"nome": "Sicilia", "esteso": "Sicilia", "a": 1155704, "b": 1432743, "tasso": 23.97}, {"nome": "Piemonte", "esteso": "Piemonte", "a": 1155791, "b": 1358901, "tasso": 17.57}, {"nome": "Marche", "esteso": "Marche", "a": 399103, "b": 501266, "tasso": 25.6}, {"nome": "Toscana", "esteso": "Toscana", "a": 990223, "b": 1199904, "tasso": 21.18}, {"nome": "Campania", "esteso": "Campania", "a": 1219409, "b": 1644385, "tasso": 34.85}, {"nome": "Puglia", "esteso": "Puglia", "a": 976986, "b": 1222672, "tasso": 25.15}, {"nome": "Veneto", "esteso": "Veneto", "a": 1231256, "b": 1610052, "tasso": 30.77}, {"nome": "Lombardia", "esteso": "Lombardia", "a": 2432886, "b": 3311198, "tasso": 36.1}, {"nome": "Emilia Romagna", "esteso": "Emilia Romagna", "a": 1128330, "b": 1484886, "tasso": 31.6}, {"nome": "P.A. Bolzano", "esteso": "Provincia autonoma di Bolzano", "a": 116140, "b": 177307, "tasso": 52.67}, {"nome": "P.A. Trento", "esteso": "Provincia autonoma di Trento", "a": 134676, "b": 184897, "tasso": 37.29}, {"nome": "Sardegna", "esteso": "Sardegna", "a": 436597, "b": 526116, "tasso": 20.5}, {"nome": "Molise", "esteso": "Molise", "a": 79536, "b": 88584, "tasso": 11.38}, {"nome": "Calabria", "esteso": "Calabria", "a": 457103, "b": 555312, "tasso": 21.49}, {"nome": "Abruzzo", "esteso": "Abruzzo", "a": 336271, "b": 419222, "tasso": 24.67}, {"nome": "Lazio", "esteso": "Lazio", "a": 1385579, "b": 1882989, "tasso": 35.9}, {"nome": "Liguria", "esteso": "Liguria", "a": 444450, "b": 502403, "tasso": 13.04}, {"nome": "Friuli Venezia Giulia", "esteso": "Friuli Venezia Giulia", "a": 332452, "b": 390453, "tasso": 17.45}, {"nome": "Basilicata", "esteso": "Basilicata", "a": 139604, "b": 160270, "tasso": 14.8}, {"nome": "Umbria", "esteso": "Umbria", "a": 236206, "b": 287373, "tasso": 21.66}, {"nome": "Valle d'Aosta", "esteso": "Valle d'Aosta", "a": 32198, "b": 39702, "tasso": 23.31}], "province": []};
+const BLUE = '#174d99', RED = '#e71e25';
+const it = d3.formatLocale({decimal: ',', thousands: '.', grouping: [3], currency: ['€', '']});
+const nInt = it.format(',.0f'), nDec = it.format(',.2f'), nTick = it.format(',');
+const SUF = CONFIG.suffisso || '';
+if (CONFIG.filtro === false) document.querySelector('.controls').style.display = 'none';
+
+const sel = d3.select('#sel');
+const regioniMenu = DATA.regioni.map(d => d.nome)
+  .filter(n => !CONFIG.soloRegionale.includes(n)).sort((a, b) => a.localeCompare(b, 'it'));
+sel.selectAll('option').data(['Tutte le regioni', ...regioniMenu]).join('option')
+  .attr('value', d => d).text(d => d);
+
+const wrapEl = document.getElementById('wrap');
+const chartEl = document.getElementById('chart');
+const tip = d3.select('#tip');
+const svg = d3.select('#chart').append('svg');
+const gGrid = svg.append('g').attr('class', 'axis');
+const gBars = svg.append('g');
+const gLabels = svg.append('g');
+
+function rows() {
+  const v = sel.property('value');
+  const base = v === 'Tutte le regioni'
+    ? DATA.regioni.map(d => ({...d, tipo: 'regione'}))
+    : DATA.province.filter(d => d.regione === v).map(d => ({...d, tipo: 'provincia'}));
+  return [...base, {...DATA.italia, tipo: 'italia'}].sort((a, b) => b.tasso - a.tasso);
+}
+
+function wrapLabel(text, width) {
+  text.each(function () {
+    const t = d3.select(this), words = t.text().split(/\s+/);
+    t.text(null);
+    let line = [], lines = [];
+    const probe = t.append('tspan');
+    words.forEach(w => {
+      line.push(w); probe.text(line.join(' '));
+      if (probe.node().getComputedTextLength() > width && line.length > 1) {
+        line.pop(); lines.push(line.join(' ')); line = [w];
+      }
+    });
+    lines.push(line.join(' ')); probe.remove();
+    const lh = 1.1, y0 = -((lines.length - 1) * lh) / 2;
+    lines.forEach((l, i) => t.append('tspan').attr('x', t.attr('x')).attr('dy', (i === 0 ? y0 + 0.35 : lh) + 'em').text(l));
+  });
+}
+
+function tipHtml(d) {
+  const nome = d.tipo === 'provincia' ? `${d.nome} (${d.regione})` : (d.tipo === 'italia' ? d.nome : (d.esteso || d.nome));
+  return `<b>${nome}</b><br>${CONFIG.a}: <b>${nInt(d.a)}</b><br>` +
+         `${CONFIG.b}: <b>${nInt(d.b)}</b><br>${CONFIG.tasso}: <b>${nDec(d.tasso)}${SUF}</b>`;
+}
+
+function showTip(event, d) {
+  tip.html(tipHtml(d)).style('opacity', 1);
+  const [mx, my] = d3.pointer(event, chartEl);
+  const tw = tip.node().offsetWidth, th = tip.node().offsetHeight, cw = chartEl.clientWidth;
+  let x = mx + 12, y = my - th - 8;
+  if (x + tw > cw) x = Math.max(0, mx - tw - 12);
+  if (y < 0) y = my + 14;
+  tip.style('left', x + 'px').style('top', y + 'px');
+}
+function hideTip() { tip.style('opacity', 0); }
+
+// Altezza comunicata alla pagina che ospita l'iframe
+let lastHeight = 0;
+function sendHeight() {
+  const h = Math.ceil(wrapEl.getBoundingClientRect().height);
+  if (h !== lastHeight && window.parent !== window) {
+    lastHeight = h;
+    window.parent.postMessage({altezza: h, height: h, id: EMBED_ID}, '*');
+  }
+}
+
+function draw(animate) {
+  const data = rows();
+  const n = data.length;
+  const W = chartEl.clientWidth;
+  const minBand = W < 450 ? 20 : 16;
+  const m = {top: 22, right: 14, bottom: 4};
+  chartEl.style.minHeight = (n * minBand + m.top + m.bottom) + 'px';
+  const H = chartEl.clientHeight;
+  svg.attr('viewBox', `0 0 ${W} ${H}`);
+
+  const fs = W < 450 ? 11 : 12;
+  const probe = svg.append('text').style('font-size', fs + 'px');
+  const longest = d3.max(data, d => {
+    probe.attr('class', 'label' + (d.tipo === 'italia' ? ' hl' : '')).text(d.nome);
+    return probe.node().getComputedTextLength();
+  });
+  probe.remove();
+  m.left = Math.ceil(Math.min(longest + 16, W * 0.45));
+  gLabels.style('font-size', fs + 'px');
+
+  const maxBand = 34;
+  const innerH = Math.min(H - m.top - m.bottom, n * maxBand);
+  const x = d3.scaleLinear().domain([0, d3.max(data, d => d.tasso)]).nice().range([m.left, W - m.right]);
+  const y = d3.scaleBand().domain(data.map(d => d.nome)).range([m.top, m.top + innerH]).padding(0.22);
+  const t = svg.transition().duration(animate ? 550 : 0);
+
+  gGrid.attr('transform', `translate(0,${m.top - 6})`).transition(t)
+    .call(d3.axisTop(x).ticks(W < 450 ? 4 : 6).tickFormat(d => nTick(d) + SUF).tickSize(-(innerH + 6)).tickPadding(4));
+  gGrid.selectAll('.tick line').attr('stroke', '#e3e3e3');
+
+  gBars.selectAll('rect').data(data, d => d.nome).join(
+      enter => enter.append('rect').attr('class', 'bar').attr('x', x(0)).attr('width', 0)
+        .attr('y', d => y(d.nome)).attr('height', y.bandwidth()),
+      update => update,
+      exit => exit.transition(t).attr('width', 0).remove())
+    .attr('fill', d => d.tipo === 'italia' ? RED : BLUE)
+    .on('pointerenter pointermove', showTip).on('pointerleave', hideTip)
+    .transition(t)
+    .attr('x', x(0)).attr('y', d => y(d.nome)).attr('height', y.bandwidth())
+    .attr('width', d => Math.max(1, x(d.tasso) - x(0)));
+
+  gLabels.selectAll('text').data(data, d => d.nome).join('text')
+    .attr('class', d => 'label' + (d.tipo === 'italia' ? ' hl' : ''))
+    .attr('x', m.left - 8).attr('text-anchor', 'end')
+    .text(d => d.nome)
+    .call(wrapLabel, m.left - 14)
+    .attr('transform', d => `translate(0,${y(d.nome) + y.bandwidth() / 2})`);
+
+  sendHeight();
+}
+
+sel.on('change', () => { hideTip(); draw(true); });
+document.addEventListener('pointerdown', e => { if (!e.target.classList.contains('bar')) hideTip(); });
+let lastW = 0, lastH = 0;
+new ResizeObserver(() => {
+  const w = chartEl.clientWidth, h = chartEl.clientHeight;
+  if (w !== lastW || h !== lastH) { lastW = w; lastH = h; draw(false); }
+}).observe(chartEl);
+new ResizeObserver(sendHeight).observe(wrapEl);
+document.fonts && document.fonts.ready.then(() => draw(false));
+draw(false);
+</script>
+</body>
+</html>
