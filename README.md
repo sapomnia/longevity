@@ -8,6 +8,12 @@ Progetto di <a href="https://www.linkedin.com/in/marta-abbà/">Marta Abbà</a> e
 
 ---
 
+## Metodo di lavoro
+
+Per raccogliere i dati utilizzati in questa inchiesta è stata inviata un’istanza di accesso generalizzato (FOIA) a tutte le aziende sanitarie locali italiane. Abbiamo chiesto loro di fornirci l’elenco delle RSA attive sul territorio di competenza, sia pubbliche che private, con il numero dei posti letto disponibili, il numero di persone in lista d’attesa alla data più recente disponibile e la tariffa media giornaliera per il ricovero nelle RSA. Solo il 78,2% delle aziende sanitarie ha risposto all’istanza e non tutte hanno fornito le informazioni richieste in maniera completa. I dati sono stati aperti, processati e visualizzati anche utilizzando Claude Opus 5.5 e Google Antigravity con Gemini 3.8 Flash.
+
+---
+
 ## Grafici
 
 | File | Titolo | Tipo | Dati usati |
