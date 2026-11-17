@@ -1,0 +1,1432 @@
+Regione	Provincia	Azienda	Tipologia	Costo giornaliero	Costo giornaliero a carico del paziente
+Valle d'Aosta	Aosta	Azienda USL Valle d'Aosta	UAP	270	0
+Valle d'Aosta	Aosta	Azienda USL Valle d'Aosta	R2	200	0
+Piemonte	Biella	Asl di Biella	Bassa	77,87	37,62
+Piemonte	Biella	Asl di Biella	Media bassa	78,1	38,38
+Piemonte	Biella	Asl di Biella	Media bassa	82,76	40,67
+Piemonte	Biella	Asl di Biella	Media alta	95,78	46,27
+Piemonte	Biella	Asl di Biella	Alta	104,18	50,33
+Piemonte	Biella	Asl di Biella	Alta con incremento	113,66	54,91
+Piemonte	Torino	Asl Città di Torino	Bassa	77,87	37,62
+Piemonte	Torino	Asl Città di Torino	Media bassa	78,1	38,38
+Piemonte	Torino	Asl Città di Torino	Media bassa	82,76	40,67
+Piemonte	Torino	Asl Città di Torino	Media alta	95,78	46,27
+Piemonte	Torino	Asl Città di Torino	Alta	104,18	50,33
+Piemonte	Torino	Asl Città di Torino	Alta con incremento	113,66	54,91
+Piemonte	Verbania	Asl VCO	Bassa	77,87	37,62
+Piemonte	Verbania	Asl VCO	Media bassa	78,1	38,38
+Piemonte	Verbania	Asl VCO	Media bassa	82,76	40,67
+Piemonte	Verbania	Asl VCO	Media alta	95,78	46,27
+Piemonte	Verbania	Asl VCO	Alta	104,18	50,33
+Piemonte	Verbania	Asl VCO	Alta con incremento	113,66	54,91
+Liguria	La Spezia	Asl 5 Spezzino	Rsa mantenimento	115,32	57,66
+Liguria	La Spezia	Asl 5 Spezzino	Residenza protetta	102,14	51,07
+Liguria	La Spezia	Asl 5 Spezzino	Nucleo Protesico	135,78	67,89
+Piemonte	Torino	Asl Torino 4	Bassa	77,87	37,62
+Piemonte	Torino	Asl Torino 4	Media bassa	78,1	38,38
+Piemonte	Torino	Asl Torino 4	Media bassa	82,76	40,67
+Piemonte	Torino	Asl Torino 4	Media alta	95,78	46,27
+Piemonte	Torino	Asl Torino 4	Alta	104,18	50,33
+Piemonte	Torino	Asl Torino 4	Alta con incremento	113,66	54,91
+Piemonte	Asti	Asl di Asti	Bassa	77,87	37,62
+Piemonte	Asti	Asl di Asti	Media bassa	78,1	38,38
+Piemonte	Asti	Asl di Asti	Media bassa	82,76	40,67
+Piemonte	Asti	Asl di Asti	Media alta	95,78	46,27
+Piemonte	Asti	Asl di Asti	Alta	104,18	50,33
+Piemonte	Asti	Asl di Asti	Alta con incremento	113,66	54,91
+Liguria	Imperia	Asl 1 Imperiese	Rsa mantenimento	115,32	57,66
+Liguria	Imperia	Asl 1 Imperiese	Residenza protetta	102,14	51,07
+Liguria	Imperia	Asl 1 Imperiese	Nucleo Protesico	135,78	67,89
+Piemonte	Vercelli	Asl di Vercelli	Bassa	77,87	37,62
+Piemonte	Vercelli	Asl di Vercelli	Media bassa	78,1	38,38
+Piemonte	Vercelli	Asl di Vercelli	Media bassa	82,76	40,67
+Piemonte	Vercelli	Asl di Vercelli	Media alta	95,78	46,27
+Piemonte	Vercelli	Asl di Vercelli	Alta	104,18	50,33
+Piemonte	Vercelli	Asl di Vercelli	Alta con incremento	113,66	54,91
+Lombardia	Bergamo	Ats di Bergamo	Camera singola residente	//	74,12
+Lombardia	Bergamo	Ats di Bergamo	Camera doppia residente	//	67,63
+Lombardia	Bergamo	Ats di Bergamo	Camera tripla residente	//	65,14
+Lombardia	Bergamo	Ats di Bergamo	Camera singola non residente	//	75,84
+Lombardia	Bergamo	Ats di Bergamo	Camera doppia non residente	//	70,19
+Lombardia	Bergamo	Ats di Bergamo	Camera tripla non residente	//	67,13
+Piemonte	Cuneo	Asl di Cuneo 2	Bassa	77,87	37,62
+Piemonte	Cuneo	Asl di Cuneo 2	Media bassa	78,1	38,38
+Piemonte	Cuneo	Asl di Cuneo 2	Media bassa	82,76	40,67
+Piemonte	Cuneo	Asl di Cuneo 2	Media alta	95,78	46,27
+Piemonte	Cuneo	Asl di Cuneo 2	Alta	104,18	50,33
+Piemonte	Cuneo	Asl di Cuneo 2	Alta con incremento	113,66	54,91
+Piemonte	Alessandria	Asl di Alessandria	Bassa	77,87	37,62
+Piemonte	Alessandria	Asl di Alessandria	Media bassa	78,1	38,38
+Piemonte	Alessandria	Asl di Alessandria	Media bassa	82,76	40,67
+Piemonte	Alessandria	Asl di Alessandria	Media alta	95,78	46,27
+Piemonte	Alessandria	Asl di Alessandria	Alta	104,18	50,33
+Piemonte	Alessandria	Asl di Alessandria	Alta con incremento	113,66	54,91
+Lombardia	Brescia	Ats di Brescia	Opera Pia Delbarba-Maselli-Dandolo Centro Sociale di Assistenza Polivalente Fondazione Onlus	//	53
+Lombardia	Brescia	Ats di Brescia	Casa di Riposo Paolo VI	//	50,96
+Lombardia	Brescia	Ats di Brescia	Fondazione Beata Lucia Versa Dalumi onlus	//	51,48
+Lombardia	Brescia	Ats di Brescia	Fondazione Uccelli - Bonetti onlus	//	54,5
+Lombardia	Brescia	Ats di Brescia	Casa di Soggiorno per Anziani	//	62,99
+Lombardia	Brescia	Ats di Brescia	Casa di Riposo Bersabea	//	55,65
+Lombardia	Brescia	Ats di Brescia	Fondazione Casa di Riposo per Anziani di Botticino onlus	//	57
+Lombardia	Brescia	Ats di Brescia	Casa di Riposo San Giovanni onlus	//	59,5
+Lombardia	Brescia	Ats di Brescia	Villa Di Salute	//	60,5
+Lombardia	Brescia	Ats di Brescia	Mons. Faustino Pinzoni	//	65,5
+Lombardia	Brescia	Ats di Brescia	Casa Di Dio	//	54
+Lombardia	Brescia	Ats di Brescia	Fondazione Casa di Industria	//	62
+Lombardia	Brescia	Ats di Brescia	Arici Sega	//	61
+Lombardia	Brescia	Ats di Brescia	Casa di Riposo San Giuseppe delle Figlie di S. Camillo	//	54,5
+Lombardia	Brescia	Ats di Brescia	Pasotti Cottinelli	//	65
+Lombardia	Brescia	Ats di Brescia	Alessandro Luzzago	//	58
+Lombardia	Brescia	Ats di Brescia	RSA Livia Feroldi	//	58
+Lombardia	Brescia	Ats di Brescia	Villa Elisa	//	61
+Lombardia	Brescia	Ats di Brescia	La Residenza	//	54
+Lombardia	Brescia	Ats di Brescia	RSA Residenza Vittoria	//	88
+Lombardia	Brescia	Ats di Brescia	Fondazione Casa di Riposo di Calcinato onlus	//	47
+Lombardia	Brescia	Ats di Brescia	Fondazione onlus Casa di Riposo Beata Cristina	//	55,89
+Lombardia	Brescia	Ats di Brescia	Paola Di Rosa	//	60
+Lombardia	Brescia	Ats di Brescia	Fondazione Casa di Riposo di Capriolo Don Gaudenzio Martinazzoli	//	58
+Lombardia	Brescia	Ats di Brescia	Fondazione S. Maria del Castello onlus	//	64
+Lombardia	Brescia	Ats di Brescia	Fondazione S. Maria del Castello onlus - Villaggio Alzheimer	//	105
+Lombardia	Brescia	Ats di Brescia	RSA Spazzini Fabeni	//	46,53
+Lombardia	Brescia	Ats di Brescia	Pio Ricovero Inabili al Lavoro	//	56
+Lombardia	Brescia	Ats di Brescia	RSA - FONDAZIONE CENTRO DI SERVIZI PER ANZIANI CASA DI RIPOSO MAGGI ONLUS	//	53,59
+Lombardia	Brescia	Ats di Brescia	RSA CHIARI - Fondazione Istituto Pietro Cadeo onlus	//	53
+Lombardia	Brescia	Ats di Brescia	RSA CHIARI - Nucleo- Fondazione Istituto Pietro Cadeo onlus - Nuclei specifici Lista RSA	//	56
+Lombardia	Brescia	Ats di Brescia	RSA COCCAGLIO - Fondazione Pompeo e Cesare Mazzocchi ONLUS	//	56,88
+Lombardia	Brescia	Ats di Brescia	RSA COCCAGLIO - Nucleo- Fondazione Pompeo e Cesare Mazzocchi ONLUS - Nuclei specifici Lista RSA	//	56,88
+Lombardia	Brescia	Ats di Brescia	"Casa di Riposo ""A. Comini"""	//	73,5
+Lombardia	Brescia	Ats di Brescia	Fondazione Martinelli- Granata -Piantoni Onlus	//	52,6
+Lombardia	Brescia	Ats di Brescia	Casa di Riposo Azienda Speciale RSA di Concesio	//	56
+Lombardia	Brescia	Ats di Brescia	Pia Opera S. Angela Merici ETS	//	62,3
+Lombardia	Brescia	Ats di Brescia	RSA Fondazione Dante Cusi onlus	//	47,67
+Lombardia	Brescia	Ats di Brescia	RSA Pietro Beretta	//	57,2
+Lombardia	Brescia	Ats di Brescia	Casa di Riposo Feltrinelli	//	65
+Lombardia	Brescia	Ats di Brescia	Casa di Riposo Cenacolo Elisa Baldo	//	57,5
+Lombardia	Brescia	Ats di Brescia	Fondazione Ricovero La Memoria	//	58
+Lombardia	Brescia	Ats di Brescia	Fondazione Casa di Riposo di Ghedi onlus	//	53
+Lombardia	Brescia	Ats di Brescia	Fondazione Centro Servizi Assistenziali Cami Alberini onlus	//	51
+Lombardia	Brescia	Ats di Brescia	Fondazione Ospedale e Casa di Riposo Nobile Paolo Richiedei	//	59,3
+Lombardia	Brescia	Ats di Brescia	Fondazione Don Ambrogio Cacciamatta onlus	//	58
+Lombardia	Brescia	Ats di Brescia	Casa di Riposo G.B. Valotti	//	47,68
+Lombardia	Brescia	Ats di Brescia	Fondazione Madonna del Corlo	//	64
+Lombardia	Brescia	Ats di Brescia	RSA Le Rondini	//	69
+Lombardia	Brescia	Ats di Brescia	Fondazione Casa di Riposo di Manerbio	//	55,23
+Lombardia	Brescia	Ats di Brescia	Casa Sorelle Girelli	//	72,5
+Lombardia	Brescia	Ats di Brescia	Andrea Fiorini onlus	//	59,5
+Lombardia	Brescia	Ats di Brescia	Casa Albergo per Anziani	//	56
+Lombardia	Brescia	Ats di Brescia	Fondazione Villa Fiori Residenza SocioAssistenziale	//	53,5
+Lombardia	Brescia	Ats di Brescia	Casa di Riposo Francesco e Beniamino Porta	//	65,75
+Lombardia	Brescia	Ats di Brescia	RSA - Soggiorno Sereno Emilia e Egidio Pasini	//	55
+Lombardia	Brescia	Ats di Brescia	RSA di Via Veronica Gambara n. 20 - Orzinuovi	//	54,5
+Lombardia	Brescia	Ats di Brescia	RSA ORZINUOVI - Nucleo- Via Veronica Gambara n. 20 - Nuclei specifici Lista RSA	//	64,5
+Lombardia	Brescia	Ats di Brescia	RSA di Via Santa Giulia n. 1 - Orzivecchi	//	54,5
+Lombardia	Brescia	Ats di Brescia	Fondazione Serlini onlus	//	58
+Lombardia	Brescia	Ats di Brescia	RSA F.lli Beretta-S.Giuseppe per la Valtenesi	//	69,04
+Lombardia	Brescia	Ats di Brescia	Casa di Riposo Don F. Cremona onlus	//	61
+Lombardia	Brescia	Ats di Brescia	Fondazione Istituto Bregoli onlus	//	48
+Lombardia	Brescia	Ats di Brescia	Fondazione Giroldi Forcella Ugoni	//	53
+Lombardia	Brescia	Ats di Brescia	Istituto Neuropsichiatrico Cremonesini	//	60,5
+Lombardia	Brescia	Ats di Brescia	Fondazione Villa Serena Onlus	//	56,9
+Lombardia	Brescia	Ats di Brescia	Fondazione Onlus Longini Morelli Sironi di Pralboino	//	54,25
+Lombardia	Brescia	Ats di Brescia	Casa Don Giuseppe Baldo	//	69,5
+Lombardia	Brescia	Ats di Brescia	Fondazione Casa di Riposo Villa G. Padovani onlus	//	54,5
+Lombardia	Brescia	Ats di Brescia	Residenza Anni Azzurri	//	105
+Lombardia	Brescia	Ats di Brescia	Evaristo Almici	//	55
+Lombardia	Brescia	Ats di Brescia	Residenza Socio Sanitaria Tilde Luigi Colosio	//	60
+Lombardia	Brescia	Ats di Brescia	Fondazione Casa di Riposo di Roe' Volciano onlus	//	54
+Lombardia	Brescia	Ats di Brescia	Fondazione Residenza Berardi Manzoni onlus	//	63
+Lombardia	Brescia	Ats di Brescia	Fondazione Lucini-Cantù onlus	//	61
+Lombardia	Brescia	Ats di Brescia	RSA ROVATO - Nucleo- Fondazione Lucini-Cantù onlus - Nuclei specifici Lista RSA	//	70
+Lombardia	Brescia	Ats di Brescia	Centro Comunale per i Servizi Sociali	//	54
+Lombardia	Brescia	Ats di Brescia	Casa di Riposo B. Bertella	//	48
+Lombardia	Brescia	Ats di Brescia	RSA Lorenzo e Gianna Zirotti	//	54,75
+Lombardia	Brescia	Ats di Brescia	Fondazione RSA Casa di Riposo di Salo' Residenza Gli Ulivi	//	60,2
+Lombardia	Brescia	Ats di Brescia	Comunale Madre Teresa di Calcutta	//	52,5
+Lombardia	Brescia	Ats di Brescia	Fondazione Nobile Annibale Maggi Via Onlus	//	56
+Lombardia	Brescia	Ats di Brescia	Casa di Riposo per Anziani Manlio Bonincontri di Tignale	//	65,5
+Lombardia	Brescia	Ats di Brescia	Fondazione G.B. Bianchi onlus	//	58,03
+Lombardia	Brescia	Ats di Brescia	Casa di Riposo Don Angelo Colombo Fondazione onlus	//	58
+Lombardia	Brescia	Ats di Brescia	Casa di Riposo Bandera Vezzoli	//	56,22
+Lombardia	Brescia	Ats di Brescia	Fondazione Gambara Tavelli Onlus	//	54,5
+Lombardia	Brescia	Ats di Brescia	Opera Pia Ricovero Valsabbino A. Passerini	//	56
+Lombardia	Brescia	Ats di Brescia	Fondazione Colturi Villa Dei Pini	//	58
+Lombardia	Brescia	Ats di Brescia	Villaggio San Francesco	//	57
+Lombardia	Brescia	Ats di Brescia	Fondazione Irene Rubini Falck onlus	//	43,5
+Piemonte	Torino	Asl Torino 3	Bassa	77,87	37,62
+Piemonte	Torino	Asl Torino 3	Media bassa	78,1	38,38
+Piemonte	Torino	Asl Torino 3	Media bassa	82,76	40,67
+Piemonte	Torino	Asl Torino 3	Media alta	95,78	46,27
+Piemonte	Torino	Asl Torino 3	Alta	104,18	50,33
+Piemonte	Torino	Asl Torino 3	Alta con incremento	113,66	54,91
+Liguria	Genova	Asl 4 Chiavarese	RSA mantenimento	115,32	57,66
+Liguria	Genova	Asl 4 Chiavarese	RP	102,14	51,07
+Liguria	Genova	Asl 4 Chiavarese	RSA Alzheimer	135,96	67,89
+Lombardia	Milano	Ats di Milano Città metropolitana	Centro Girola	//	88
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA Il Nuovo Focolare Di S.M. Loreto	//	80
+Lombardia	Milano	Ats di Milano Città metropolitana	Casa Famiglia Di Milano Affori	//	108
+Lombardia	Milano	Ats di Milano Città metropolitana	Casa Famiglia Per Anziani Di Milano	//	105
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA San Francesco d'Assisi	//	101
+Lombardia	Milano	Ats di Milano Città metropolitana	Don Leone Porta	//	111,7
+Lombardia	Milano	Ats di Milano Città metropolitana	Casa Di Riposo San Giorgio	//	109
+Lombardia	Milano	Ats di Milano Città metropolitana	"RSA ""Ornato"""	//	95,71
+Lombardia	Milano	Ats di Milano Città metropolitana	Pindaro 44	//	80
+Lombardia	Milano	Ats di Milano Città metropolitana	Casa Beato Luigi Guanella	//	76
+Lombardia	Milano	Ats di Milano Città metropolitana	Centro Padre Ambrosoli Giuseppe	//	110
+Lombardia	Milano	Ats di Milano Città metropolitana	Casa dell'Anziano Residenza Luigi Strada	//	87
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA Nuova Casa Famiglia	//	125
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA Ippocrate 1	//	108
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA Ippocrate 2	//	108
+Lombardia	Milano	Ats di Milano Città metropolitana	Parco Sempione	//	119,5
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA I Mulini	//	68
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA Saccardo Palazzina B	//	114,8
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA Adriano	//	130
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA Saccardo Palazzina A	//	114,8
+Lombardia	Milano	Ats di Milano Città metropolitana	Polo Geriatrico Riabilitativo 1	//	107,8
+Lombardia	Milano	Ats di Milano Città metropolitana	Polo Geriatrico Riabilitativo 2	//	107,8
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA San Faustino	//	117,5
+Lombardia	Milano	Ats di Milano Città metropolitana	Santa Giulia	//	65,88
+Lombardia	Milano	Ats di Milano Città metropolitana	Casa di Riposo per Musicisti	//	12,53
+Lombardia	Milano	Ats di Milano Città metropolitana	Fondazione San Giuseppe Moscati	//	101
+Lombardia	Milano	Ats di Milano Città metropolitana	Monsignor Bicchierai 2	//	102
+Lombardia	Milano	Ats di Milano Città metropolitana	Istituto Palazzolo Don Carlo Gnocchi ETS	//	79
+Lombardia	Milano	Ats di Milano Città metropolitana	Residenza San Luca	//	68
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA Domus Patrizia	//	105
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA Villa il Verrocchio	//	91,62
+Lombardia	Milano	Ats di Milano Città metropolitana	Centro Polivalente Anziani Cusano Milanino	//	1,19
+Lombardia	Milano	Ats di Milano Città metropolitana	Fondazione Ricovero Martinelli Onlus	//	73
+Lombardia	Milano	Ats di Milano Città metropolitana	Ambrosiana	//	82
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA Santa Lucia	//	116,7
+Lombardia	Milano	Ats di Milano Città metropolitana	Istituto Geriatrico Pio Albergo Trivulzio	//	82,64
+Lombardia	Milano	Ats di Milano Città metropolitana	Opera Pastor Angelicus	//	90
+Lombardia	Milano	Ats di Milano Città metropolitana	Istituto Geriatrico Milanese	//	95
+Lombardia	Milano	Ats di Milano Città metropolitana	Residenza Mons. Luigi Olgiati	//	92
+Lombardia	Milano	Ats di Milano Città metropolitana	Gerosa G. Brichetto	//	89
+Lombardia	Milano	Ats di Milano Città metropolitana	Casa Famiglia per Anziani di Cormano	//	47,38
+Lombardia	Milano	Ats di Milano Città metropolitana	Piccolo Cottolengo Don Orione	//	81,5
+Lombardia	Milano	Ats di Milano Città metropolitana	Villa Flora	//	77,5
+Lombardia	Milano	Ats di Milano Città metropolitana	Residenza Navigli	//	68
+Lombardia	Milano	Ats di Milano Città metropolitana	"RSA ""Quarenghi"""	//	105,49
+Lombardia	Milano	Ats di Milano Città metropolitana	Istituto Geriatrico Piero Redaelli	//	83
+Lombardia	Milano	Ats di Milano Città metropolitana	Arzaga	//	101
+Lombardia	Milano	Ats di Milano Città metropolitana	La Piccola Casa del Rifugio	//	94
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA Villa Maggi	//	93,04
+Lombardia	Milano	Ats di Milano Città metropolitana	Polo Geriatrico Riabilitativo	//	112,5
+Lombardia	Milano	Ats di Milano Città metropolitana	Istituto Geriatrico Piero Redaelli	//	81
+Lombardia	Milano	Ats di Milano Città metropolitana	Virgilio Ferrari	//	90
+Lombardia	Milano	Ats di Milano Città metropolitana	Istituto Geriatrico La Pelucca	//	92
+Lombardia	Milano	Ats di Milano Città metropolitana	Residenza Anni Azzurri San Rocco	//	108,8
+Lombardia	Milano	Ats di Milano Città metropolitana	Santa Sara	//	92
+Lombardia	Milano	Ats di Milano Città metropolitana	Residenza del Sole	//	87
+Lombardia	Milano	Ats di Milano Città metropolitana	Casa Famiglia per Anziani Mons. Carlo Testa	//	86,33
+Lombardia	Milano	Ats di Milano Città metropolitana	Villa Antonietta	//	70
+Lombardia	Milano	Ats di Milano Città metropolitana	Residenza Santa Marta	//	99,7
+Lombardia	Milano	Ats di Milano Città metropolitana	Famagosta	//	78,75
+Lombardia	Milano	Ats di Milano Città metropolitana	Ricovero Ferdinando Uboldi	//	90
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA Maria Ausiliatrice	//	80,6
+Lombardia	Milano	Ats di Milano Città metropolitana	Residenza San Felice	//	131
+Lombardia	Milano	Ats di Milano Città metropolitana	Baggio	//	91,8
+Lombardia	Milano	Ats di Milano Città metropolitana	Il Parco delle Cave	//	91,8
+Lombardia	Milano	Ats di Milano Città metropolitana	Residenza San Martino	//	103,1
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA Emilio Bernardelli	//	90
+Lombardia	Milano	Ats di Milano Città metropolitana	Casa Senago	//	89,7
+Lombardia	Milano	Ats di Milano Città metropolitana	Casa San Giuseppe	//	69
+Lombardia	Milano	Ats di Milano Città metropolitana	San Luigi	//	85
+Lombardia	Milano	Ats di Milano Città metropolitana	Casa Giardini	//	89,7
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA Naviglio Grande	//	94,3
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA Il Naviglio	//	84
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA Baroni	//	90,27
+Lombardia	Milano	Ats di Milano Città metropolitana	Emmaus	//	110
+Lombardia	Milano	Ats di Milano Città metropolitana	Casa dell'Antico Ospitale delle Suore di Santa Marcellina - Mons. L. Biraghi	//	40
+Lombardia	Milano	Ats di Milano Città metropolitana	Sercop Casa Di Riposo Gallazzi Vismara	//	77,28
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA Pontirolo	//	81,17
+Lombardia	Milano	Ats di Milano Città metropolitana	S. Caterina	//	78,5
+Lombardia	Milano	Ats di Milano Città metropolitana	Residenza Anni Azzurri Mirasole	//	108,5
+Lombardia	Milano	Ats di Milano Città metropolitana	Casa dell'Anziano San Camillo	//	82,5
+Lombardia	Milano	Ats di Milano Città metropolitana	I Fontanili	//	81,7
+Lombardia	Milano	Ats di Milano Città metropolitana	Melograno	//	107,8
+Lombardia	Milano	Ats di Milano Città metropolitana	Sandro Pertini	//	41,32
+Lombardia	Milano	Ats di Milano Città metropolitana	Residenza del Parco	//	59,2
+Lombardia	Milano	Ats di Milano Città metropolitana	Senator Carlo Perini	//	77
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA Villa Vasari ex Mater Sapientiae	//	77,46
+Lombardia	Milano	Ats di Milano Città metropolitana	Gli Oleandri	//	79,9
+Lombardia	Milano	Ats di Milano Città metropolitana	Casa Famiglia per Anziani di Bussero	//	86,01
+Lombardia	Milano	Ats di Milano Città metropolitana	Vergani e Bassi	//	91
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA di Lainate Nucleo protetto	//	92,13
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA di Lainate	//	74
+Lombardia	Milano	Ats di Milano Città metropolitana	Centro Santa Maria al Castello	//	80
+Lombardia	Milano	Ats di Milano Città metropolitana	Fondazione Ferrario	//	77
+Lombardia	Milano	Ats di Milano Città metropolitana	Villa Arcadia	//	78,9
+Lombardia	Milano	Ats di Milano Città metropolitana	Giovanni Paolo II	//	82,86
+Lombardia	Milano	Ats di Milano Città metropolitana	Residenza Borromea	//	68,2
+Lombardia	Milano	Ats di Milano Città metropolitana	Cascina Cortenuova	//	90
+Lombardia	Milano	Ats di Milano Città metropolitana	Fondazione Castellini	//	71,8
+Lombardia	Milano	Ats di Milano Città metropolitana	I Pioppi	//	79,46
+Lombardia	Milano	Ats di Milano Città metropolitana	Il Gelso	//	98
+Lombardia	Milano	Ats di Milano Città metropolitana	Fondazione Mario Lampugnani	//	75
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA Leopardi	//	82,5
+Lombardia	Milano	Ats di Milano Città metropolitana	Acquamarina	//	116,5
+Lombardia	Milano	Ats di Milano Città metropolitana	Alfredo Podestà	//	101,5
+Lombardia	Milano	Ats di Milano Città metropolitana	L'Orchidea	//	98
+Lombardia	Milano	Ats di Milano Città metropolitana	Maria Lorenzon	//	101,5
+Lombardia	Milano	Ats di Milano Città metropolitana	Sandro Pertini	//	71
+Lombardia	Milano	Ats di Milano Città metropolitana	Oasi	//	100
+Lombardia	Milano	Ats di Milano Città metropolitana	Casa di Riposo Albergo del Nonno	//	81
+Lombardia	Milano	Ats di Milano Città metropolitana	Casa Famiglia per Anziani di San Vittore Olona	//	82,72
+Lombardia	Milano	Ats di Milano Città metropolitana	Fondazione Giuseppe Gemellaro	//	60,16
+Lombardia	Milano	Ats di Milano Città metropolitana	Ospedale Luigi Marchesi	//	88,5
+Lombardia	Milano	Ats di Milano Città metropolitana	Piccola Casa della Divina Provvidenza Cottolengo	//	69,3
+Lombardia	Milano	Ats di Milano Città metropolitana	Casa anziani di Rescaldina	//	82,42
+Lombardia	Milano	Ats di Milano Città metropolitana	Don Felice Cozzi	//	79,11
+Lombardia	Milano	Ats di Milano Città metropolitana	Fondazione Sant'Erasmo	//	83
+Lombardia	Milano	Ats di Milano Città metropolitana	Fondazione Il Cerchio Onlus Residenza San Remigio	//	78
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA Pozzoli	//	97,5
+Lombardia	Milano	Ats di Milano Città metropolitana	Casa di Riposo Città di Abbiategrasso	//	75
+Lombardia	Milano	Ats di Milano Città metropolitana	Casa Famiglia per Anziani di Busto Garolfo	//	82,72
+Lombardia	Milano	Ats di Milano Città metropolitana	Don Giuseppe Cuni	//	76,5
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA Belvedere	//	72
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA San Riccardo Pampuri Onlus	//	72,33
+Lombardia	Milano	Ats di Milano Città metropolitana	Casa Famiglia per Anziani Dott. Vittorio Crespi di Villa Cortese	//	82,72
+Lombardia	Milano	Ats di Milano Città metropolitana	Il Palio	//	105
+Lombardia	Milano	Ats di Milano Città metropolitana	San Marco	//	78,2
+Lombardia	Milano	Ats di Milano Città metropolitana	Casa Famiglia per Anziani di Villa Cortese	//	82,72
+Lombardia	Milano	Ats di Milano Città metropolitana	Casa Padre Pio	//	83
+Lombardia	Milano	Ats di Milano Città metropolitana	Istituto geriatrico Camillo Golgi	//	80
+Lombardia	Milano	Ats di Milano Città metropolitana	"RSA ""Dott. M. Leone"""	//	82,89
+Lombardia	Milano	Ats di Milano Città metropolitana	Anna Sironi	//	90
+Lombardia	Milano	Ats di Milano Città metropolitana	"Casa Famiglia per Anziani di Inveruno ""Ernesto Azzalin"""	//	82,72
+Lombardia	Milano	Ats di Milano Città metropolitana	Casa Mater Orphanorum	//	80
+Lombardia	Lodi	Ats di Milano Città metropolitana	Istituto Santa Savina	//	82,11
+Lombardia	Lodi	Ats di Milano Città metropolitana	RSA Fondazione Santa Chiara	//	70
+Lombardia	Lodi	Ats di Milano Città metropolitana	Santa Francesca Cabrini	//	60
+Lombardia	Milano	Ats di Milano Città metropolitana	San Giuseppe	//	74
+Lombardia	Milano	Ats di Milano Città metropolitana	Fondazione Opera Pia RSA Francesca Colleoni	//	70,82
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA Sant’Edoardo	//	65
+Lombardia	Lodi	Ats di Milano Città metropolitana	Fondazione Ing. Pietro Zoncada ETS	//	70
+Lombardia	Milano	Ats di Milano Città metropolitana	RSA Valsasino	//	62
+Lombardia	Lodi	Ats di Milano Città metropolitana	Casa Santa Teresa	//	72
+Lombardia	Lodi	Ats di Milano Città metropolitana	Fondazione Sen. Grossi - Franzini	//	66
+Lombardia	Lodi	Ats di Milano Città metropolitana	Fondazione Milani	//	65
+Lombardia	Lodi	Ats di Milano Città metropolitana	Angelica Vittadini Terzaghi	//	56
+Lombardia	Lodi	Ats di Milano Città metropolitana	Fondazione Vigoni della Somaglia	//	67
+Lombardia	Lodi	Ats di Milano Città metropolitana	R.S.A. Santa Francesca Cabrini	//	65
+Lombardia	Lodi	Ats di Milano Città metropolitana	San Giorgio (Viale Gandolfi 27/34)	//	59
+Lombardia	Lodi	Ats di Milano Città metropolitana	Fondazione Opere Pie Riunite di Codogno	//	61
+Lombardia	Lodi	Ats di Milano Città metropolitana	San Giorgio (Viale Gandolfi 27/33)	//	59
+Lombardia	Lodi	Ats di Milano Città metropolitana	Monsignor Trabattoni	//	75,5
+Lombardia	Lodi	Ats di Milano Città metropolitana	Luigi Corazza	//	75,5
+Lombardia	Lodi	Ats di Milano Città metropolitana	Monsignor Carlo Salvaderi	//	69,5
+Piemonte	Cuneo	Asl di Cuneo 1	Bassa	76,56	37,62
+Piemonte	Cuneo	Asl di Cuneo 1	Media bassa	78,1	38,38
+Piemonte	Cuneo	Asl di Cuneo 1	Media bassa	82,76	40,67
+Piemonte	Cuneo	Asl di Cuneo 1	Media alta	94,16	46,27
+Piemonte	Cuneo	Asl di Cuneo 1	Alta	102,42	50,33
+Piemonte	Cuneo	Asl di Cuneo 1	Alta con incremento	111,74	54,91
+Lombardia	Monza Brianza	Ats Brianza	Anna E Guido Fossati	//	78,21
+Lombardia	Monza Brianza	Ats Brianza	Anni Azzurri Vico Mercati	//	101,5
+Lombardia	Monza Brianza	Ats Brianza	Anni Verdi	//	81,1
+Lombardia	Monza Brianza	Ats Brianza	Bosco In Citta	//	79,8
+Lombardia	Monza Brianza	Ats Brianza	Casa Cambiaghi	//	75
+Lombardia	Lecco	Ats Brianza	Casa Di Riposo Carlo e Elisa Frigerio Onlus	//	69,7
+Lombardia	Lecco	Ats Brianza	Casa Di Riposo La Madonnina	//	76,67
+Lombardia	Monza Brianza	Ats Brianza	Casa Di Riposo Luigia E Alessandro Agostoni	//	82
+Lombardia	Monza Brianza	Ats Brianza	Casa Di Riposo Madre Ada Bianchi	//	78
+Lombardia	Lecco	Ats Brianza	Casa Di Riposo Mandello Del Lario Onlus	//	74,96
+Lombardia	Lecco	Ats Brianza	Casa Di Riposo Monticello Brianza	//	75
+Lombardia	Lecco	Ats Brianza	Casa Di Riposo Pietro Buzzi	//	77,5
+Lombardia	Lecco	Ats Brianza	Casa Di Riposo S. Francesco	//	65,75
+Lombardia	Lecco	Ats Brianza	Casa Di Riposo Sant'Antonio	//	69
+Lombardia	Lecco	Ats Brianza	Casa Famiglia Per Anziani	//	86,01
+Lombardia	Monza Brianza	Ats Brianza	Casa Famiglia Per Anziani Di Busnago	//	84,33
+Lombardia	Monza Brianza	Ats Brianza	Casa Famiglia San Giuseppe Onlus	//	90,06
+Lombardia	Lecco	Ats Brianza	Casa Madonna Della Fiducia	//	71,04
+Lombardia	Lecco	Ats Brianza	Casa Madonna Della Neve Onlus	//	80
+Lombardia	Monza Brianza	Ats Brianza	Centro Ronzoni Villa	//	80,5
+Lombardia	Monza Brianza	Ats Brianza	Corte Briantea	//	49,35
+Lombardia	Monza Brianza	Ats Brianza	Don Angelo Bellani	//	75
+Lombardia	Monza Brianza	Ats Brianza	Don Emilio Meani	//	78
+Lombardia	Monza Brianza	Ats Brianza	F. Scaccabarozzi	//	79,8
+Lombardia	Lecco	Ats Brianza	Fondazione Casa Del Cieco Monsignor Edoardo Gilardi Onlus	//	80
+Lombardia	Lecco	Ats Brianza	Fondazione Casa Di Riposo Brambilla-Nava Onlus	//	85,48
+Lombardia	Lecco	Ats Brianza	Fondazione Casa Di Riposo Dr. Luigi E  Regina Sironi Onlus	//	79
+Lombardia	Lecco	Ats Brianza	Fondazione Fratelli Enrico E Antonio Nobili - Onlus	//	87
+Lombardia	Monza Brianza	Ats Brianza	Fondazione Giuseppe Besana Onlus	//	70
+Lombardia	Monza Brianza	Ats Brianza	Fondazione Giuseppina Scola - Onlus	//	72
+Lombardia	Monza Brianza	Ats Brianza	Groane	//	95
+Lombardia	Monza Brianza	Ats Brianza	I Gelsi	//	78,95
+Lombardia	Monza Brianza	Ats Brianza	Il Parco	//	91,35
+Lombardia	Lecco	Ats Brianza	Istituti Riuniti Airoldi E Muzzi Onlus	//	77
+Lombardia	Lecco	Ats Brianza	Istituto Geriatrico G. E C.  Frisia	//	73
+Lombardia	Monza Brianza	Ats Brianza	L'Arca	//	86,5
+Lombardia	Monza Brianza	Ats Brianza	La Rosa D'Argento	//	81,9
+Lombardia	Monza Brianza	Ats Brianza	Le Querce	//	90
+Lombardia	Monza Brianza	Ats Brianza	Luigi Porro	//	83
+Lombardia	Monza Brianza	Ats Brianza	Macchiavelli 1	//	93
+Lombardia	Monza Brianza	Ats Brianza	Macchiavelli 2	//	93
+Lombardia	Monza Brianza	Ats Brianza	Mater Misericordiae	//	69,04
+Lombardia	Monza Brianza	Ats Brianza	Oasi Domenicana	//	78,5
+Lombardia	Monza Brianza	Ats Brianza	Oasi Groane	//	95
+Lombardia	Monza Brianza	Ats Brianza	Piccolo Cottolengo Di Don Orione	//	75
+Lombardia	Lecco	Ats Brianza	R.S.A. Fondazione Sacra Famiglia	//	80
+Lombardia	Lecco	Ats Brianza	R.S.A. Mons. Giovanni Borsieri	//	87
+Lombardia	Lecco	Ats Brianza	R.S.A. Opera Pia Magistris	//	77
+Lombardia	Lecco	Ats Brianza	R.S.A. Villa Serena	//	77,5
+Lombardia	Monza Brianza	Ats Brianza	Residenza Amica	//	77,5
+Lombardia	Monza Brianza	Ats Brianza	Residenza Rita e Luigi Gelosa	//	92
+Lombardia	Monza Brianza	Ats Brianza	Residenza San Camillo	//	75
+Lombardia	Lecco	Ats Brianza	Residenza Villa Serena	//	63
+Lombardia	Monza Brianza	Ats Brianza	RSA Attanasio	//	95
+Lombardia	Lecco	Ats Brianza	Rsa Fondazione Maria Monzini Onlus	//	79
+Lombardia	Monza Brianza	Ats Brianza	RSA Limbiate	//	95
+Lombardia	Lecco	Ats Brianza	Rsa San Giorgio	//	84
+Lombardia	Monza Brianza	Ats Brianza	San Francesco	//	90,5
+Lombardia	Monza Brianza	Ats Brianza	San Pietro	//	85
+Lombardia	Monza Brianza	Ats Brianza	Sant'Andrea	//	105,8
+Lombardia	Monza Brianza	Ats Brianza	Villa Cenacolo	//	80,57
+Lombardia	Lecco	Ats Brianza	Villa Dei Cedri	//	95
+Lombardia	Monza Brianza	Ats Brianza	Villa Paradiso	//	79,6
+Lombardia	Monza Brianza	Ats Brianza	Villa Reale - Anni Azzurri	//	115,5
+Lombardia	Monza Brianza	Ats Brianza	Villa San Clemente	//	86,1
+Lombardia	Monza Brianza	Ats Brianza	Villa Teruzzi	//	66,94
+Piemonte	Torino	Asl Torino 5	Bassa	76,56	37,62
+Piemonte	Torino	Asl Torino 5	Media bassa	78,1	38,38
+Piemonte	Torino	Asl Torino 5	Media bassa	82,76	40,67
+Piemonte	Torino	Asl Torino 5	Media alta	94,16	46,27
+Piemonte	Torino	Asl Torino 5	Alta	102,42	50,33
+Piemonte	Torino	Asl Torino 5	Alta con incremento	111,74	54,91
+Liguria	Savona	Asl 2 Savonese	RP	//	51,07
+Liguria	Savona	Asl 2 Savonese	RSA mantenimento	//	57,66
+Liguria	Savona	Asl 2 Savonese	RSA ambiente protesico	//	67,98
+Lombardia	Pavia	Ats Pavia	Antonio Dellacà	//	65
+Lombardia	Pavia	Ats Pavia	Arcobaleno Plus	//	86
+Lombardia	Pavia	Ats Pavia	Casa del Vecchio E del Fanciullo Itala Vochieri	//	55,89
+Lombardia	Pavia	Ats Pavia	Casa di riposo	//	46,68
+Lombardia	Pavia	Ats Pavia	Casa di riposo  Francesco Pertusati	//	61
+Lombardia	Pavia	Ats Pavia	Casa di riposo  S. Tarcisio	//	57,63
+Lombardia	Pavia	Ats Pavia	Casa di riposo Di Varzi	//	62,21
+Lombardia	Pavia	Ats Pavia	Casa di riposo Fratelli Carnevale	//	70,03
+Lombardia	Pavia	Ats Pavia	Casa di riposo Gottardo Delfinoni	//	65,49
+Lombardia	Pavia	Ats Pavia	Casa di riposo Per Anziani	//	48
+Lombardia	Pavia	Ats Pavia	Casa di riposo S. Giuseppe	//	57
+Lombardia	Pavia	Ats Pavia	Casa Sacra Famiglia	//	66
+Lombardia	Pavia	Ats Pavia	Casa San Giuseppe	//	68
+Lombardia	Pavia	Ats Pavia	Casa Serena	//	60
+Lombardia	Pavia	Ats Pavia	Centro Aperto A. Chiesa - Visconti	//	63
+Lombardia	Pavia	Ats Pavia	Coniugi  Lavatelli	//	65
+Lombardia	Pavia	Ats Pavia	Don Carlo Ferrandi	//	56
+Lombardia	Pavia	Ats Pavia	Don Giuseppe Gennaro	//	65
+Lombardia	Pavia	Ats Pavia	Don Ventura	//	59,5
+Lombardia	Pavia	Ats Pavia	Fond. C. F. Cella Di Rivara	//	60,5
+Lombardia	Pavia	Ats Pavia	Fondazione  Ricovero S. Martino	//	57,53
+Lombardia	Pavia	Ats Pavia	Fondazione Alceste Cortellona Onlus	//	43
+Lombardia	Pavia	Ats Pavia	Fondazione Bellini E Silva	//	60,82
+Lombardia	Pavia	Ats Pavia	Fondazione Conte Franco Cella	//	60,5
+Lombardia	Pavia	Ats Pavia	Fondazione Cusani Visconti	//	63,75
+Lombardia	Pavia	Ats Pavia	Fondazione Galtrucco	//	62
+Lombardia	Pavia	Ats Pavia	Fondazione Marzotto	//	53,33
+Lombardia	Pavia	Ats Pavia	Fondazione Pensionato Sannazzarese Onlus	//	56
+Lombardia	Pavia	Ats Pavia	Fondazione Pio Istituto Adelina Nigra Ets	//	55,5
+Lombardia	Pavia	Ats Pavia	Fondazione Porta Spinola Arnaboldi Onlus	//	67,4
+Lombardia	Pavia	Ats Pavia	Fondazione Varni Agnetti	//	61,64
+Lombardia	Pavia	Ats Pavia	I Germogli	//	55,11
+Lombardia	Pavia	Ats Pavia	Il Gioiello	//	75
+Lombardia	Pavia	Ats Pavia	Istituto De Rodolfi	//	55
+Lombardia	Pavia	Ats Pavia	Istituzioni Riunite Mede	//	52
+Lombardia	Pavia	Ats Pavia	La Castellana	//	60,88
+Lombardia	Pavia	Ats Pavia	La Certosa Di Pavia	//	86,5
+Lombardia	Pavia	Ats Pavia	La Risaia	//	90
+Lombardia	Pavia	Ats Pavia	Le Colline	//	63,5
+Lombardia	Pavia	Ats Pavia	Padre Giovanni Balduzzi	//	65
+Lombardia	Pavia	Ats Pavia	Pensionato Don Orione	//	63
+Lombardia	Pavia	Ats Pavia	Pensionato Zanaboni	//	64,94
+Lombardia	Pavia	Ats Pavia	Pia Famiglia Delle Sorelle del Santo Rosario Apostole del Lavoro	//	72
+Lombardia	Pavia	Ats Pavia	Pii Istituti Unificati	//	59,5
+Lombardia	Pavia	Ats Pavia	Pio Istituto Coniugi Buzzoni Nigra	//	58,95
+Lombardia	Pavia	Ats Pavia	Pio Istituto Fam. Ing. E. Sassi	//	62
+Lombardia	Pavia	Ats Pavia	Residenza Giovanni Amodeo	//	89
+Lombardia	Pavia	Ats Pavia	Residenza I Gigli	//	64
+Lombardia	Pavia	Ats Pavia	Residenza La Tua Casa	//	64,5
+Lombardia	Pavia	Ats Pavia	Residenza Le Torri	//	83,5
+Lombardia	Pavia	Ats Pavia	Residenza Sanitaria Assistenziale	//	64
+Lombardia	Pavia	Ats Pavia	Residenza Sanitaria Assistenziale Di Corteolona	//	66,3
+Lombardia	Pavia	Ats Pavia	Residenza Sanitario Assistenziale Comunale Paolo Beccaria	//	70,3
+Lombardia	Pavia	Ats Pavia	Riva del Tempo	//	69,46
+Lombardia	Pavia	Ats Pavia	Rsa Arcobaleno Castellana	//	90
+Lombardia	Pavia	Ats Pavia	R.S.A. Arcobaleno Luna	//	76
+Lombardia	Pavia	Ats Pavia	Rsa Arcobaleno Parc	//	90
+Lombardia	Pavia	Ats Pavia	R.S.A. Arcobaleno Sole	//	76
+Lombardia	Pavia	Ats Pavia	Rsa Carletto Concina	//	78
+Lombardia	Pavia	Ats Pavia	Rsa Casa Per L'anziano	//	49,51
+Lombardia	Pavia	Ats Pavia	Rsa Ferrera Erbognone	//	50
+Lombardia	Pavia	Ats Pavia	Rsa Fondazione  Ospedale Fagnani Galtrucco	//	65
+Lombardia	Pavia	Ats Pavia	R.S.A. La Filanda	//	90
+Lombardia	Pavia	Ats Pavia	Rsa S. Croce	//	73,5
+Lombardia	Pavia	Ats Pavia	Rsa 1 Asp Carlo Pezzani	//	67,3
+Lombardia	Pavia	Ats Pavia	Rsa 2 Asp Carlo Pezzani	//	67,3
+Lombardia	Pavia	Ats Pavia	S. Riccardo Pampuri	//	73
+Lombardia	Pavia	Ats Pavia	Sacro Cuore	//	60,5
+Lombardia	Pavia	Ats Pavia	San Fortunato	//	85,7
+Lombardia	Pavia	Ats Pavia	San Francesco	//	79,25
+Lombardia	Pavia	Ats Pavia	Santa Maria Alle Fonti	//	67,5
+Lombardia	Pavia	Ats Pavia	Sereni Orizzonti Villa Vanni	//	74,5
+Lombardia	Pavia	Ats Pavia	Soggiorno Villa Delle Rose	//	62,3
+Lombardia	Pavia	Ats Pavia	Torre Della Rocchetta	//	80
+Lombardia	Pavia	Ats Pavia	Turvegia	//	85,44
+Lombardia	Pavia	Ats Pavia	Villa Antea	//	81,6
+Lombardia	Pavia	Ats Pavia	Villa Chiara	//	65
+Lombardia	Pavia	Ats Pavia	Villa Enrica	//	65
+Lombardia	Pavia	Ats Pavia	Villa Gerlina	//	85
+Lombardia	Pavia	Ats Pavia	Villa Mafalda	//	79,4
+Lombardia	Pavia	Ats Pavia	Villa Mater	//	65
+Lombardia	Pavia	Ats Pavia	Villa Serena	//	67
+Trentino Alto Adige	Trento	Asuit	Spes - Solatrix	//	61,1
+Trentino Alto Adige	Trento	Asuit	Spes - Montagnaga Pine'	//	60,85
+Trentino Alto Adige	Trento	Asuit	Spes - Villa Belfonte Tn	//	60,25
+Trentino Alto Adige	Trento	Asuit	Spes - Via Veneto Tn	//	59,95
+Trentino Alto Adige	Trento	Asuit	Spes - Cadine Tn	//	59,35
+Trentino Alto Adige	Trento	Asuit	Spes - Lisignago	//	57,55
+Trentino Alto Adige	Trento	Asuit	Trento Civica	//	57,1
+Trentino Alto Adige	Trento	Asuit	Povo	//	56,1
+Trentino Alto Adige	Trento	Asuit	Rovereto	//	55,5
+Trentino Alto Adige	Trento	Asuit	Trento - Beato De Tschiderer	//	54,3
+Trentino Alto Adige	Trento	Asuit	Brentonico	//	54,08
+Trentino Alto Adige	Trento	Asuit	Mezzolombardo	//	53,6
+Trentino Alto Adige	Trento	Asuit	Lavis	//	53,3
+Trentino Alto Adige	Trento	Asuit	Fondo*	//	53
+Trentino Alto Adige	Trento	Asuit	Folgaria	//	53
+Trentino Alto Adige	Trento	Asuit	Pellizzano	//	53
+Trentino Alto Adige	Trento	Asuit	Tesero	//	52,97
+Trentino Alto Adige	Trento	Asuit	Predazzo	//	52,97
+Trentino Alto Adige	Trento	Asuit	Arco Rsa Regina	//	52,5
+Trentino Alto Adige	Trento	Asuit	Vigo Di Fassa	//	52,05
+Trentino Alto Adige	Trento	Asuit	Mori	//	52
+Trentino Alto Adige	Trento	Asuit	Riva Del Garda	//	52
+Trentino Alto Adige	Trento	Asuit	Rovereto Ist. Sacra Famiglia	//	52
+Trentino Alto Adige	Trento	Asuit	Dro	//	51,9
+Trentino Alto Adige	Trento	Asuit	Pergine Valsug.	//	51,5
+Trentino Alto Adige	Trento	Asuit	Ledro	//	51,5
+Trentino Alto Adige	Trento	Asuit	Avio	//	51
+Trentino Alto Adige	Trento	Asuit	Arco	//	51
+Trentino Alto Adige	Trento	Asuit	Predaia - Taio	//	51
+Trentino Alto Adige	Trento	Asuit	Bleggio Superiore	//	50,6
+Trentino Alto Adige	Trento	Asuit	Canal S. Bovo	//	50,5
+Trentino Alto Adige	Trento	Asuit	Roncegno	//	50,5
+Trentino Alto Adige	Trento	Asuit	Pieve Tesino	//	50,5
+Trentino Alto Adige	Trento	Asuit	Primiero -S.Martino Cas.Zza-Transacqua	//	50,5
+Trentino Alto Adige	Trento	Asuit	Castel Ivano - Strigno	//	50
+Trentino Alto Adige	Trento	Asuit	Pinzolo	//	49,5
+Trentino Alto Adige	Trento	Asuit	Mezzocorona	//	49,5
+Trentino Alto Adige	Trento	Asuit	Borgo Valsugana	//	49,2
+Trentino Alto Adige	Trento	Asuit	Spiazzo	//	49
+Trentino Alto Adige	Trento	Asuit	Male'	//	49
+Trentino Alto Adige	Trento	Asuit	Cles	//	48,8
+Trentino Alto Adige	Trento	Asuit	Vallarsa	//	48,5
+Trentino Alto Adige	Trento	Asuit	Storo	//	48,5
+Trentino Alto Adige	Trento	Asuit	Levico Terme	//	48
+Trentino Alto Adige	Trento	Asuit	Cavedine	//	47,7
+Trentino Alto Adige	Trento	Asuit	Pieve Di Bono-Prezzo	//	47,5
+Trentino Alto Adige	Trento	Asuit	Castello Tesino	//	47
+Trentino Alto Adige	Trento	Asuit	Borgo Chiese-Condino	//	46,5
+Trentino Alto Adige	Trento	Asuit	Nomi	//	46
+Trentino Alto Adige	Trento	Asuit	Grigno	//	46
+Veneto	Venezia	Ulss 3 Serenissima	//	104	52
+Veneto	Venezia	Ulss 4 Veneto Orientale	//	104	52
+Lombardia	Sondrio	Ats della Montagna	Casa San Lorenzo	//	60
+Lombardia	Sondrio	Ats della Montagna	Casa San Benigno	//	61,81
+Lombardia	Sondrio	Ats della Montagna	Fondazione Villa del Sorriso Onlus	//	59,18
+Lombardia	Sondrio	Ats della Montagna	Casa di Riposo Città di Chiavenna	//	59
+Lombardia	Sondrio	Ats della Montagna	Fondazione Madonna della Neve Onlus	//	57,53
+Lombardia	Sondrio	Ats della Montagna	RSA Roncaglia di Civo	//	90
+Lombardia	Sondrio	Ats della Montagna	Casa di Riposo Corti Nemesio	//	60,82
+Lombardia	Sondrio	Ats della Montagna	Casa Madonna del Lavoro - Don Guanella	//	63,45
+Lombardia	Sondrio	Ats della Montagna	Fondazione Visconti Venosta Onlus	//	54,25
+Lombardia	Sondrio	Ats della Montagna	Casa di Riposo G.M. Venzoli	//	52,6
+Lombardia	Sondrio	Ats della Montagna	RSA Tomaso Ambrosetti	//	60,49
+Lombardia	Sondrio	Ats della Montagna	RSA Paolo Paravicini	//	60,49
+Lombardia	Sondrio	Ats della Montagna	Casa di Riposo Costante Patrizi	//	57,21
+Lombardia	Sondrio	Ats della Montagna	Bellavista	//	50,95
+Lombardia	Sondrio	Ats della Montagna	Casa di Riposo Città di Sondrio	//	57,87
+Lombardia	Sondrio	Ats della Montagna	Centro Servizi alla Persona	//	59,51
+Lombardia	Sondrio	Ats della Montagna	RSA Bernina	//	95
+Lombardia	Sondrio	Ats della Montagna	Fondazione Talamona Onlus	//	53,59
+Lombardia	Sondrio	Ats della Montagna	Fondazione S.Orsola Onlus	//	49,32
+Lombardia	Sondrio	Ats della Montagna	Fondazione Città di Tirano Onlus	//	59,84
+Lombardia	Sondrio	Ats della Montagna	Baita Serena	//	60
+Lombardia	Sondrio	Ats della Montagna	Casa di Riposo Bongioni Lambertenghi Onlus	//	60,49
+Lombardia	Como	Ats della Montagna	Casa di Riposo Ferriere e Fonderie Dongo	//	72,7
+Lombardia	Como	Ats della Montagna	Casa Sacro Cuore	//	74
+Lombardia	Brescia	Ats della Montagna	Rsa Lucia Lorenzetti	//	57
+Lombardia	Brescia	Ats della Montagna	Rsa Beato Innocenzo	//	65,06
+Lombardia	Brescia	Ats della Montagna	Rsa Fondazione Villa Monsignor Damiano Zani	//	56
+Lombardia	Brescia	Ats della Montagna	Rsa Cav. Paolo Rivadossi	//	61,44
+Lombardia	Brescia	Ats della Montagna	Rsa Fondazione Ente Celeri Onlus	//	52
+Lombardia	Brescia	Ats della Montagna	Rsa Fondazione Fratelli Bona Onlus	//	52
+Lombardia	Brescia	Ats della Montagna	Rsa Residenza Angelo Maj Fondazione Onus	//	57
+Lombardia	Brescia	Ats della Montagna	Rsa Fondazione Casa di Soggiorno per Anziani D.Giamboni Onlus	//	52,6
+Lombardia	Brescia	Ats della Montagna	Rsa Ninj Beccagutti	//	59
+Lombardia	Brescia	Ats della Montagna	Rsa Residenza per Anziani Villa W.A.Mozart	//	59
+Lombardia	Brescia	Ats della Montagna	Rsa Don G.Ferraglio	//	56
+Lombardia	Brescia	Ats della Montagna	Rsa Fondazione Giovannina Rizzieri Onlus	//	55,8
+Lombardia	Brescia	Ats della Montagna	Rsa Fondazione Onlus Santa Maria Della Neve	//	59
+Lombardia	Brescia	Ats della Montagna	Rsa Fondazione Giacomo Carettoni Onlus	//	62
+Lombardia	Cremona	Ats Val Padana	Casa di Riposo Giovanni E Luciana Arvedi	//	70
+Lombardia	Mantova	Ats Val Padana	Casa di Riposo Residenza Alla Pace	//	67
+Lombardia	Cremona	Ats Val Padana	Casa di Riposo San Giuseppe	//	65,5
+Lombardia	Mantova	Ats Val Padana	Casa Famiglia  Madre Colomba Gabriel	//	66
+Lombardia	Cremona	Ats Val Padana	Casa Famiglia Padre Francesco Spinelli	//	70
+Lombardia	Cremona	Ats Val Padana	Casa Soggiorno Nolli Pigoli	//	64
+Lombardia	Cremona	Ats Val Padana	Don F. Mori	//	77,14
+Lombardia	Mantova	Ats Val Padana	Fondazione Baguzzi Dassu'	//	60
+Lombardia	Cremona	Ats Val Padana	Fondazione Benefattori Cremaschi	//	68,5
+Lombardia	Cremona	Ats Val Padana	Fondazione Benefattori Cremaschi Onlus	//	68,5
+Lombardia	Cremona	Ats Val Padana	Fondazione Bevilacqua Rizzi	//	57
+Lombardia	Cremona	Ats Val Padana	Fondazione Bruno Pari Onlus	//	62
+Lombardia	Cremona	Ats Val Padana	Fondazione Casa di Riposo di Robecco D'oglio Onlus	//	62
+Lombardia	Cremona	Ats Val Padana	Fondazione Casa Riposo Ospedale Dei Poveri Pandino Onlus	//	62
+Lombardia	Mantova	Ats Val Padana	Fondazione Conte Dr. Carlo Caracci Onlus	//	58
+Lombardia	Mantova	Ats Val Padana	Fondazione Contessa Rizzini Onlus	//	64
+Lombardia	Cremona	Ats Val Padana	Fondazione di Servizi Alla Persona Milanesi E Frosi Onlus	//	62
+Lombardia	Cremona	Ats Val Padana	Fondazione E. Germani Centro Sanitario Assistenziale Onlus	//	64,5
+Lombardia	Cremona	Ats Val Padana	Fondazione Esilda E Francesco Soldi Onlus	//	60
+Lombardia	Mantova	Ats Val Padana	Fondazione G. Belfanti Onlus	//	64
+Lombardia	Cremona	Ats Val Padana	Fondazione Giuseppina Brunenghi Onlus	//	60,5
+Lombardia	Cremona	Ats Val Padana	Fondazione Guida Dr. Venceslao Onlus	//	60
+Lombardia	Mantova	Ats Val Padana	Fondazione Innocenta Zanetti E Angelo Cominelli Onlus	//	63
+Lombardia	Cremona	Ats Val Padana	Fondazione Istituto Vismara - De Petri Onlus	//	65,5
+Lombardia	Mantova	Ats Val Padana	Fondazione Mazzucchini Casa di Riposo Pomponesco Onlus	//	58
+Lombardia	Cremona	Ats Val Padana	Fondazione O.P. G. Vezzoli	//	62
+Lombardia	Mantova	Ats Val Padana	Fondazione Onlus Casa di Riposo Leandra	//	56,5
+Lombardia	Mantova	Ats Val Padana	Fondazione Ospedale Civile di Gonzaga	//	63
+Lombardia	Cremona	Ats Val Padana	Fondazione Ospedale Della Carita' Casa di Riposo Onlus	//	59,5
+Lombardia	Cremona	Ats Val Padana	Fondazione Ospedale Giuseppe Aragona Istituto Geriatrico E Riabilitativo Onlus	//	61
+Lombardia	Mantova	Ats Val Padana	Fondazione Pietro Sissa	//	64
+Lombardia	Cremona	Ats Val Padana	Fondazione Rsa di Soncino Onlus	//	63
+Lombardia	Mantova	Ats Val Padana	Fondazione San Biagio Onlus	//	66
+Lombardia	Mantova	Ats Val Padana	Fondazione Scarpari Forattini Onlus	//	73
+Lombardia	Cremona	Ats Val Padana	Fondazione Ss. Redentore	//	65
+Lombardia	Mantova	Ats Val Padana	Fondazione Ulderico Sabbadini Onlus	//	60
+Lombardia	Cremona	Ats Val Padana	Fondazione Villa Sacro Cuore Coniugi Preyer Onlus	//	57
+Lombardia	Mantova	Ats Val Padana	Franco Nicolai Onlus	//	66
+Lombardia	Mantova	Ats Val Padana	Istituto Geriatrico Carlo Louisa Grassi	//	60,5
+Lombardia	Mantova	Ats Val Padana	Istituto Per Anziani Isidoro Cappi Onlus	//	68
+Lombardia	Cremona	Ats Val Padana	Luigi Mazza	//	65,5
+Lombardia	Mantova	Ats Val Padana	Residenza Ducale	//	66
+Lombardia	Cremona	Ats Val Padana	Residenza Guerreschi	//	130
+Lombardia	Mantova	Ats Val Padana	Residenza Sanitaria Assistenziale di Asola	//	56
+Lombardia	Mantova	Ats Val Padana	Residenza Te	//	71
+Lombardia	Cremona	Ats Val Padana	Rsa A Istituto Ospedaliero	//	67,5
+Lombardia	Mantova	Ats Val Padana	Rsa A. Ricciardelli	//	55
+Lombardia	Cremona	Ats Val Padana	Rsa Azzolini	//	64,4
+Lombardia	Cremona	Ats Val Padana	Rsa B	//	64,4
+Lombardia	Mantova	Ats Val Padana	Rsa Beata Paola	//	66
+Lombardia	Mantova	Ats Val Padana	Rsa Boni 2	//	100
+Lombardia	Mantova	Ats Val Padana	Rsa Casa Canossa	//	70
+Lombardia	Mantova	Ats Val Padana	Rsa Casa Pace	//	74
+Lombardia	Mantova	Ats Val Padana	Rsa Casa Rosanna	//	66
+Lombardia	Mantova	Ats Val Padana	Rsa Casa Solaris	//	70
+Lombardia	Mantova	Ats Val Padana	Rsa Comunale	//	58
+Lombardia	Mantova	Ats Val Padana	Rsa Ducale	//	68,39
+Lombardia	Mantova	Ats Val Padana	Rsa Emanuele E Giuseppina Cordioli	//	67
+Lombardia	Mantova	Ats Val Padana	Rsa Ernesta Bovi	//	64,1
+Lombardia	Mantova	Ats Val Padana	Rsa Fondazione Antonio Nuvolari	//	64,5
+Lombardia	Cremona	Ats Val Padana	Rsa Fondazione Conte Carlo Busi	//	64
+Lombardia	Mantova	Ats Val Padana	Rsa Fondazione Luigi Boni Onlus	//	65
+Lombardia	Mantova	Ats Val Padana	Rsa Fondazione Mons. Arrigo Mazzali Onlus	//	64
+Lombardia	Cremona	Ats Val Padana	Rsa Fondazione Ospedale Caimi Onlus	//	68
+Lombardia	Mantova	Ats Val Padana	Rsa Giuseppe Serini	//	68
+Lombardia	Mantova	Ats Val Padana	Rsa I Ciclamini	//	67,21
+Lombardia	Mantova	Ats Val Padana	Rsa I Girasoli	//	66
+Lombardia	Mantova	Ats Val Padana	Rsa I Tulipani	//	65
+Lombardia	Mantova	Ats Val Padana	Rsa Il Gelso	//	65
+Lombardia	Mantova	Ats Val Padana	Rsa Isabella D'este	//	45
+Lombardia	Mantova	Ats Val Padana	Rsa Luigi Bianchi	//	56
+Lombardia	Cremona	Ats Val Padana	Rsa Mainardi	//	64,4
+Lombardia	Mantova	Ats Val Padana	Rsa Mantegna	//	62,15
+Lombardia	Mantova	Ats Val Padana	Rsa Mons. Benedini	//	59
+Lombardia	Mantova	Ats Val Padana	Rsa Morando	//	78
+Lombardia	Mantova	Ats Val Padana	Rsa Rodigo	//	66,5
+Lombardia	Mantova	Ats Val Padana	Rsa San Pietro	//	66
+Lombardia	Cremona	Ats Val Padana	Rsa San Vincenzo	//	70
+Lombardia	Cremona	Ats Val Padana	Rsa Somenzi	//	64,4
+Lombardia	Mantova	Ats Val Padana	Rsa Tosi Cippelletti di Rivarolo Mantovano	//	59
+Lombardia	Mantova	Ats Val Padana	Rsa Unita' Geriatrica Riabilitativa Onlus	//	67
+Lombardia	Mantova	Ats Val Padana	Rsa Villa Aurelia	//	71
+Lombardia	Mantova	Ats Val Padana	Rsa Villa Azzurra	//	66
+Lombardia	Mantova	Ats Val Padana	Rsa Villa Carpaneda	//	63,5
+Lombardia	Mantova	Ats Val Padana	Rsa Villa Maddalena	//	68
+Lombardia	Cremona	Ats Val Padana	Villa Abbadia	//	73,5
+Lombardia	Cremona	Ats Val Padana	Zucchi Falcina	//	70
+Trentino Alto Adige	Bolzano	Asdaa	Centro di degenza Firmian	//	53
+Lombardia	Como	Ats Insubria	Opera Pia Roscio Onlus	//	60
+Lombardia	Como	Ats Insubria	Casa di Riposo Villa San Benedetto	//	83
+Lombardia	Como	Ats Insubria	Ida Parravicini di Persia	//	69
+Lombardia	Como	Ats Insubria	Rsa Il Focolare Santa Maria di Loreto	//	78
+Lombardia	Como	Ats Insubria	Rsa Valle Intelvi	//	78
+Lombardia	Como	Ats Insubria	Casa Per Anziani Don Giuseppe Allievi	//	72
+Lombardia	Como	Ats Insubria	Casa di Riposo Vallardi Ets	//	65,5
+Lombardia	Como	Ats Insubria	Rsa Fondazione Bellaria Ets	//	66,5
+Lombardia	Como	Ats Insubria	Fondazione Anna Borletti Per Invalidi E Anziani	//	71
+Lombardia	Como	Ats Insubria	Istituto Nidasio Galetti	//	73
+Lombardia	Como	Ats Insubria	Residenza San Giovanni	//	92
+Lombardia	Como	Ats Insubria	Fondazione Gioventù Nova Villa Rovera Molina Onlus	//	79,5
+Lombardia	Como	Ats Insubria	Greco De Vecchi	//	77
+Lombardia	Como	Ats Insubria	Residenza Sanitaria Bellagio	//	72,38
+Lombardia	Como	Ats Insubria	San Giulio	//	91
+Lombardia	Como	Ats Insubria	Residenza Ai Pini	//	85
+Lombardia	Varese	Ats Insubria	Fondazione Giuseppe E Giuliana Ronzoni Onlus	//	81
+Lombardia	Varese	Ats Insubria	Villa Puricelli - Casa Cardinale Giacomo Lercaro	//	80,09
+Lombardia	Como	Ats Insubria	Fondazione Case di Riposo Riunite di Bregnano E Lomazzo - Rsa Bregnano	//	76
+Lombardia	Varese	Ats Insubria	Centro Polifunzionale Per La Terza Età	//	78,99
+Lombardia	Varese	Ats Insubria	Istituto La Provvidenza U.G. 1	//	78
+Lombardia	Varese	Ats Insubria	Istituto La Provvidenza U.G. 3	//	81
+Lombardia	Varese	Ats Insubria	Istituto Cavalier Francesco Menotti	//	82,5
+Lombardia	Como	Ats Insubria	Villa Dossel	//	73,97
+Lombardia	Varese	Ats Insubria	Istituto Palazzolo Casa San Giuseppe	//	76
+Lombardia	Como	Ats Insubria	Antonio Vivaldi	//	90,5
+Lombardia	Como	Ats Insubria	Fondazione Rsa Garibaldi Pogliani Onlus	//	66
+Lombardia	Como	Ats Insubria	Fondazione Rsa Garibaldi Pogliani Onlus Sede 3 Fossano	//	81
+Lombardia	Como	Ats Insubria	Don Alessandro Pozzoli	//	63
+Lombardia	Como	Ats Insubria	Residenza Croce di Malta	//	92,3
+Lombardia	Como	Ats Insubria	Fondazione Rsa Garibaldi Pogliani Onlus	//	66,5
+Lombardia	Varese	Ats Insubria	Rsa Corte Cova	//	79
+Lombardia	Varese	Ats Insubria	Fondazione Casa di Soggiorno E Riposo Longhi Francesco E Famiglia  Pianezza Federico Onlus	//	75
+Lombardia	Varese	Ats Insubria	Rsa Cardinal Colombo	//	78,61
+Lombardia	Varese	Ats Insubria	Rsa Sant'andrea	//	79,8
+Lombardia	Varese	Ats Insubria	Fondazione Centro Assistenza Anziani Giulio Moroni Onlus	//	77
+Lombardia	Como	Ats Insubria	Il Ronco	//	85,5
+Lombardia	Como	Ats Insubria	Villa Clarice	//	89,5
+Lombardia	Como	Ats Insubria	Santa Maria Della Pace	//	69
+Lombardia	Varese	Ats Insubria	Fondazione Angela Mauri Sacconaghi - Giovanni Borghi Onlus	//	81
+Lombardia	Como	Ats Insubria	Casa Divina Provvidenza Opera Don Guanella	//	67,63
+Lombardia	Como	Ats Insubria	Casa Santa Maria Della Provvidenza	//	73
+Lombardia	Como	Ats Insubria	Fondazione Ca' D'industria Onlus	//	74
+Lombardia	Como	Ats Insubria	Fondazione Ca' D'industria Onlus	//	78
+Lombardia	Como	Ats Insubria	Istituto Suore Giuseppine	//	73
+Lombardia	Como	Ats Insubria	Le Camelie	//	80
+Lombardia	Como	Ats Insubria	Rsa Casa S. Marcellina	//	73
+Lombardia	Como	Ats Insubria	Pascoli	//	63,55
+Lombardia	Varese	Ats Insubria	Rsa Casa S.Maria Annunciata	//	75
+Lombardia	Varese	Ats Insubria	Residenza Prealpina	//	85
+Lombardia	Como	Ats Insubria	Sacro Cuore - 1	//	78
+Lombardia	Como	Ats Insubria	Sacro Cuore - 2	//	78
+Lombardia	Como	Ats Insubria	Fondazione Giuseppina Prina - Onlus	//	69
+Lombardia	Varese	Ats Insubria	Fondazione Bellora Onlus	//	65
+Lombardia	Varese	Ats Insubria	Residenza Angelo Bellora	//	65
+Lombardia	Varese	Ats Insubria	Rsa Camelot	//	64,66
+Lombardia	Varese	Ats Insubria	Rsa Il Melo	//	90,21
+Lombardia	Varese	Ats Insubria	Casa di Riposo D. Bernacchi - Gerli Arioli Onlus	//	76,5
+Lombardia	Varese	Ats Insubria	Rsa Villaggio Amico	//	112
+Lombardia	Varese	Ats Insubria	Residenza Raimondi	//	87,5
+Lombardia	Varese	Ats Insubria	Rsa Villa Parini	//	95,8
+Lombardia	Como	Ats Insubria	Foscolo	//	120
+Lombardia	Varese	Ats Insubria	Rsa  A.S.Far.M	//	81,5
+Lombardia	Varese	Ats Insubria	Casa Don Guanella	//	83,11
+Lombardia	Varese	Ats Insubria	Residenza Ispra Relais	//	85
+Lombardia	Varese	Ats Insubria	Rsa Fiammetta Polis	//	94
+Lombardia	Varese	Ats Insubria	Rsa Villa Fiammetta	//	85
+Lombardia	Varese	Ats Insubria	Rsa Residenza Giardino	//	85
+Lombardia	Varese	Ats Insubria	Residenza Franco Bassani	//	80,7
+Lombardia	Varese	Ats Insubria	Residenza Gennaro Arioli	//	80,7
+Lombardia	Varese	Ats Insubria	Residenza Giannina Scotti	//	80,7
+Lombardia	Como	Ats Insubria	Casa di Riposo Villa Citterio	//	55,23
+Lombardia	Como	Ats Insubria	Casa Beato Luigi Guanella	//	73
+Lombardia	Como	Ats Insubria	Fondazione Case di Riposo Riunite di Bregnano E Lomazzo - Rsa Lomazzo	//	76
+Lombardia	Varese	Ats Insubria	Fondazione Centro Accoglienza Per Anziani Onlus	//	76,5
+Lombardia	Varese	Ats Insubria	Fondazione Mons. Gerolamo  Comi Onlus	//	76,5
+Lombardia	Varese	Ats Insubria	Residenza Mario E Rina Molina	//	84
+Lombardia	Varese	Ats Insubria	Fondazione Don Carlo Gnocchi Onlus - Centro Santa Maria Al Monte	//	74
+Lombardia	Varese	Ats Insubria	Rsa Calicantus Srl	//	90
+Lombardia	Como	Ats Insubria	Centro Geriatrico Porta Spinola	//	77
+Lombardia	Como	Ats Insubria	Casa Giardino Degli Ulivi	//	82
+Lombardia	Como	Ats Insubria	La Sapienza	//	82
+Lombardia	Como	Ats Insubria	Giovanni Xxiii	//	74,8
+Lombardia	Como	Ats Insubria	Fondazione Michela E Franco Fornasari	//	77,26
+Lombardia	Como	Ats Insubria	Fondazione Casa di Riposo Citta' di Olgiate Comasco Onlus	//	58
+Lombardia	Varese	Ats Insubria	Rsa Casa San Giorgio	//	80,55
+Lombardia	Como	Ats Insubria	Karol Wojtyla	//	78
+Lombardia	Como	Ats Insubria	Lina Erba	//	82
+Lombardia	Varese	Ats Insubria	Residenza Al Lago	//	85
+Lombardia	Varese	Ats Insubria	Residenza Lago Maggiore	//	88
+Lombardia	Como	Ats Insubria	Casa di Riposo Per Anziani Villa Stefania	//	90,27
+Lombardia	Como	Ats Insubria	Villa S. Fermo	//	70
+Lombardia	Varese	Ats Insubria	Casa di Riposo Giulio Gianetti	//	79,46
+Lombardia	Varese	Ats Insubria	Rsa Casa  S.Agnese	//	74
+Lombardia	Varese	Ats Insubria	Rsa Fondazione Casa di Riposo Intercomunale Saronno Onlus	//	81
+Lombardia	Varese	Ats Insubria	Casa S. Angelo	//	75
+Lombardia	Como	Ats Insubria	San Carlo Borromeo - Fatebenefratelli	//	71,5
+Lombardia	Varese	Ats Insubria	"Fondazione Casa di Riposo ""C. E V. Bellini"" Onlus"	//	70,75
+Lombardia	Varese	Ats Insubria	Rsa Il Girasole	//	68
+Lombardia	Varese	Ats Insubria	Casa di Riposo San Gaetano	//	76
+Lombardia	Varese	Ats Insubria	Fondazione Velini Casa Famiglia Onlus	//	76
+Lombardia	Varese	Ats Insubria	Rsa Pineta	//	76
+Lombardia	Como	Ats Insubria	Papa Giovanni Xxiii	//	76
+Lombardia	Como	Ats Insubria	Casa Anziani Intercomunale	//	66
+Lombardia	Varese	Ats Insubria	Fondazione Fratelli Paolo E Tito Molina Onlus	//	73
+Lombardia	Varese	Ats Insubria	Residenza Sanitaria Assistenziale Maria Immacolata	//	84,2
+Lombardia	Varese	Ats Insubria	Fondazione Angelo Poretti E Angelo  Magnani Onlus	//	73
+Lombardia	Varese	Ats Insubria	Rsa Villaggio Del Fanciullo	//	70,68
+Lombardia	Varese	Ats Insubria	Casa di Riposo San Giuseppe	//	77
+Lombardia	Varese	Ats Insubria	Fondazione Istituto Madonna Della Croce	//	73
+Veneto	Padova	Ulss 6 Euganea	//	104	52
+Friuli Venezia Giulia	Udine	Asufo	"ASP ""Daniele Moro"""	//	89
+Friuli Venezia Giulia	Udine	Asufo	"ASP Cordenonese ""Virginia Fabbri Taliento"""	//	66
+Friuli Venezia Giulia	Udine	Asufo	ASP di Spilimbergo	//	67
+Friuli Venezia Giulia	Udine	Asufo	Casa di Riposo Parrocchia dei Santi, Vito, Modesto e Crescenzia Martiri	//	55
+Friuli Venezia Giulia	Udine	Asufo	Casa di soggiorno per anziani di Aviano	//	72,9
+Friuli Venezia Giulia	Udine	Asufo	Casa Serena - Pordenone	//	64,83
+Friuli Venezia Giulia	Udine	Asufo	Centro Assistenza Anziani di Maniago	//	77,6
+Friuli Venezia Giulia	Udine	Asufo	"Residenza ""Le Betulle"""	//	62
+Friuli Venezia Giulia	Udine	Asufo	"Residenza ""Micoli Toscano"""	//	92
+Friuli Venezia Giulia	Udine	Asufo	"Residenza ""Tre Cuori"""	//	86,5
+Friuli Venezia Giulia	Udine	Asufo	Residenza per anziani di Sacile	//	80,1
+Friuli Venezia Giulia	Udine	Asufo	Solidarietà - Mons. D. Cadore	//	83,9
+Friuli Venezia Giulia	Udine	Asufo	Umberto I - Pordenone	//	87,4
+Friuli Venezia Giulia	Udine	Asufo	Zaffiro Noncello	//	99
+Friuli Venezia Giulia	Udine	Asufo	Zaffiro Torre	//	99
+Friuli Venezia Giulia	Udine	Asufo	Casa anziani Ada e Alfredo Arcicasa	//	84
+Friuli Venezia Giulia	Udine	Asufo	Casa Lucia	//	81,1
+Friuli Venezia Giulia	Udine	Asufo	"Residenza ""Casa dell'Emigrante C. e A. Carnera"""	//	62
+Friuli Venezia Giulia	Udine	Asufo	Villa Olimpia	//	85
+Friuli Venezia Giulia	Udine	Asufo	Fondazione G. Fabricio	//	51
+Friuli Venezia Giulia	Udine	Asufo	La Panoramica	//	108
+Friuli Venezia Giulia	Udine	Asufo	Residenza casa del clero	//	55
+Friuli Venezia Giulia	Udine	Asufo	Opera Colledani Bulian	//	49,5
+Friuli Venezia Giulia	Udine	Asufo	Residenza Assistenziale Alberghiera di Cimolais	//	55
+Friuli Venezia Giulia	Udine	Asufo	Casa Alberina	//	63
+Friuli Venezia Giulia	Udine	Asufo	Casa Clelia	//	63
+Friuli Venezia Giulia	Udine	Asufo	Casa Colvera	//	54,61
+Friuli Venezia Giulia	Udine	Asufo	Casa per anziani Valeriano	//	47
+Friuli Venezia Giulia	Udine	Asufo	Il Pellegrin	//	60,26
+Friuli Venezia Giulia	Udine	Asufo	Villa Mariucci	//	53
+Emilia Romagna	Piacenza	Ausl Piacenza	Pubblica	109,05	54,15
+Emilia Romagna	Piacenza	Ausl Piacenza	Privata	109,8	54,15
+Emilia Romagna	Parma	Ausl Parma	Pubblica	109,05	54,15
+Emilia Romagna	Parma	Ausl Parma	Privata	109,8	54,15
+Emilia Romagna	Reggio Emilia	Ausl Reggio Emilia	Pubblica	109,05	54,15
+Emilia Romagna	Reggio Emilia	Ausl Reggio Emilia	Privata	109,8	54,15
+Emilia Romagna	Modena	Ausl Modena	Pubblica	109,05	54,15
+Emilia Romagna	Modena	Ausl Modena	Privata	109,8	54,15
+Emilia Romagna	Bologna	Ausl Bologna	Pubblica	109,05	54,15
+Emilia Romagna	Bologna	Ausl Bologna	Privata	109,8	54,15
+Veneto	Vicenza	Ulss 8 Berica	"Casa di Riposo ""Bonaguro"""	//	73,5
+Veneto	Vicenza	Ulss 8 Berica	"Casa di Riposo ""Comm. A. Michelazzo"""	//	58
+Veneto	Vicenza	Ulss 8 Berica	"Casa di Riposo ""Don A. Simionati e Cav.D. Soattini"""	//	55
+Veneto	Vicenza	Ulss 8 Berica	"Casa di riposo ""Orazio Lampertico"""	//	64
+Veneto	Vicenza	Ulss 8 Berica	"Casa di Riposo ""San Giuseppe"""	//	53
+Veneto	Vicenza	Ulss 8 Berica	"Casa di Riposo ""Serse Panizzoni"""	//	58,5
+Veneto	Vicenza	Ulss 8 Berica	Casa di Riposo “Dott. U. e A. Tassoni”	//	52,5
+Veneto	Vicenza	Ulss 8 Berica	Casa di Riposo San G. Battista	//	60
+Veneto	Vicenza	Ulss 8 Berica	Centro Anziani Villa Margherita	//	48,9
+Veneto	Vicenza	Ulss 8 Berica	"Centro Polifunzionale ""Papa Luciani"""	//	75
+Veneto	Vicenza	Ulss 8 Berica	"Centro Residenziale Anziani ""S. Scalabrin"""	//	59,5
+Veneto	Vicenza	Ulss 8 Berica	Centro Serv.Assistenziali S. Antonio Chiampo ed Alta Valle	//	63
+Veneto	Vicenza	Ulss 8 Berica	"Centro Servizi ""Cà Arnaldi"""	//	59
+Veneto	Vicenza	Ulss 8 Berica	"Centro Servizi Anziani ""Umberto Bagarella"" Dueville"	//	62
+Veneto	Vicenza	Ulss 8 Berica	Centro Servizi Anziani Fondazione Marzotto	//	51,68
+Veneto	Vicenza	Ulss 8 Berica	Centro Servizi Beato Nascimbeni	//	64
+Veneto	Vicenza	Ulss 8 Berica	Centro Servizi Sociali Villa Serena	//	66
+Veneto	Vicenza	Ulss 8 Berica	Centro Servizio Anziani - Casa Provvidenza	//	72,3
+Veneto	Vicenza	Ulss 8 Berica	CSA S. Bertilla - Brendola	//	66,5
+Veneto	Vicenza	Ulss 8 Berica	Fondazione Luigia Gaspari Bressan o.n.l.u.s.	//	67
+Veneto	Vicenza	Ulss 8 Berica	Fondazione Opera Immacolata Concezione Onlus	//	52,1
+Veneto	Vicenza	Ulss 8 Berica	I.P.A.B. Suor Diodata Bertolo	//	63
+Veneto	Vicenza	Ulss 8 Berica	IPAB di Vicenza - Residenza Monte Crocetta	//	69,7
+Veneto	Vicenza	Ulss 8 Berica	IPAB di Vicenza - Residenza Salvi	//	69,7
+Veneto	Vicenza	Ulss 8 Berica	IPAB di Vicenza - Residenza Trento	//	69,7
+Veneto	Vicenza	Ulss 8 Berica	IPAB G. Bisognin Servizi Socio Assistenziali	//	58,2
+Veneto	Vicenza	Ulss 8 Berica	IPAB La Pieve – Servizi Assistenziali	//	61,2
+Veneto	Vicenza	Ulss 8 Berica	Opera Pia Raggio di Sole	//	49,5
+Veneto	Vicenza	Ulss 8 Berica	Parco Fortuna	//	65
+Veneto	Vicenza	Ulss 8 Berica	"Residenza ""Villa Caldogno"""	//	66
+Veneto	Vicenza	Ulss 8 Berica	Residenza Fontanelle di Trissino	//	66
+Veneto	Vicenza	Ulss 8 Berica	Residenza Giardino Recoaro Terme	//	66
+Veneto	Vicenza	Ulss 8 Berica	Residenza Montalbieri	//	63,5
+Veneto	Vicenza	Ulss 8 Berica	Residenza Parco Città	//	62
+Veneto	Vicenza	Ulss 8 Berica	Scuola Materna Casa di Riposo Don Antonio Bruzzo	//	50
+Veneto	Vicenza	Ulss 8 Berica	Villa Serena Lonigo	//	51,7
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Martini	//	44
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Armony	//	66
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Casa di Michele	//	53
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Dario Maestrini	//	48,48
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Guillichini	//	60,9
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Pescaiola	//	48,48
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Pionta	//	48,48
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Santa Elisabetta	//	53
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Villa Fiorita	//	55
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Vittorio Fossombroni	//	53,5
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Badia Tedalda	//	50
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Villaggio Consolata	//	58
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Fabbri Bicoli	//	53,5
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	OAMI Casa Filippo	//	58
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Castelfranco Di Sopra	//	52
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	OAMI Casa Serena	//	58
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Casa Albergo per Anziani	//	58,7
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	RSA San Giovanni Bosco	//	58,7
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Castiglion Fiorentino	//	42
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Cosimo Serristori	//	53,9
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Belvedere	//	65
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Becattini	//	51
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Casa di Anna	//	65
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	La Primula	//	42
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Santa Rita	//	66,5
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Sernini	//	42
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	RSA San Martino	//	42
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	RSA Residenza Argento	//	65
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Arrighi Griffoli	//	42
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Ciapi	//	46
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Santa Maria Maddalena	//	52,6
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	S. Maria della Pace	//	48,48
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	ASP Montevarchi	//	53,5
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Paolo e Isolina Biozzi	//	54
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Poppi	//	58
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	San Romualdo	//	49
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Masaccio	//	53,5
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	San Lorenzo	//	56,5
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Sestino G. Bertozzi	//	54,64
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Boschi	//	48,48
+Toscana	Arezzo	Azienda Usl Toscana Sud Est	Terranuova Bracciolini	//	53,5
+Toscana	Firenze	Azienda Usl Toscana Centro	Masaccio	//	65
+Toscana	Firenze	Azienda Usl Toscana Centro	Villa Jole	//	73
+Toscana	Firenze	Azienda Usl Toscana Centro	Villa Olimpia	//	69,5
+Toscana	Firenze	Azienda Usl Toscana Centro	Villa Santa Monica	//	69,5
+Toscana	Firenze	Azienda Usl Toscana Centro	Villa Santa Teresa	//	75
+Toscana	Firenze	Azienda Usl Toscana Centro	Naldini-Torrigiani	//	62,5
+Toscana	Firenze	Azienda Usl Toscana Centro	Residenza Tavarnelle	//	61,37
+Toscana	Firenze	Azienda Usl Toscana Centro	Anni Azzurri Beato Angelico	//	65
+Toscana	Firenze	Azienda Usl Toscana Centro	Giotto	//	65
+Toscana	Firenze	Azienda Usl Toscana Centro	San Giuseppe a Ronta	//	58
+Toscana	Firenze	Azienda Usl Toscana Centro	Villa Magli	//	58,21
+Toscana	Firenze	Azienda Usl Toscana Centro	RSA Piccola Corte	//	62
+Toscana	Firenze	Azienda Usl Toscana Centro	La Mimosa	//	65
+Toscana	Firenze	Azienda Usl Toscana Centro	Residenza Anni Azzurri Campi Bisenzio	//	64
+Toscana	Firenze	Azienda Usl Toscana Centro	RSA Mario Cioni	//	53,5
+Toscana	Firenze	Azienda Usl Toscana Centro	RSA Mario Cappelli	//	53,5
+Toscana	Firenze	Azienda Usl Toscana Centro	Ciapetti - Sezione La Pieve	//	59
+Toscana	Firenze	Azienda Usl Toscana Centro	Ciapetti - Sezione Timignano	//	59
+Toscana	Firenze	Azienda Usl Toscana Centro	Centro Egiziano Giglioli	//	56
+Toscana	Firenze	Azienda Usl Toscana Centro	Villa Agostina	//	62,68
+Toscana	Firenze	Azienda Usl Toscana Centro	Villa San Biagio	//	61
+Toscana	Firenze	Azienda Usl Toscana Centro	Centro residenziale Vincenzo Chiarugi	//	61
+Toscana	Firenze	Azienda Usl Toscana Centro	Chiassatelle	//	53
+Toscana	Firenze	Azienda Usl Toscana Centro	Frate Sole	//	65
+Toscana	Firenze	Azienda Usl Toscana Centro	Martelli	//	60
+Toscana	Firenze	Azienda Usl Toscana Centro	RSA SAN ROMOLO - CASA ARGIA	//	60
+Toscana	Firenze	Azienda Usl Toscana Centro	Ancelle Sacro Cuore di Gesu' Agonizzante	//	59,1
+Toscana	Firenze	Azienda Usl Toscana Centro	Casa di riposo Anna Lapini	//	59,1
+Toscana	Firenze	Azienda Usl Toscana Centro	"Casa ""Paolo VI"""	//	58
+Toscana	Firenze	Azienda Usl Toscana Centro	Casa San Giuseppe	//	65
+Toscana	Firenze	Azienda Usl Toscana Centro	Cottolengo	//	59,1
+Toscana	Firenze	Azienda Usl Toscana Centro	Fondazione Opera Casa A. Placci	//	53,5
+Toscana	Firenze	Azienda Usl Toscana Centro	Guidi Raggio	//	59,1
+Toscana	Firenze	Azienda Usl Toscana Centro	Il Giglio	//	62
+Toscana	Firenze	Azienda Usl Toscana Centro	Il Gignoro	//	59,1
+Toscana	Firenze	Azienda Usl Toscana Centro	Istituto San Salvatore	//	59
+Toscana	Firenze	Azienda Usl Toscana Centro	La Chiocciola	//	66
+Toscana	Firenze	Azienda Usl Toscana Centro	La Cupolina	//	66
+Toscana	Firenze	Azienda Usl Toscana Centro	La Meridiana	//	69
+Toscana	Firenze	Azienda Usl Toscana Centro	L'Arcolaio	//	61
+Toscana	Firenze	Azienda Usl Toscana Centro	La Veranella	//	65
+Toscana	Firenze	Azienda Usl Toscana Centro	Le Casette	//	58
+Toscana	Firenze	Azienda Usl Toscana Centro	Le Civette	//	52,79
+Toscana	Firenze	Azienda Usl Toscana Centro	Le Magnolie	//	63
+Toscana	Firenze	Azienda Usl Toscana Centro	L.F. Orvieto	//	59,1
+Toscana	Firenze	Azienda Usl Toscana Centro	Madonna delle Grazie	//	59,1
+Toscana	Firenze	Azienda Usl Toscana Centro	Madre Francesca Tarducci	//	59,1
+Toscana	Firenze	Azienda Usl Toscana Centro	Montedomini	//	59,1
+Toscana	Firenze	Azienda Usl Toscana Centro	Montedomini Istituto San Silvestro	//	53,5
+Toscana	Firenze	Azienda Usl Toscana Centro	Pio Istituto S. Anna	//	66,5
+Toscana	Firenze	Azienda Usl Toscana Centro	RSA L'Uliveto	//	66
+Toscana	Firenze	Azienda Usl Toscana Centro	RSA Thouar	//	59,1
+Toscana	Firenze	Azienda Usl Toscana Centro	San Giuseppe Cottolengo	//	59,1
+Toscana	Firenze	Azienda Usl Toscana Centro	San Lorenzo	//	65
+Toscana	Firenze	Azienda Usl Toscana Centro	S. Saadun Ospizio Israelitico	//	59,5
+Toscana	Firenze	Azienda Usl Toscana Centro	Villa Canova	//	68
+Toscana	Firenze	Azienda Usl Toscana Centro	Villa Consolata	//	56
+Toscana	Firenze	Azienda Usl Toscana Centro	Villa Desiderio	//	57
+Toscana	Firenze	Azienda Usl Toscana Centro	Villa Gisella Nuovo Padiglione	//	70
+Toscana	Firenze	Azienda Usl Toscana Centro	Villa Gisella Vecchio Padiglione	//	70
+Toscana	Firenze	Azienda Usl Toscana Centro	SS. Annunziata	//	49,5
+Toscana	Firenze	Azienda Usl Toscana Centro	Villa Le Ortensie	//	53,5
+Toscana	Firenze	Azienda Usl Toscana Centro	Villa Val Verde	//	51
+Toscana	Firenze	Azienda Usl Toscana Centro	Le Vele	//	53
+Toscana	Firenze	Azienda Usl Toscana Centro	Casa di Riposo Gino Incontri	//	53
+Toscana	Firenze	Azienda Usl Toscana Centro	Botticelli	//	65
+Toscana	Firenze	Azienda Usl Toscana Centro	Rosa Libri	//	62,5
+Toscana	Firenze	Azienda Usl Toscana Centro	Opera Pia Leopoldo e Giovanni Vanni	//	59,3
+Toscana	Firenze	Azienda Usl Toscana Centro	Alfa Columbus	//	63,5
+Toscana	Firenze	Azienda Usl Toscana Centro	Villa Michelangelo	//	64
+Toscana	Firenze	Azienda Usl Toscana Centro	Villa Ersilia	//	49,65
+Toscana	Firenze	Azienda Usl Toscana Centro	La Collinella	//	59
+Toscana	Firenze	Azienda Usl Toscana Centro	Villa Serena	//	53,5
+Toscana	Firenze	Azienda Usl Toscana Centro	Il Castello	//	60,9
+Toscana	Firenze	Azienda Usl Toscana Centro	Santa Maria della Misericordia	//	58
+Toscana	Firenze	Azienda Usl Toscana Centro	RSA Francesco Costa	//	54
+Toscana	Firenze	Azienda Usl Toscana Centro	Monsavano	//	58
+Toscana	Firenze	Azienda Usl Toscana Centro	Villa Laura	//	67
+Toscana	Firenze	Azienda Usl Toscana Centro	Villa Poggio Adorno	//	71,5
+Toscana	Firenze	Azienda Usl Toscana Centro	San Giuseppe	//	55,5
+Toscana	Firenze	Azienda Usl Toscana Centro	Villa San Martino	//	73
+Toscana	Firenze	Azienda Usl Toscana Centro	Nuova Villa Rio	//	71,5
+Toscana	Firenze	Azienda Usl Toscana Centro	Acciaiolo	//	53
+Toscana	Firenze	Azienda Usl Toscana Centro	Ledanice	//	62
+Toscana	Firenze	Azienda Usl Toscana Centro	San Francesco	//	63
+Toscana	Firenze	Azienda Usl Toscana Centro	Istituto S. Giuseppe	//	57,02
+Toscana	Firenze	Azienda Usl Toscana Centro	Villa Solaria	//	53,5
+Toscana	Firenze	Azienda Usl Toscana Centro	Monsignor Olinto Fedi	//	56,17
+Toscana	Firenze	Azienda Usl Toscana Centro	Soggiorno Angelica	//	59,1
+Toscana	Firenze	Azienda Usl Toscana Centro	Villa I Pitti	//	58
+Toscana	Firenze	Azienda Usl Toscana Centro	Villa Serena	//	59,1
+Toscana	Firenze	Azienda Usl Toscana Centro	Bivigliano clinic ex Villa Belisario	//	58
+Toscana	Firenze	Azienda Usl Toscana Centro	MD clinic	//	58
+Toscana	Grosseto	Azienda Usl Toscana Sud Est	Giuseppe Vegni	//	51
+Toscana	Grosseto	Azienda Usl Toscana Sud Est	Le Sughere	//	52,88
+Toscana	Grosseto	Azienda Usl Toscana Sud Est	Marina di Levante	//	55,27
+Toscana	Grosseto	Azienda Usl Toscana Sud Est	Casa Maiani	//	55,27
+Toscana	Grosseto	Azienda Usl Toscana Sud Est	Anni azzurri Il Poggione	//	64
+Toscana	Grosseto	Azienda Usl Toscana Sud Est	Ferrucci	//	52,88
+Toscana	Grosseto	Azienda Usl Toscana Sud Est	RSA Anni Azzurri il Poggione 2	//	64
+Toscana	Grosseto	Azienda Usl Toscana Sud Est	Villa Gloria	//	67
+Toscana	Grosseto	Azienda Usl Toscana Sud Est	Bianca e Maddalena Morvidi	//	53,5
+Toscana	Grosseto	Azienda Usl Toscana Sud Est	Istituto Falusi	//	58,1
+Toscana	Grosseto	Azienda Usl Toscana Sud Est	Villa Varoli	//	60
+Toscana	Grosseto	Azienda Usl Toscana Sud Est	Residenza Costa d'Argento	//	65,14
+Toscana	Grosseto	Azienda Usl Toscana Sud Est	Le Prata	//	50
+Toscana	Grosseto	Azienda Usl Toscana Sud Est	Madonna del buon incontro	//	51
+Toscana	Grosseto	Azienda Usl Toscana Sud Est	San Giovanni Battista	//	51,45
+Toscana	Grosseto	Azienda Usl Toscana Sud Est	San Giovanni di Scansano	//	43,8
+Toscana	Grosseto	Azienda Usl Toscana Sud Est	Caravaggio	//	57,5
+Toscana	Grosseto	Azienda Usl Toscana Sud Est	Cottolengo di Scarlino	//	51,45
+Toscana	Grosseto	Azienda Usl Toscana Sud Est	Casa Albergo per Anziani	//	49,5
+Toscana	Grosseto	Azienda Usl Toscana Sud Est	Piccolomini Sereni	//	43,55
+Toscana	Livorno	Azienda Usl Toscana Nord Ovest	Carlo Fattori	//	59
+Toscana	Livorno	Azienda Usl Toscana Nord Ovest	Campiglia Marittima	//	59,3
+Toscana	Livorno	Azienda Usl Toscana Nord Ovest	I Giunchi	//	59,3
+Toscana	Livorno	Azienda Usl Toscana Nord Ovest	Cecina	//	62
+Toscana	Livorno	Azienda Usl Toscana Nord Ovest	Fondazione Cardinale Maffi	//	60,15
+Toscana	Livorno	Azienda Usl Toscana Nord Ovest	Parco del Tombolo	//	62
+Toscana	Livorno	Azienda Usl Toscana Nord Ovest	Bastia	//	59,3
+Toscana	Livorno	Azienda Usl Toscana Nord Ovest	Coteto	//	59,3
+Toscana	Livorno	Azienda Usl Toscana Nord Ovest	I Girasoli	//	53,25
+Toscana	Livorno	Azienda Usl Toscana Nord Ovest	Istituto Mater Divinae Gratiae	//	63,5
+Toscana	Livorno	Azienda Usl Toscana Nord Ovest	Istituto Santa Caterina	//	53,25
+Toscana	Livorno	Azienda Usl Toscana Nord Ovest	Istituto S. Maria	//	53,5
+Toscana	Livorno	Azienda Usl Toscana Nord Ovest	Pascoli	//	53,5
+Toscana	Livorno	Azienda Usl Toscana Nord Ovest	RSA La Vedetta	//	60
+Toscana	Livorno	Azienda Usl Toscana Nord Ovest	Villa del Colle	//	53,25
+Toscana	Livorno	Azienda Usl Toscana Nord Ovest	Villa Serena	//	53,5
+Toscana	Livorno	Azienda Usl Toscana Nord Ovest	Santa Caterina Marciana	//	53,5
+Toscana	Livorno	Azienda Usl Toscana Nord Ovest	San Rocco	//	59,3
+Toscana	Livorno	Azienda Usl Toscana Nord Ovest	Casa del Duca	//	59,3
+Toscana	Livorno	Azienda Usl Toscana Nord Ovest	Fattoria di Castello	//	60
+Toscana	Livorno	Azienda Usl Toscana Nord Ovest	Rosignano Solvay	//	60,15
+Toscana	Livorno	Azienda Usl Toscana Nord Ovest	RSA Villa Degli Etruschi	//	53,5
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Il Sole	//	59,3
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Belvedere	//	55
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Villa di Riposo Pascoli	//	65
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Don Bachini	//	64
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	RSA Convento San Francesco	//	65
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Casa dei Nonni	//	53,5
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Residenza Alfieri	//	65
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	RSA Villa Maria Lido di Camaiore	//	59,1
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Villa Alfieri	//	65
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Villa le Camelie	//	59,1
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Don Alberto Gori	//	59
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	La Perla	//	75
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Marianetti	//	59
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Domus Aurea	//	53,5
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	RSA Appennino	//	59,3
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	RSA Apuane	//	59,3
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Carolina Pierotti	//	59,3
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Paoli Puccetti	//	59,3
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Villa Verde Dott. Gastone Lucchesi	//	53,5
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Alba Serena	//	59
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Arcobaleno	//	53,5
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Casa Anziani Santa Maria Assunta Onlus	//	53,5
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Casa Anziani Sant'Anna	//	59
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Casa del Clero	//	59
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Centro Anziani Monte S. Quirico	//	59
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Pia Casa	//	59
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Nuova Villa Laguidara e del Carmelo	//	59,1
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Villa Ciocchetti	//	56,5
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Pio Istituto Campana	//	59,1
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Villa San Lorenzo	//	59,3
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Roberto Nobili	//	59,3
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Giuseppe Tabarracci	//	59,1
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Maria Domenica Barbantini	//	59,1
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Sacro cuore	//	53,5
+Toscana	Lucca	Azienda Usl Toscana Nord Ovest	Villa dei Fiori	//	53,5
+Toscana	Massa-Carrara	Azienda Usl Toscana Nord Ovest	Sanatrix	//	48,5
+Toscana	Massa-Carrara	Azienda Usl Toscana Nord Ovest	Michelangelo	//	53,5
+Toscana	Massa-Carrara	Azienda Usl Toscana Nord Ovest	Villa Rosa	//	45
+Toscana	Massa-Carrara	Azienda Usl Toscana Nord Ovest	Nuovi Orizzonti	//	59,3
+Toscana	Massa-Carrara	Azienda Usl Toscana Nord Ovest	Villa Angela	//	53,5
+Toscana	Massa-Carrara	Azienda Usl Toscana Nord Ovest	Regina Elena	//	62
+Toscana	Massa-Carrara	Azienda Usl Toscana Nord Ovest	Wilma Falcione	//	74
+Toscana	Massa-Carrara	Azienda Usl Toscana Nord Ovest	Villa Lory	//	50
+Toscana	Massa-Carrara	Azienda Usl Toscana Nord Ovest	Villa Serena	//	53
+Toscana	Massa-Carrara	Azienda Usl Toscana Nord Ovest	Villaverde del Lago	//	46,5
+Toscana	Massa-Carrara	Azienda Usl Toscana Nord Ovest	Fivizzano	//	59,3
+Toscana	Massa-Carrara	Azienda Usl Toscana Nord Ovest	La Fontana d'Oro	//	50
+Toscana	Massa-Carrara	Azienda Usl Toscana Nord Ovest	San Giuseppe	//	60,15
+Toscana	Massa-Carrara	Azienda Usl Toscana Nord Ovest	G. Ascoli	//	64
+Toscana	Massa-Carrara	Azienda Usl Toscana Nord Ovest	Riviera Blu	//	61
+Toscana	Massa-Carrara	Azienda Usl Toscana Nord Ovest	RSA Pelù	//	53,5
+Toscana	Massa-Carrara	Azienda Usl Toscana Nord Ovest	Sempreverde	//	60
+Toscana	Massa-Carrara	Azienda Usl Toscana Nord Ovest	Villa Andrea	//	60
+Toscana	Massa-Carrara	Azienda Usl Toscana Nord Ovest	Residence degli ulivi	//	49
+Toscana	Massa-Carrara	Azienda Usl Toscana Nord Ovest	RSA Fondazione Galli Bonaventuri	//	48
+Toscana	Massa-Carrara	Azienda Usl Toscana Nord Ovest	Pontremoli	//	59,3
+Toscana	Massa-Carrara	Azienda Usl Toscana Nord Ovest	Soggiorno Madre Cabrini	//	50
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	I maggi	//	59,3
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	OAMI Casa Sorelle Migliorati	//	58
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	Piccola Casa della divina Provvidenza - Cottolengo	//	53
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	Belvedere	//	58
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	Casciana Terme	//	59,3
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	Matteo Remaggi	//	60
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	Madonna del Rosario	//	59
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	RSA Maria Regina	//	60
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	Selene Menichetti	//	53
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	Casa di Ottavina	//	59,3
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	I Poggetti	//	59,8
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	Madonna del Soccorso	//	55
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	Fondazione Parrocchia S. Frediano onlus	//	59
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	Aurora	//	59,3
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	Casa Mimosa	//	46
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	Madonna della Fiducia	//	60
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	Nissim	//	59,3
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	Umberto Viale	//	59,3
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	Villa Isabella	//	59,3
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	Villa Santa Caterina	//	52,39
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	Istituto Sacro Cuore	//	54
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	Fondazione Dott. A. Giampieri	//	59
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	RSA Le Melorie	//	62
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	RSA Ponsacco	//	62
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	Casa Leoncini Margherita	//	63,76
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	San Giuseppe	//	59,1
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	Villa Sorriso	//	59,1
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	Fondazione Casa Cardinale Maffi	//	59,03
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	Le Sorgenti	//	55
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	RSA Le Fonti	//	61,08
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	Del Campana Guazzesi	//	55,5
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	G. Meacci	//	53
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	RSA Silvio Silvatici	//	53,5
+Toscana	Pisa	Azienda Usl Toscana Nord Ovest	Santa Chiara	//	57
+Toscana	Pistoia	Azienda Usl Toscana Centro	Le Lame	//	53,5
+Toscana	Pistoia	Azienda Usl Toscana Centro	Carlo Minghetti	//	53
+Toscana	Pistoia	Azienda Usl Toscana Centro	Domus Pacis	//	55
+Toscana	Pistoia	Azienda Usl Toscana Centro	San Domenico	//	50,87
+Toscana	Pistoia	Azienda Usl Toscana Centro	Villa Matilde - Ist. Don Bosco	//	52
+Toscana	Pistoia	Azienda Usl Toscana Centro	RSA Nuova Stella	//	53,5
+Toscana	Pistoia	Azienda Usl Toscana Centro	Bonelle	//	57,1
+Toscana	Pistoia	Azienda Usl Toscana Centro	Villa Chiara	//	72,5
+Toscana	Pistoia	Azienda Usl Toscana Centro	Villone Puccini	//	57,1
+Toscana	Pistoia	Azienda Usl Toscana Centro	Sereni Orizzonti Villa Bianca	//	51
+Toscana	Pistoia	Azienda Usl Toscana Centro	Fondazione Turati Gli Alberi	//	63,59
+Toscana	Pistoia	Azienda Usl Toscana Centro	Fondazione Turati I Fiori	//	65,5
+Toscana	Pistoia	Azienda Usl Toscana Centro	Villa Guidotti	//	59
+Toscana	Pistoia	Azienda Usl Toscana Centro	Villa Serena	//	57,1
+Toscana	Pistoia	Azienda Usl Toscana Centro	Cantagrillo	//	57,1
+Toscana	Prato	Azienda Usl Toscana Centro	A. Ricci	//	62,5
+Toscana	Prato	Azienda Usl Toscana Centro	Casa Accoglienza Anziani Comeana	//	62,5
+Toscana	Prato	Azienda Usl Toscana Centro	Cicignano	//	53,5
+Toscana	Prato	Azienda Usl Toscana Centro	San Francesco	//	62,5
+Toscana	Prato	Azienda Usl Toscana Centro	Casa Santa Maria della Pietà	//	62,5
+Toscana	Prato	Azienda Usl Toscana Centro	Casa Serena	//	64
+Toscana	Prato	Azienda Usl Toscana Centro	La casa di Marta	//	61,9
+Toscana	Prato	Azienda Usl Toscana Centro	Luisa e Livio Camozzi	//	64
+Toscana	Prato	Azienda Usl Toscana Centro	Margherita	//	61,95
+Toscana	Prato	Azienda Usl Toscana Centro	Pio Istituto Santa Caterina de' Ricci	//	62,5
+Toscana	Prato	Azienda Usl Toscana Centro	RSA Gonfienti	//	56,18
+Toscana	Prato	Azienda Usl Toscana Centro	RSA I Lecci	//	56,18
+Toscana	Prato	Azienda Usl Toscana Centro	Ubaldo Biti	//	66
+Toscana	Prato	Azienda Usl Toscana Centro	Villa Amelia	//	65
+Toscana	Prato	Azienda Usl Toscana Centro	Villa Maria Assunta	//	66
+Toscana	Prato	Azienda Usl Toscana Centro	Villa Niccolini	//	66
+Toscana	Prato	Azienda Usl Toscana Centro	Villa San Giusto	//	59,6
+Toscana	Prato	Azienda Usl Toscana Centro	Lice Mengoni	//	65
+Toscana	Prato	Azienda Usl Toscana Centro	Cardinale G. Benelli	//	62,5
+Toscana	Prato	Azienda Usl Toscana Centro	Ofelia e Ugo Balestri	//	62,5
+Toscana	Siena	Azienda Usl Toscana Sud Est	Casa Fabbrini	//	51,04
+Toscana	Siena	Azienda Usl Toscana Sud Est	Centro Virginia Borgheri	//	55
+Toscana	Siena	Azienda Usl Toscana Sud Est	RSA S.Agnese	//	54
+Toscana	Siena	Azienda Usl Toscana Sud Est	Villa Chigi	//	55
+Toscana	Siena	Azienda Usl Toscana Sud Est	Casa Famiglia Cetona	//	53
+Toscana	Siena	Azienda Usl Toscana Sud Est	Regina Mundi	//	53,5
+Toscana	Siena	Azienda Usl Toscana Sud Est	Sandro Pertini	//	50
+Toscana	Siena	Azienda Usl Toscana Sud Est	Casa San Giuseppe	//	59
+Toscana	Siena	Azienda Usl Toscana Sud Est	Francesco Bottai	//	57,5
+Toscana	Siena	Azienda Usl Toscana Sud Est	Casa di Riposo della Misericordia	//	53,5
+Toscana	Siena	Azienda Usl Toscana Sud Est	Montalcino	//	59,1
+Toscana	Siena	Azienda Usl Toscana Sud Est	Cocconi Bernabei	//	58
+Toscana	Siena	Azienda Usl Toscana Sud Est	Casa Accoglienza Emmaus	//	58
+Toscana	Siena	Azienda Usl Toscana Sud Est	Nilde Iotti	//	51
+Toscana	Siena	Azienda Usl Toscana Sud Est	La Piaggiarella	//	58
+Toscana	Siena	Azienda Usl Toscana Sud Est	Casa Pacelli	//	51,04
+Toscana	Siena	Azienda Usl Toscana Sud Est	D. Gandini	//	57,5
+Toscana	Siena	Azienda Usl Toscana Sud Est	Pietro Fedi	//	53
+Toscana	Siena	Azienda Usl Toscana Sud Est	Villa Paradiso	//	64,5
+Toscana	Siena	Azienda Usl Toscana Sud Est	Santa Fina	//	57,5
+Toscana	Siena	Azienda Usl Toscana Sud Est	Comunale ex ONPI	//	51
+Toscana	Siena	Azienda Usl Toscana Sud Est	Piero Bargagli	//	55
+Toscana	Siena	Azienda Usl Toscana Sud Est	Caccialupi	//	55,27
+Toscana	Siena	Azienda Usl Toscana Sud Est	Campansi	//	55,27
+Toscana	Siena	Azienda Usl Toscana Sud Est	Quisisana Siena	//	58
+Toscana	Siena	Azienda Usl Toscana Sud Est	RSA Salus	//	60,9
+Toscana	Siena	Azienda Usl Toscana Sud Est	RSA Villa il Pavone	//	60,9
+Toscana	Siena	Azienda Usl Toscana Sud Est	Villa San Bernardino	//	63
+Toscana	Siena	Azienda Usl Toscana Sud Est	Sinalunga	//	51
+Toscana	Siena	Azienda Usl Toscana Sud Est	Torrita di Siena	//	51
+Marche	Pesaro Urbino	Ast Pesaro Urbino	Dopo il 61simo giorno di degenza	//	42,6
+Marche	Ancona	Ast Ancona	Residenza Protetta per Anziani non autosufficienti	81,14	40,57
+Marche	Ancona	Ast Ancona	Residenza Protetta per persone con demenze	108,96	54,48
+Marche	Macerata	Ast Macerata	Ordinaria - Dopo il 61simo giorno di degenza	123	42,5
+Marche	Macerata	Ast Macerata	Alzheimer - Dopo il 61simo giorno di degenza	128	42,5
+Marche	Fermo	Ast Fermo	Ordinaria - Dopo il 61simo giorno di degenza	123	42,5
+Marche	Fermo	Ast Fermo	Alzheimer - Dopo il 61simo giorno di degenza	128	42,5
+Emilia Romagna	Forlì Cesena	Ausl Romagna	Pubblica	109,05	54,15
+Emilia Romagna	Forlì Cesena	Ausl Romagna	Privata	109,8	54,15
+Emilia Romagna	Ravenna	Ausl Romagna	Pubblica	109,05	54,15
+Emilia Romagna	Ravenna	Ausl Romagna	Privata	109,8	54,15
+Emilia Romagna	Rimini	Ausl Romagna	Pubblica	109,05	54,15
+Emilia Romagna	Rimini	Ausl Romagna	Privata	109,8	54,15
+Umbria	Perugia	Usl Umbria 1	Hospice	337,52	0
+Umbria	Perugia	Usl Umbria 1	Residenza sanitaria assistita	170,39	0
+Umbria	Perugia	Usl Umbria 1	Nucleo per demenze	188,87	0
+Umbria	Perugia	Usl Umbria 1	Residenze protette per anziani	120	60
+Lazio	Roma	Asl Roma 1	Intensivo	241,34	0
+Lazio	Roma	Asl Roma 1	Estensivo per non autosufficienti	153,66	0
+Lazio	Roma	Asl Roma 1	Mantenimento alto	129,71	64,85
+Lazio	Roma	Asl Roma 1	Mantenimento basso	107,8	53,9
+Lazio	Roma	Asl Roma 2	Intensivo	241,34	0
+Lazio	Roma	Asl Roma 2	Estensivo per non autosufficienti	153,66	0
+Lazio	Roma	Asl Roma 2	Mantenimento alto	129,71	64,85
+Lazio	Roma	Asl Roma 2	Mantenimento basso	107,8	53,9
+Lazio	Roma	Asl Roma 3	Intensivo	241,34	0
+Lazio	Roma	Asl Roma 3	Estensivo per non autosufficienti	153,66	0
+Lazio	Roma	Asl Roma 3	Mantenimento alto	129,71	64,85
+Lazio	Roma	Asl Roma 3	Mantenimento basso	107,8	53,9
+Lazio	Roma	Asl Roma 4	Intensivo	241,34	0
+Lazio	Roma	Asl Roma 4	Estensivo per non autosufficienti	153,66	0
+Lazio	Roma	Asl Roma 4	Mantenimento alto	129,71	64,85
+Lazio	Roma	Asl Roma 4	Mantenimento basso	107,8	53,9
+Lazio	Roma	Asl Roma 5	Intensivo	241,34	0
+Lazio	Roma	Asl Roma 5	Estensivo per non autosufficienti	153,66	0
+Lazio	Roma	Asl Roma 5	Mantenimento alto	129,71	64,85
+Lazio	Roma	Asl Roma 5	Mantenimento basso	107,8	53,9
+Lazio	Roma	Asl Roma 6	Intensivo	241,34	0
+Lazio	Roma	Asl Roma 6	Estensivo per non autosufficienti	153,66	0
+Lazio	Roma	Asl Roma 6	Mantenimento alto	129,71	64,85
+Lazio	Roma	Asl Roma 6	Mantenimento basso	107,8	53,9
+Emilia Romagna	Bologna	Ausl Imola	Pubblica	109,05	54,15
+Emilia Romagna	Bologna	Ausl Imola	Privata	109,8	54,15
+Marche	Ascoli Piceno	Ast Ascoli Piceno	Rsa	123	42,5
+Lazio	Latina	Asl Latina	Residenziale - Mantenimento alto (PL A)	//	64,86
+Lazio	Latina	Asl Latina	Residenziale - Mantenimento basso (PL B)	//	53,9
+Lazio	Latina	Asl Latina	Semi-residenziale - Mantenimento alto	//	33,73
+Lazio	Latina	Asl Latina	Residenziale estensivo	//	153,99
+Lazio	Latina	Asl Latina	Residenziale - Disturbi cognitivo comportamentali gravi	//	153,99
+Umbria	Perugia	Usl Umbria 2	Rsa	170,39	0
+Umbria	Perugia	Usl Umbria 2	Rsa	187,43	0
+Umbria	Terni	Usl Umbria 2	Rsa	170,39	0
+Umbria	Terni	Usl Umbria 2	Rsa	187,43	0
+Emilia Romagna	Ferrara	Ausl Ferrara	Pubblica	109,05	54,15
+Emilia Romagna	Ferrara	Ausl Ferrara	Privata	109,8	54,15
+Molise	Campobasso	Asrem	Privata livello R2	96	0
+Molise	Campobasso	Asrem	Privata livello R3	56	28
+Molise	Campobasso	Asrem	Privata livello R3	51	23
+Molise	Isernia	Asrem	Privata livello R1	180	0
+Molise	Isernia	Asrem	Privata livello R2	96	0
+Molise	Isernia	Asrem	Privata livello R3	56	28
+Molise	Isernia	Asrem	Pubblica livello R3	56	28
+Lazio	Rieti	Asl Rieti	Estensivo disturbi cognitivo comportamentali gravi	153,99	0
+Lazio	Rieti	Asl Rieti	Mantenimento alto (Mant. A)	129,72	64,86
+Lazio	Rieti	Asl Rieti	Mantenimento basso (Mant. B)	107,8	53,9
+Lazio	Rieti	Asl Rieti	Intensivo	241,34	0
+Lazio	Rieti	Asl Rieti	Estensivo non autosufficienti	153,99	0
+Lazio	Rieti	Asl Rieti	Mantenimento alto (Mant. A)	129,72	64,86
+Lazio	Rieti	Asl Rieti	Mantenimento basso (Mant. B)	107,8	53,9
+Lazio	Rieti	Asl Rieti	Estensivo non autosufficienti	153,99	0
+Lazio	Rieti	Asl Rieti	Mantenimento alto (Mant. A)	129,72	64,86
+Lazio	Rieti	Asl Rieti	Mantenimento basso (Mant. B)	107,8	53,9
+Lazio	Rieti	Asl Rieti	Mantenimento alto (Mant. A)	129,72	64,86
+Lazio	Rieti	Asl Rieti	Mantenimento basso (Mant. B)	107,8	53,9
+Lazio	Rieti	Asl Rieti	Mantenimento basso (Mant. B)	107,8	53,9
+Lazio	Viterbo	Asl Viterbo	Intensiva	220,3	220,3
+Lazio	Viterbo	Asl Viterbo	Mantenimento A	118,4	59,2
+Lazio	Viterbo	Asl Viterbo	Mantenimento B	98,4	49,2
+Abruzzo	Pescara	Asl Pescara	Fascia 1	77,3	38,65
+Abruzzo	Pescara	Asl Pescara	Fascia 2	87,86	43,93
+Abruzzo	Pescara	Asl Pescara	Fascia 3	104,69	0
+Campania	Avellino	Asl Avellino	RSA anziani non autosufficienti non riqualificate (Alto livello)	126,85	63,43
+Campania	Avellino	Asl Avellino	RSA anziani non autosufficienti non riqualificate (Medio livello)	110,62	55,31
+Campania	Avellino	Asl Avellino	RSA nucleo demenze non riqualificate	125,19	62,6
+Campania	Caserta	Asl Caserta	RSA per adulti non autosufficienti - NON RIQUALIFICATE - Alto livello	126,85	63,43
+Campania	Caserta	Asl Caserta	RSA per adulti non autosufficienti - NON RIQUALIFICATE - Alto livello	63,43	31,72
+Campania	Caserta	Asl Caserta	RSA per adulti non autosufficienti - NON RIQUALIFICATE - Alto livello	126,85	0
+Campania	Caserta	Asl Caserta	RSA per adulti non autosufficienti - NON RIQUALIFICATE - Alto livello	126,85	63,43
+Campania	Caserta	Asl Caserta	RSA per adulti non autosufficienti - NON RIQUALIFICATE - Medio livello	110,62	55,31
+Campania	Caserta	Asl Caserta	RSA per adulti non autosufficienti - NON RIQUALIFICATE - Medio livello	55,31	27,66
+Campania	Caserta	Asl Caserta	RSA per adulti non autosufficienti - NON RIQUALIFICATE - Medio livello	110,62	0
+Campania	Caserta	Asl Caserta	RSA per adulti non autosufficienti - NON RIQUALIFICATE - Medio livello	110,62	55,31
+Campania	Caserta	Asl Caserta	RSA residenziali per persone adulte non autosufficienti - nucleo demenze - NON RIQUALIFICATE	125,19	62,6
+Campania	Caserta	Asl Caserta	RSA residenziali per persone adulte non autosufficienti - nucleo demenze - NON RIQUALIFICATE	62,6	31,3
+Campania	Caserta	Asl Caserta	RSA residenziali per persone adulte non autosufficienti - nucleo demenze - NON RIQUALIFICATE	125,19	0
+Campania	Caserta	Asl Caserta	RSA residenziali per persone adulte non autosufficienti - nucleo demenze - NON RIQUALIFICATE	125,19	62,6
+Campania	Napoli	Asl Napoli 1 Centro	RSA per adulti non autosufficienti alto livello assistenziale	126,85	126,85
+Campania	Napoli	Asl Napoli 1 Centro	RSA per adulti non autosufficienti alto livello assistenziale	110,62	110,62
+Campania	Napoli	Asl Napoli 1 Centro	RSA per adulti non autosufficienti alto livello assistenziale	110,62	110,62
+Campania	Napoli	Asl Napoli 1 Centro	RSA per adulti non autosufficienti alto livello assistenziale	126,85	126,85
+Campania	Napoli	Asl Napoli 1 Centro	RSA per adulti non autosufficienti demenza	125,19	125,19
+Campania	Napoli	Asl Napoli 1 Centro	RSA per adulti non autosufficienti medio livello assistenziale	118,07	118,07
+Campania	Napoli	Asl Napoli 1 Centro	RSA per adulti non autosufficienti alto livello assistenziale	134,62	134,62
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	RSA	//	55,86
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	estensiva anziani tipo A Privata	112,33	0
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	mantenimento tipo A Privata	100,33	50,16
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	mantenimento tipo B Privata	97,3	48,65
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	mantenimento tipo A Privata	100,33	50,16
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	mantenimento tipo B Privata	97,3	48,65
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	mantenimento tipo A Privata	100,33	50,16
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	mantenimento tipo A Privata	100,33	50,16
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	mantenimento tipo B Privata	97,3	48,65
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	mantenimento tipo A Privata	100,33	50,16
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	mantenimento tipo A Privata	100,33	50,16
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	estensiva anziani tipo A Privata	112,33	0
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	estensiva demenze tipo B Privata	130,27	0
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	mantenimento tipo A Privata	100,33	50,16
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	estensiva demenze tipo B Privata	130,27	0
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	mantenimento tipo A Privata	100,33	50,16
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	mantenimento tipo A Privata	100,33	50,16
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	estensiva anziani tipo A Pubblica	112,33	0
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	estensiva demenze tipo B Pubblica	130,27	0
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	mantenimento tipo A Pubblica	100,33	50,16
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	mantenimento tipo B Pubblica	97,3	48,65
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	mantenimento tipo A Privata	100,33	50,16
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	mantenimento tipo B Privata	97,3	48,65
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	estensiva anziani tipo A Privata	112,33	0
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	mantenimento tipo A Privata	100,33	50,16
+Puglia	Barletta Andria Trani	Asl Barletta Andria Trani	mantenimento tipo B Privata	97,3	48,65
+Puglia	Brindisi	Asl Brindisi	Rsa estensiva anziani Tipo A	112,33	0
+Puglia	Brindisi	Asl Brindisi	Rsa estensiva demenze Tipo B	130,27	0
+Puglia	Brindisi	Asl Brindisi	Rsa mantenimento anziani Tipo A	100,33	50,17
+Puglia	Brindisi	Asl Brindisi	Rsa mantenimento demenze Tipo B	97,3	48,65
+Puglia	Foggia	Asl Foggia	Rsa estensiva anziani Tipo A	112,33	0
+Puglia	Foggia	Asl Foggia	Rsa estensiva demenze Tipo B	130,27	0
+Puglia	Foggia	Asl Foggia	Rsa mantenimento anziani Tipo A	100,33	50,17
+Puglia	Foggia	Asl Foggia	Rsa mantenimento demenze Tipo B	97,3	48,65
+Basilicata	Potenza	Asl Potenza	Rsa medio livello di assistenza	//	0
+Basilicata	Potenza	Asl Potenza	Rsa basso livello di assistenza	//	22,56
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Estensiva anziani	112,33	0
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Estensiva anziani	112,33	0
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Estensiva demenze	130,27	0
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento Demenze	97,3	48,65
+Puglia	Lecce	Asl Lecce	Estensiva anziani	112,33	0
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento Demenze	97,3	48,65
+Puglia	Lecce	Asl Lecce	Estensiva demenze	130,27	0
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento Demenze	97,3	48,65
+Puglia	Lecce	Asl Lecce	Rssa	100,33	50,16
+Puglia	Lecce	Asl Lecce	Estensiva anziani	112,33	0
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Estensiva anziani	112,33	0
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento Demenze	97,3	48,65
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento Demenze	97,3	48,65
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento Demenze	97,3	48,65
+Puglia	Lecce	Asl Lecce	Estensiva anziani	112,33	0
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento Demenze	97,3	48,65
+Puglia	Lecce	Asl Lecce	Estensiva anziani	112,33	0
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento Demenze	97,3	48,65
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento Demenze	97,3	48,65
+Puglia	Lecce	Asl Lecce	Estensiva anziani	112,33	0
+Puglia	Lecce	Asl Lecce	Estensiva demenze	130,27	0
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Estensiva anziani	112,33	0
+Puglia	Lecce	Asl Lecce	RSA	100,33	50,16
+Puglia	Lecce	Asl Lecce	RSA alzheimer	97,3	48,65
+Puglia	Lecce	Asl Lecce	RSA	100,33	50,16
+Puglia	Lecce	Asl Lecce	RSA alzheimer	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento Demenze	97,3	48,65
+Puglia	Lecce	Asl Lecce	Estensiva anziani	112,33	0
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Estensiva anziani	112,33	0
+Puglia	Lecce	Asl Lecce	RSA	100,33	50,16
+Puglia	Lecce	Asl Lecce	Rssa	100,33	50,16
+Puglia	Lecce	Asl Lecce	Rssa	100,33	50,16
+Puglia	Lecce	Asl Lecce	Rssa	100,33	50,16
+Puglia	Lecce	Asl Lecce	Estensiva anziani	112,33	0
+Puglia	Lecce	Asl Lecce	Estensiva demenze	130,27	0
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento Demenze	97,3	48,65
+Puglia	Lecce	Asl Lecce	Estensiva demenze	130,27	0
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento Demenze	97,3	48,65
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento Demenze	97,3	48,65
+Puglia	Lecce	Asl Lecce	Estensiva anziani	112,33	0
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento Demenze	97,3	48,65
+Puglia	Lecce	Asl Lecce	Estensiva anziani	112,33	0
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento Demenze	97,3	48,65
+Puglia	Lecce	Asl Lecce	Estensiva anziani	112,33	0
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento Demenze	97,3	48,65
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento Demenze	97,3	48,65
+Puglia	Lecce	Asl Lecce	Estensiva demenze	130,27	0
+Puglia	Lecce	Asl Lecce	Estensiva anziani	112,33	0
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento Demenze	97,3	48,65
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento Demenze	97,3	48,65
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento Demenze	97,3	48,65
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Puglia	Lecce	Asl Lecce	Mantenimento anziani	100,33	50,16
+Basilicata	Matera	Asl Matera	R3	90,24	22,56
+Calabria	Catanzaro	Asp Catanzaro	RSA/A	165,23	//
+Calabria	Catanzaro	Asp Catanzaro	RSA/D	174,71	//
+Calabria	Crotone	Asp Crotone	RSAR2 Anziani	165,23	49,57
+Sicilia	Agrigento	Asp Agrigento	Degenza ordinaria	118	59
+Sicilia	Agrigento	Asp Agrigento	Alzheimer	177	0
+Sicilia	Caltanissetta	Asp Caltanissetta	RSA	118	59
+Sicilia	Messina	Asp Messina	RSA	118	59
+Sicilia	Messina	Asp Messina	Alzheimer	177	0
+Sicilia	Trapani	Asp Trapani	RSA	118	59
+Sicilia	Trapani	Asp Trapani	Alzheimer	177	0
+Sardegna	Nuoro	Asl Nuoro	R1	225	//
+Sardegna	Nuoro	Asl Nuoro	R2	179	//
+Sardegna	Nuoro	Asl Nuoro	R3B	61	//
+Sardegna	Nuoro	Asl Nuoro	R3A/R3D	79	//
+Sardegna	Oristano	Asl Oristano	R1	238	0
+Sardegna	Oristano	Asl Oristano	R2	182	0
+Sardegna	Oristano	Asl Oristano	R3B	162	81
+Sardegna	Oristano	Asl Oristano	R3A/R3D	122	61
+Sardegna	Ogliastra	Asl Ogliastra	R3A/R3D	127,15	79
+Sardegna	Ogliastra	Asl Ogliastra	R3B	98,18	61
+Sardegna	Ogliastra	Asl Ogliastra	R2	169,49	0
+Sardegna	Sulcis Iglesiente	Asl Sulcis Iglesiente	R1	225	0
+Sardegna	Sulcis Iglesiente	Asl Sulcis Iglesiente	R2	179	0
+Sardegna	Sulcis Iglesiente	Asl Sulcis Iglesiente	R3A/R3D	158	79
+Sardegna	Sulcis Iglesiente	Asl Sulcis Iglesiente	R3B	122	61
+Sardegna	//	Ares Sardegna	R1	238	0
+Sardegna	//	Ares Sardegna	R2	182	0
+Sardegna	//	Ares Sardegna	R3A/R3D	162	81
+Sardegna	//	Ares Sardegna	R3B	122	61

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le tariffe delle case di riposo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #fff; }
+  body { font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; color: #000; }
+  .wrap {
+    width: 100%; max-width: 610px; min-height: 610px; margin: 0 auto;
+    padding: 14px 12px 10px; display: flex; flex-direction: column; background: #fff;
+  }
+  h1 { font-size: 20px; font-weight: 700; margin: 0 0 3px; line-height: 1.2; }
+  .sub { font-size: 14px; margin: 0 0 10px; color: #222; line-height: 1.3; }
+  .controls { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; font-size: 13px; }
+  .controls label { color: #222; }
+  select {
+    font-family: inherit; font-size: 13px; padding: 5px 28px 5px 9px; border: 1px solid #bbb;
+    border-radius: 4px; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23174d99'/%3E%3C/svg%3E") no-repeat right 9px center;
+    -webkit-appearance: none; appearance: none; color: #000; cursor: pointer; max-width: 100%;
+  }
+  select:focus { outline: 2px solid #5296d0; outline-offset: 1px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 12px; color: #222; margin-bottom: 4px; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .legend svg { display: block; }
+  .chart { flex: 1; min-height: 0; position: relative; }
+  .chart svg.main { display: block; width: 100%; height: 100%; position: absolute; inset: 0; }
+  .stripe { fill: #f2f4f7; }
+  .axis text { font-family: inherit; font-size: 11px; fill: #444; }
+  .axis .domain { display: none; }
+  .axis .tick line { stroke: #e3e3e3; }
+  .label { fill: #000; }
+  .range { stroke: #174d99; stroke-width: 1.5; stroke-linecap: round; }
+  .val { fill: #5296d0; fill-opacity: .4; }
+  .dot { fill: #174d99; stroke: #fff; stroke-width: 1.5; }
+  .row.on .dot, .row.on .dotmax { stroke: #0d1f43; }
+  .dotmax { fill: #174d99; stroke: #fff; stroke-width: 1.5; }
+  .free { font-size: 11.5px; font-style: italic; fill: #444; }
+  .hit { fill: transparent; cursor: pointer; }
+  .notes { font-size: 10.5px; line-height: 1.35; color: #333; margin-top: 6px; }
+  .notes p { margin: 0 0 3px; }
+  .notes .src { font-style: italic; }
+  .tip {
+    position: absolute; pointer-events: none; background: #fff; border: 1px solid #ccc;
+    border-radius: 4px; padding: 7px 9px; font-size: 12.5px; line-height: 1.45;
+    box-shadow: 0 2px 6px rgba(0,0,0,.15); opacity: 0; transition: opacity .12s; z-index: 5;
+    white-space: nowrap;
+  }
+  .tip b { font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="wrap" id="wrap">
+  <h1>Le tariffe delle case di riposo</h1>
+  <p class="sub">Costi minimi della quota alberghiera a carico dell'utente - Valori in euro</p>
+  <div class="controls">
+    <label for="sel">Mostra:</label>
+    <select id="sel"></select>
+  </div>
+  <div class="legend">
+    <span><svg width="14" height="12"><circle cx="7" cy="6" r="5" fill="#174d99"/></svg>Tariffa unica</span>
+    <span><svg width="50" height="12"><line x1="7" x2="43" y1="6" y2="6" stroke="#174d99" stroke-width="1.5"/><circle cx="16" cy="4.5" r="2.6" fill="#5296d0" fill-opacity=".4"/><circle cx="21" cy="7.5" r="2.6" fill="#5296d0" fill-opacity=".4"/><circle cx="26" cy="5" r="2.6" fill="#5296d0" fill-opacity=".4"/><circle cx="33" cy="7" r="2.6" fill="#5296d0" fill-opacity=".4"/><circle cx="7" cy="6" r="5" fill="#174d99" stroke="#fff" stroke-width="1.5"/><circle cx="43" cy="6" r="5" fill="#174d99" stroke="#fff" stroke-width="1.5"/></svg>Tariffa delle singole realtà</span>
+  </div>
+  <div class="chart" id="chart"><div class="tip" id="tip"></div></div>
+  <div class="notes">
+    <p>In Valle d'Aosta il costo è interamente coperto dalla Regione.</p>
+    <p class="src">Fonte: elaborazione SkyTg24 su dati Asl 2026</p>
+  </div>
+</div>
+<script>
+const EMBED_ID = 'longevity-tariffe-minime-case-di-riposo';
+const CONFIG = {"gratuito": "Costo interamente coperto dalla Regione"};
+const DATA = {"regioni": [{"nome": "Abruzzo", "min": 38.65, "max": 38.65, "mercato": false, "valori": [38.65]}, {"nome": "Basilicata", "min": 22.56, "max": 22.56, "mercato": false, "valori": [22.56, 22.56]}, {"nome": "Calabria", "min": 49.57, "max": 49.57, "mercato": false, "valori": [49.57]}, {"nome": "Campania", "min": 27.66, "max": 110.62, "mercato": false, "valori": [27.66, 55.31, 110.62]}, {"nome": "Emilia Romagna", "min": 54.15, "max": 54.15, "mercato": false, "valori": [54.15, 54.15, 54.15, 54.15, 54.15, 54.15, 54.15, 54.15]}, {"nome": "Friuli Venezia Giulia", "min": 47.0, "max": 108.0, "mercato": true, "valori": [47.0, 49.5, 51.0, 53.0, 54.61, 55.0, 55.0, 55.0, 60.26, 62.0, 62.0, 63.0, 63.0, 64.83, 66.0, 67.0, 72.9, 77.6, 80.1, 81.1, 83.9, 84.0, 85.0, 86.5, 87.4, 89.0, 92.0, 99.0, 99.0, 108.0]}, {"nome": "Lazio", "min": 33.73, "max": 53.9, "mercato": false, "valori": [33.73, 49.2, 53.9, 53.9, 53.9, 53.9, 53.9, 53.9, 53.9]}, {"nome": "Liguria", "min": 51.07, "max": 51.07, "mercato": false, "valori": [51.07, 51.07, 51.07, 51.07]}, {"nome": "Lombardia", "min": 1.19, "max": 131.0, "mercato": true, "valori": [1.19, 12.53, 40.0, 41.32, 43.0, 43.5, 45.0, 46.53, 46.68, 47.0, 47.38, 47.67, 47.68, 48.0, 48.0, 48.0, 49.32, 49.35, 49.51, 50.0, 50.95, 50.96, 51.0, 51.48, 52.0, 52.0, 52.0, 52.5, 52.6, 52.6, 52.6, 53.0, 53.0, 53.0, 53.0, 53.33, 53.5, 53.59, 53.59, 54.0, 54.0, 54.0, 54.0, 54.25, 54.25, 54.5, 54.5, 54.5, 54.5, 54.5, 54.5, 54.75, 55.0, 55.0, 55.0, 55.0, 55.11, 55.23, 55.23, 55.5, 55.65, 55.8, 55.89, 55.89, 56.0, 56.0, 56.0, 56.0, 56.0, 56.0, 56.0, 56.0, 56.0, 56.0, 56.0, 56.0, 56.0, 56.22, 56.5, 56.88, 56.88, 56.9, 57.0, 57.0, 57.0, 57.0, 57.0, 57.0, 57.0, 57.2, 57.21, 57.5, 57.53, 57.53, 57.63, 57.87, 58.0, 58.0, 58.0, 58.0, 58.0, 58.0, 58.0, 58.0, 58.0, 58.0, 58.0, 58.0, 58.03, 58.95, 59.0, 59.0, 59.0, 59.0, 59.0, 59.0, 59.0, 59.0, 59.18, 59.2, 59.3, 59.5, 59.5, 59.5, 59.5, 59.5, 59.51, 59.84, 60.0, 60.0, 60.0, 60.0, 60.0, 60.0, 60.0, 60.0, 60.0, 60.0, 60.0, 60.16, 60.2, 60.49, 60.49, 60.49, 60.5, 60.5, 60.5, 60.5, 60.5, 60.5, 60.5, 60.82, 60.82, 60.88, 61.0, 61.0, 61.0, 61.0, 61.0, 61.0, 61.0, 61.44, 61.64, 61.81, 62.0, 62.0, 62.0, 62.0, 62.0, 62.0, 62.0, 62.0, 62.0, 62.0, 62.15, 62.21, 62.3, 62.3, 62.99, 63.0, 63.0, 63.0, 63.0, 63.0, 63.0, 63.0, 63.0, 63.45, 63.5, 63.5, 63.55, 63.75, 64.0, 64.0, 64.0, 64.0, 64.0, 64.0, 64.0, 64.0, 64.0, 64.0, 64.1, 64.4, 64.4, 64.4, 64.4, 64.5, 64.5, 64.5, 64.5, 64.66, 64.94, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.06, 65.14, 65.49, 65.5, 65.5, 65.5, 65.5, 65.5, 65.5, 65.75, 65.75, 65.88, 66.0, 66.0, 66.0, 66.0, 66.0, 66.0, 66.0, 66.0, 66.0, 66.0, 66.0, 66.0, 66.0, 66.3, 66.5, 66.5, 66.94, 67.0, 67.0, 67.0, 67.0, 67.0, 67.21, 67.3, 67.3, 67.4, 67.5, 67.5, 67.63, 68.0, 68.0, 68.0, 68.0, 68.0, 68.0, 68.0, 68.0, 68.0, 68.2, 68.39, 68.5, 68.5, 69.0, 69.0, 69.0, 69.0, 69.0, 69.0, 69.04, 69.04, 69.3, 69.46, 69.5, 69.5, 69.7, 70.0, 70.0, 70.0, 70.0, 70.0, 70.0, 70.0, 70.0, 70.0, 70.0, 70.0, 70.0, 70.03, 70.3, 70.68, 70.75, 70.82, 71.0, 71.0, 71.0, 71.04, 71.5, 71.8, 72.0, 72.0, 72.0, 72.0, 72.0, 72.33, 72.38, 72.5, 72.7, 73.0, 73.0, 73.0, 73.0, 73.0, 73.0, 73.0, 73.0, 73.0, 73.0, 73.0, 73.0, 73.5, 73.5, 73.5, 73.97, 74.0, 74.0, 74.0, 74.0, 74.0, 74.0, 74.0, 74.5, 74.8, 74.96, 75.0, 75.0, 75.0, 75.0, 75.0, 75.0, 75.0, 75.0, 75.0, 75.0, 75.0, 75.5, 75.5, 76.0, 76.0, 76.0, 76.0, 76.0, 76.0, 76.0, 76.0, 76.0, 76.0, 76.5, 76.5, 76.5, 76.5, 76.67, 77.0, 77.0, 77.0, 77.0, 77.0, 77.0, 77.0, 77.0, 77.14, 77.26, 77.28, 77.46, 77.5, 77.5, 77.5, 77.5, 78.0, 78.0, 78.0, 78.0, 78.0, 78.0, 78.0, 78.0, 78.0, 78.0, 78.0, 78.2, 78.21, 78.5, 78.5, 78.61, 78.75, 78.9, 78.95, 78.99, 79.0, 79.0, 79.0, 79.0, 79.11, 79.25, 79.4, 79.46, 79.46, 79.5, 79.6, 79.8, 79.8, 79.8, 79.9, 80.0, 80.0, 80.0, 80.0, 80.0, 80.0, 80.0, 80.0, 80.0, 80.0, 80.09, 80.5, 80.55, 80.57, 80.6, 80.7, 80.7, 80.7, 81.0, 81.0, 81.0, 81.0, 81.0, 81.0, 81.0, 81.1, 81.17, 81.5, 81.5, 81.6, 81.7, 81.9, 82.0, 82.0, 82.0, 82.0, 82.0, 82.11, 82.42, 82.5, 82.5, 82.5, 82.64, 82.72, 82.72, 82.72, 82.72, 82.72, 82.86, 82.89, 83.0, 83.0, 83.0, 83.0, 83.11, 83.5, 84.0, 84.0, 84.0, 84.2, 84.33, 85.0, 85.0, 85.0, 85.0, 85.0, 85.0, 85.0, 85.0, 85.0, 85.44, 85.48, 85.5, 85.7, 86.0, 86.01, 86.01, 86.1, 86.33, 86.5, 86.5, 87.0, 87.0, 87.0, 87.0, 87.5, 88.0, 88.0, 88.0, 88.5, 89.0, 89.0, 89.5, 89.7, 89.7, 90.0, 90.0, 90.0, 90.0, 90.0, 90.0, 90.0, 90.0, 90.0, 90.0, 90.0, 90.0, 90.0, 90.06, 90.21, 90.27, 90.27, 90.5, 90.5, 91.0, 91.0, 91.35, 91.62, 91.8, 91.8, 92.0, 92.0, 92.0, 92.0, 92.0, 92.13, 92.3, 93.0, 93.0, 93.04, 94.0, 94.0, 94.3, 95.0, 95.0, 95.0, 95.0, 95.0, 95.0, 95.0, 95.71, 95.8, 97.5, 98.0, 98.0, 99.7, 100.0, 100.0, 101.0, 101.0, 101.0, 101.5, 101.5, 101.5, 102.0, 103.1, 105.0, 105.0, 105.0, 105.0, 105.0, 105.49, 105.8, 107.8, 107.8, 107.8, 108.0, 108.0, 108.0, 108.5, 108.8, 109.0, 110.0, 110.0, 111.7, 112.0, 112.5, 114.8, 114.8, 115.5, 116.5, 116.7, 117.5, 119.5, 120.0, 125.0, 130.0, 130.0, 131.0]}, {"nome": "Marche", "min": 40.57, "max": 42.6, "mercato": false, "valori": [40.57, 42.5, 42.5, 42.5, 42.6]}, {"nome": "Molise", "min": 23.0, "max": 23.0, "mercato": false, "valori": [23.0]}, {"nome": "Piemonte", "min": 37.62, "max": 37.62, "mercato": false, "valori": [37.62, 37.62, 37.62, 37.62, 37.62, 37.62, 37.62, 37.62, 37.62, 37.62, 37.62]}, {"nome": "Puglia", "min": 48.65, "max": 48.65, "mercato": false, "valori": [48.65, 48.65, 48.65, 48.65]}, {"nome": "Sardegna", "min": 61.0, "max": 61.0, "mercato": false, "valori": [61.0, 61.0, 61.0, 61.0]}, {"nome": "Sicilia", "min": 59.0, "max": 59.0, "mercato": false, "valori": [59.0, 59.0, 59.0, 59.0]}, {"nome": "Toscana", "min": 42.0, "max": 75.0, "mercato": true, "valori": [42.0, 42.0, 42.0, 42.0, 42.0, 43.55, 43.8, 44.0, 45.0, 46.0, 46.0, 46.5, 48.0, 48.48, 48.48, 48.48, 48.48, 48.48, 48.5, 49.0, 49.0, 49.5, 49.5, 49.65, 50.0, 50.0, 50.0, 50.0, 50.0, 50.0, 50.87, 51.0, 51.0, 51.0, 51.0, 51.0, 51.0, 51.0, 51.0, 51.0, 51.04, 51.04, 51.45, 51.45, 52.0, 52.0, 52.39, 52.6, 52.79, 52.88, 52.88, 53.0, 53.0, 53.0, 53.0, 53.0, 53.0, 53.0, 53.0, 53.0, 53.0, 53.0, 53.0, 53.0, 53.25, 53.25, 53.25, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.9, 54.0, 54.0, 54.0, 54.0, 54.64, 55.0, 55.0, 55.0, 55.0, 55.0, 55.0, 55.0, 55.0, 55.27, 55.27, 55.27, 55.27, 55.5, 55.5, 56.0, 56.0, 56.17, 56.18, 56.18, 56.5, 56.5, 57.0, 57.0, 57.02, 57.1, 57.1, 57.1, 57.5, 57.5, 57.5, 57.5, 58.0, 58.0, 58.0, 58.0, 58.0, 58.0, 58.0, 58.0, 58.0, 58.0, 58.0, 58.0, 58.0, 58.0, 58.0, 58.0, 58.0, 58.1, 58.21, 58.7, 59.0, 59.0, 59.0, 59.0, 59.0, 59.0, 59.0, 59.0, 59.0, 59.0, 59.0, 59.0, 59.0, 59.0, 59.0, 59.0, 59.0, 59.03, 59.1, 59.1, 59.1, 59.1, 59.1, 59.1, 59.1, 59.1, 59.1, 59.1, 59.1, 59.1, 59.1, 59.1, 59.1, 59.1, 59.1, 59.1, 59.1, 59.1, 59.1, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.5, 59.6, 59.8, 60.0, 60.0, 60.0, 60.0, 60.0, 60.0, 60.0, 60.0, 60.0, 60.0, 60.15, 60.15, 60.9, 60.9, 60.9, 60.9, 61.0, 61.0, 61.0, 61.0, 61.08, 61.37, 61.9, 61.95, 62.0, 62.0, 62.0, 62.0, 62.0, 62.0, 62.0, 62.0, 62.5, 62.5, 62.5, 62.5, 62.5, 62.5, 62.5, 62.5, 62.5, 62.68, 63.0, 63.0, 63.5, 63.5, 63.59, 63.76, 64.0, 64.0, 64.0, 64.0, 64.0, 64.0, 64.0, 64.0, 64.5, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.14, 65.5, 66.0, 66.0, 66.0, 66.0, 66.0, 66.0, 66.0, 66.5, 66.5, 67.0, 67.0, 68.0, 69.0, 69.5, 69.5, 70.0, 70.0, 71.5, 71.5, 72.5, 73.0, 73.0, 74.0, 75.0, 75.0]}, {"nome": "Trentino Alto Adige", "min": 46.0, "max": 61.1, "mercato": true, "valori": [46.0, 46.0, 46.5, 47.0, 47.5, 47.7, 48.0, 48.5, 48.5, 48.8, 49.0, 49.0, 49.2, 49.5, 49.5, 50.0, 50.5, 50.5, 50.5, 50.5, 50.6, 51.0, 51.0, 51.0, 51.5, 51.5, 51.9, 52.0, 52.0, 52.0, 52.05, 52.5, 52.97, 52.97, 53.0, 53.0, 53.0, 53.0, 53.3, 53.6, 54.08, 54.3, 55.5, 56.1, 57.1, 57.55, 59.35, 59.95, 60.25, 60.85, 61.1]}, {"nome": "Umbria", "min": 60.0, "max": 60.0, "mercato": false, "valori": [60.0]}, {"nome": "Valle d'Aosta", "min": null, "max": null, "valori": []}, {"nome": "Veneto", "min": 48.9, "max": 75.0, "mercato": true, "valori": [48.9, 49.5, 50.0, 51.68, 51.7, 52.0, 52.0, 52.0, 52.1, 52.5, 53.0, 55.0, 58.0, 58.2, 58.5, 59.0, 59.5, 60.0, 61.2, 62.0, 62.0, 63.0, 63.0, 63.5, 64.0, 64.0, 65.0, 66.0, 66.0, 66.0, 66.0, 66.5, 67.0, 69.7, 69.7, 69.7, 72.3, 73.5, 75.0]}], "aziende": [{"nome": "Asl di Biella", "regione": "Piemonte", "min": 37.62, "max": 37.62, "strutture": null, "mercato": false, "valori": [37.62]}, {"nome": "Asl Città di Torino", "regione": "Piemonte", "min": 37.62, "max": 37.62, "strutture": null, "mercato": false, "valori": [37.62]}, {"nome": "Asl VCO", "regione": "Piemonte", "min": 37.62, "max": 37.62, "strutture": null, "mercato": false, "valori": [37.62]}, {"nome": "Asl 5 Spezzino", "regione": "Liguria", "min": 51.07, "max": 51.07, "strutture": null, "mercato": false, "valori": [51.07]}, {"nome": "Asl Torino 4", "regione": "Piemonte", "min": 37.62, "max": 37.62, "strutture": null, "mercato": false, "valori": [37.62]}, {"nome": "Asl di Asti", "regione": "Piemonte", "min": 37.62, "max": 37.62, "strutture": null, "mercato": false, "valori": [37.62]}, {"nome": "Asl 1 Imperiese", "regione": "Liguria", "min": 51.07, "max": 51.07, "strutture": null, "mercato": false, "valori": [51.07]}, {"nome": "Asl di Vercelli", "regione": "Piemonte", "min": 37.62, "max": 37.62, "strutture": null, "mercato": false, "valori": [37.62]}, {"nome": "Ats di Bergamo", "regione": "Lombardia", "min": 65.14, "max": 65.14, "strutture": null, "mercato": false, "valori": [65.14]}, {"nome": "Asl di Cuneo 2", "regione": "Piemonte", "min": 37.62, "max": 37.62, "strutture": null, "mercato": false, "valori": [37.62]}, {"nome": "Asl di Alessandria", "regione": "Piemonte", "min": 37.62, "max": 37.62, "strutture": null, "mercato": false, "valori": [37.62]}, {"nome": "Ats di Brescia", "regione": "Lombardia", "min": 43.5, "max": 105.0, "strutture": 91, "mercato": true, "valori": [43.5, 46.53, 47.0, 47.67, 47.68, 48.0, 48.0, 50.96, 51.0, 51.48, 52.5, 52.6, 53.0, 53.0, 53.0, 53.0, 53.5, 53.59, 54.0, 54.0, 54.0, 54.0, 54.25, 54.5, 54.5, 54.5, 54.5, 54.5, 54.5, 54.75, 55.0, 55.0, 55.23, 55.65, 55.89, 56.0, 56.0, 56.0, 56.0, 56.0, 56.0, 56.22, 56.88, 56.88, 56.9, 57.0, 57.0, 57.2, 57.5, 58.0, 58.0, 58.0, 58.0, 58.0, 58.0, 58.0, 58.0, 58.03, 59.3, 59.5, 59.5, 60.0, 60.0, 60.2, 60.5, 60.5, 61.0, 61.0, 61.0, 61.0, 62.0, 62.3, 62.99, 63.0, 64.0, 64.0, 64.5, 65.0, 65.0, 65.5, 65.5, 65.75, 69.0, 69.04, 69.5, 70.0, 72.5, 73.5, 88.0, 105.0, 105.0]}, {"nome": "Asl Torino 3", "regione": "Piemonte", "min": 37.62, "max": 37.62, "strutture": null, "mercato": false, "valori": [37.62]}, {"nome": "Asl 4 Chiavarese", "regione": "Liguria", "min": 51.07, "max": 51.07, "strutture": null, "mercato": false, "valori": [51.07]}, {"nome": "Ats di Milano Città metropolitana", "regione": "Lombardia", "min": 1.19, "max": 131.0, "strutture": 152, "mercato": true, "valori": [1.19, 12.53, 40.0, 41.32, 47.38, 56.0, 59.0, 59.0, 59.2, 60.0, 60.16, 61.0, 62.0, 65.0, 65.0, 65.0, 65.88, 66.0, 67.0, 68.0, 68.0, 68.0, 68.2, 69.0, 69.3, 69.5, 70.0, 70.0, 70.0, 70.82, 71.8, 72.0, 72.0, 72.33, 73.0, 74.0, 74.0, 75.0, 75.0, 75.5, 75.5, 76.0, 76.5, 77.0, 77.0, 77.28, 77.46, 77.5, 78.0, 78.2, 78.5, 78.75, 78.9, 79.0, 79.11, 79.46, 79.9, 80.0, 80.0, 80.0, 80.0, 80.0, 80.6, 81.0, 81.0, 81.17, 81.5, 81.7, 82.0, 82.11, 82.42, 82.5, 82.5, 82.64, 82.72, 82.72, 82.72, 82.72, 82.72, 82.86, 82.89, 83.0, 83.0, 84.0, 85.0, 86.01, 86.33, 87.0, 87.0, 88.0, 88.5, 89.0, 89.7, 89.7, 90.0, 90.0, 90.0, 90.0, 90.0, 90.0, 90.27, 91.0, 91.62, 91.8, 91.8, 92.0, 92.0, 92.0, 92.13, 93.04, 94.0, 94.3, 95.0, 95.71, 97.5, 98.0, 98.0, 99.7, 100.0, 101.0, 101.0, 101.0, 101.5, 101.5, 102.0, 103.1, 105.0, 105.0, 105.0, 105.49, 107.8, 107.8, 107.8, 108.0, 108.0, 108.0, 108.5, 108.8, 109.0, 110.0, 110.0, 111.7, 112.5, 114.8, 114.8, 116.5, 116.7, 117.5, 119.5, 125.0, 130.0, 131.0]}, {"nome": "Asl di Cuneo 1", "regione": "Piemonte", "min": 37.62, "max": 37.62, "strutture": null, "mercato": false, "valori": [37.62]}, {"nome": "Ats Brianza", "regione": "Lombardia", "min": 49.35, "max": 115.5, "strutture": 66, "mercato": true, "valori": [49.35, 63.0, 65.75, 66.94, 69.0, 69.04, 69.7, 70.0, 71.04, 72.0, 73.0, 74.96, 75.0, 75.0, 75.0, 75.0, 75.0, 76.67, 77.0, 77.0, 77.5, 77.5, 77.5, 78.0, 78.0, 78.21, 78.5, 78.95, 79.0, 79.0, 79.6, 79.8, 79.8, 80.0, 80.0, 80.0, 80.5, 80.57, 81.1, 81.9, 82.0, 83.0, 84.0, 84.33, 85.0, 85.48, 86.01, 86.1, 86.5, 87.0, 87.0, 90.0, 90.06, 90.5, 91.35, 92.0, 93.0, 93.0, 95.0, 95.0, 95.0, 95.0, 95.0, 101.5, 105.8, 115.5]}, {"nome": "Asl Torino 5", "regione": "Piemonte", "min": 37.62, "max": 37.62, "strutture": null, "mercato": false, "valori": [37.62]}, {"nome": "Asl 2 Savonese", "regione": "Liguria", "min": 51.07, "max": 51.07, "strutture": null, "mercato": false, "valori": [51.07]}, {"nome": "Ats Pavia", "regione": "Lombardia", "min": 43.0, "max": 90.0, "strutture": 82, "mercato": true, "valori": [43.0, 46.68, 48.0, 49.51, 50.0, 52.0, 53.33, 55.0, 55.11, 55.5, 55.89, 56.0, 56.0, 57.0, 57.53, 57.63, 58.95, 59.5, 59.5, 60.0, 60.5, 60.5, 60.5, 60.82, 60.88, 61.0, 61.64, 62.0, 62.0, 62.21, 62.3, 63.0, 63.0, 63.5, 63.75, 64.0, 64.0, 64.5, 64.94, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.49, 66.0, 66.3, 67.0, 67.3, 67.3, 67.4, 67.5, 68.0, 69.46, 70.03, 70.3, 72.0, 73.0, 73.5, 74.5, 75.0, 76.0, 76.0, 78.0, 79.25, 79.4, 80.0, 81.6, 83.5, 85.0, 85.44, 85.7, 86.0, 86.5, 89.0, 90.0, 90.0, 90.0, 90.0]}, {"nome": "Asuit", "regione": "Trentino Alto Adige", "min": 46.0, "max": 61.1, "strutture": 50, "mercato": true, "valori": [46.0, 46.0, 46.5, 47.0, 47.5, 47.7, 48.0, 48.5, 48.5, 48.8, 49.0, 49.0, 49.2, 49.5, 49.5, 50.0, 50.5, 50.5, 50.5, 50.5, 50.6, 51.0, 51.0, 51.0, 51.5, 51.5, 51.9, 52.0, 52.0, 52.0, 52.05, 52.5, 52.97, 52.97, 53.0, 53.0, 53.0, 53.3, 53.6, 54.08, 54.3, 55.5, 56.1, 57.1, 57.55, 59.35, 59.95, 60.25, 60.85, 61.1]}, {"nome": "Ulss 3 Serenissima", "regione": "Veneto", "min": 52.0, "max": 52.0, "strutture": 1, "mercato": true, "valori": [52.0]}, {"nome": "Ulss 4 Veneto Orientale", "regione": "Veneto", "min": 52.0, "max": 52.0, "strutture": 1, "mercato": true, "valori": [52.0]}, {"nome": "Ats della Montagna", "regione": "Lombardia", "min": 49.32, "max": 95.0, "strutture": 38, "mercato": true, "valori": [49.32, 50.95, 52.0, 52.0, 52.6, 52.6, 53.59, 54.25, 55.8, 56.0, 56.0, 57.0, 57.0, 57.21, 57.53, 57.87, 59.0, 59.0, 59.0, 59.0, 59.18, 59.51, 59.84, 60.0, 60.0, 60.49, 60.49, 60.49, 60.82, 61.44, 61.81, 62.0, 63.45, 65.06, 72.7, 74.0, 90.0, 95.0]}, {"nome": "Ats Val Padana", "regione": "Lombardia", "min": 45.0, "max": 130.0, "strutture": 87, "mercato": true, "valori": [45.0, 55.0, 56.0, 56.0, 56.5, 57.0, 57.0, 58.0, 58.0, 58.0, 59.0, 59.0, 59.5, 60.0, 60.0, 60.0, 60.0, 60.5, 60.5, 61.0, 62.0, 62.0, 62.0, 62.0, 62.0, 62.15, 63.0, 63.0, 63.0, 63.5, 64.0, 64.0, 64.0, 64.0, 64.0, 64.0, 64.1, 64.4, 64.4, 64.4, 64.4, 64.5, 64.5, 65.0, 65.0, 65.0, 65.0, 65.5, 65.5, 65.5, 66.0, 66.0, 66.0, 66.0, 66.0, 66.0, 66.0, 66.0, 66.0, 66.5, 67.0, 67.0, 67.0, 67.21, 67.5, 68.0, 68.0, 68.0, 68.0, 68.39, 68.5, 68.5, 70.0, 70.0, 70.0, 70.0, 70.0, 70.0, 71.0, 71.0, 73.0, 73.5, 74.0, 77.14, 78.0, 100.0, 130.0]}, {"nome": "Asdaa", "regione": "Trentino Alto Adige", "min": 53.0, "max": 53.0, "strutture": 1, "mercato": true, "valori": [53.0]}, {"nome": "Ats Insubria", "regione": "Lombardia", "min": 55.23, "max": 120.0, "strutture": 108, "mercato": true, "valori": [55.23, 58.0, 60.0, 63.0, 63.55, 64.66, 65.0, 65.0, 65.5, 66.0, 66.0, 66.5, 67.63, 68.0, 69.0, 69.0, 69.0, 70.0, 70.68, 70.75, 71.0, 71.5, 72.0, 72.38, 73.0, 73.0, 73.0, 73.0, 73.0, 73.0, 73.0, 73.0, 73.97, 74.0, 74.0, 74.0, 74.8, 75.0, 75.0, 75.0, 76.0, 76.0, 76.0, 76.0, 76.0, 76.0, 76.0, 76.5, 76.5, 76.5, 77.0, 77.0, 77.0, 77.0, 77.26, 78.0, 78.0, 78.0, 78.0, 78.0, 78.0, 78.61, 78.99, 79.0, 79.46, 79.5, 79.8, 80.0, 80.09, 80.55, 80.7, 80.7, 80.7, 81.0, 81.0, 81.0, 81.0, 81.0, 81.5, 82.0, 82.0, 82.0, 82.5, 83.0, 83.11, 84.0, 84.2, 85.0, 85.0, 85.0, 85.0, 85.0, 85.0, 85.5, 87.5, 88.0, 89.5, 90.0, 90.21, 90.27, 90.5, 91.0, 92.0, 92.3, 94.0, 95.8, 112.0, 120.0]}, {"nome": "Ulss 6 Euganea", "regione": "Veneto", "min": 52.0, "max": 52.0, "strutture": 1, "mercato": true, "valori": [52.0]}, {"nome": "Asufo", "regione": "Friuli Venezia Giulia", "min": 47.0, "max": 108.0, "strutture": 30, "mercato": true, "valori": [47.0, 49.5, 51.0, 53.0, 54.61, 55.0, 55.0, 55.0, 60.26, 62.0, 62.0, 63.0, 63.0, 64.83, 66.0, 67.0, 72.9, 77.6, 80.1, 81.1, 83.9, 84.0, 85.0, 86.5, 87.4, 89.0, 92.0, 99.0, 99.0, 108.0]}, {"nome": "Ausl Piacenza", "regione": "Emilia Romagna", "min": 54.15, "max": 54.15, "strutture": null, "mercato": false, "valori": [54.15]}, {"nome": "Ausl Parma", "regione": "Emilia Romagna", "min": 54.15, "max": 54.15, "strutture": null, "mercato": false, "valori": [54.15]}, {"nome": "Ausl Reggio Emilia", "regione": "Emilia Romagna", "min": 54.15, "max": 54.15, "strutture": null, "mercato": false, "valori": [54.15]}, {"nome": "Ausl Modena", "regione": "Emilia Romagna", "min": 54.15, "max": 54.15, "strutture": null, "mercato": false, "valori": [54.15]}, {"nome": "Ausl Bologna", "regione": "Emilia Romagna", "min": 54.15, "max": 54.15, "strutture": null, "mercato": false, "valori": [54.15]}, {"nome": "Ulss 8 Berica", "regione": "Veneto", "min": 48.9, "max": 75.0, "strutture": 36, "mercato": true, "valori": [48.9, 49.5, 50.0, 51.68, 51.7, 52.1, 52.5, 53.0, 55.0, 58.0, 58.2, 58.5, 59.0, 59.5, 60.0, 61.2, 62.0, 62.0, 63.0, 63.0, 63.5, 64.0, 64.0, 65.0, 66.0, 66.0, 66.0, 66.0, 66.5, 67.0, 69.7, 69.7, 69.7, 72.3, 73.5, 75.0]}, {"nome": "Azienda Usl Toscana Sud Est", "regione": "Toscana", "min": 42.0, "max": 67.0, "strutture": 90, "mercato": true, "valori": [42.0, 42.0, 42.0, 42.0, 42.0, 43.55, 43.8, 44.0, 46.0, 48.48, 48.48, 48.48, 48.48, 48.48, 49.0, 49.5, 50.0, 50.0, 50.0, 51.0, 51.0, 51.0, 51.0, 51.0, 51.0, 51.0, 51.04, 51.04, 51.45, 51.45, 52.0, 52.6, 52.88, 52.88, 53.0, 53.0, 53.0, 53.0, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.9, 54.0, 54.0, 54.64, 55.0, 55.0, 55.0, 55.0, 55.27, 55.27, 55.27, 55.27, 56.5, 57.5, 57.5, 57.5, 57.5, 58.0, 58.0, 58.0, 58.0, 58.0, 58.0, 58.0, 58.0, 58.1, 58.7, 59.0, 59.1, 60.0, 60.9, 60.9, 60.9, 63.0, 64.0, 64.0, 64.5, 65.0, 65.0, 65.0, 65.14, 66.0, 66.5, 67.0]}, {"nome": "Azienda Usl Toscana Centro", "regione": "Toscana", "min": 49.5, "max": 75.0, "strutture": 125, "mercato": true, "valori": [49.5, 49.65, 50.87, 51.0, 51.0, 52.0, 52.79, 53.0, 53.0, 53.0, 53.0, 53.0, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 54.0, 55.0, 55.5, 56.0, 56.0, 56.17, 56.18, 56.18, 57.0, 57.02, 57.1, 57.1, 57.1, 58.0, 58.0, 58.0, 58.0, 58.0, 58.0, 58.0, 58.0, 58.21, 59.0, 59.0, 59.0, 59.0, 59.0, 59.1, 59.1, 59.1, 59.1, 59.1, 59.1, 59.1, 59.1, 59.1, 59.1, 59.1, 59.1, 59.3, 59.5, 59.6, 60.0, 60.0, 60.9, 61.0, 61.0, 61.0, 61.37, 61.9, 61.95, 62.0, 62.0, 62.0, 62.5, 62.5, 62.5, 62.5, 62.5, 62.5, 62.5, 62.5, 62.5, 62.68, 63.0, 63.5, 63.59, 64.0, 64.0, 64.0, 64.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.0, 65.5, 66.0, 66.0, 66.0, 66.0, 66.0, 66.0, 66.5, 67.0, 68.0, 69.0, 69.5, 69.5, 70.0, 70.0, 71.5, 71.5, 72.5, 73.0, 73.0, 75.0]}, {"nome": "Azienda Usl Toscana Nord Ovest", "regione": "Toscana", "min": 45.0, "max": 75.0, "strutture": 110, "mercato": true, "valori": [45.0, 46.0, 46.5, 48.0, 48.5, 49.0, 50.0, 50.0, 50.0, 52.39, 53.0, 53.0, 53.0, 53.0, 53.25, 53.25, 53.25, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 53.5, 54.0, 55.0, 55.0, 55.0, 55.5, 56.5, 57.0, 58.0, 59.0, 59.0, 59.0, 59.0, 59.0, 59.0, 59.0, 59.0, 59.0, 59.0, 59.0, 59.03, 59.1, 59.1, 59.1, 59.1, 59.1, 59.1, 59.1, 59.1, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.3, 59.8, 60.0, 60.0, 60.0, 60.0, 60.0, 60.0, 60.0, 60.15, 60.15, 61.0, 61.08, 62.0, 62.0, 62.0, 62.0, 62.0, 63.5, 63.76, 64.0, 64.0, 65.0, 65.0, 65.0, 65.0, 74.0, 75.0]}, {"nome": "Ast Pesaro Urbino", "regione": "Marche", "min": 42.6, "max": 42.6, "strutture": null, "mercato": false, "valori": [42.6]}, {"nome": "Ast Ancona", "regione": "Marche", "min": 40.57, "max": 40.57, "strutture": null, "mercato": false, "valori": [40.57]}, {"nome": "Ast Macerata", "regione": "Marche", "min": 42.5, "max": 42.5, "strutture": null, "mercato": false, "valori": [42.5]}, {"nome": "Ast Fermo", "regione": "Marche", "min": 42.5, "max": 42.5, "strutture": null, "mercato": false, "valori": [42.5]}, {"nome": "Ausl Romagna", "regione": "Emilia Romagna", "min": 54.15, "max": 54.15, "strutture": null, "mercato": false, "valori": [54.15]}, {"nome": "Usl Umbria 1", "regione": "Umbria", "min": 60.0, "max": 60.0, "strutture": null, "mercato": false, "valori": [60.0]}, {"nome": "Asl Roma 1", "regione": "Lazio", "min": 53.9, "max": 53.9, "strutture": null, "mercato": false, "valori": [53.9]}, {"nome": "Asl Roma 2", "regione": "Lazio", "min": 53.9, "max": 53.9, "strutture": null, "mercato": false, "valori": [53.9]}, {"nome": "Asl Roma 3", "regione": "Lazio", "min": 53.9, "max": 53.9, "strutture": null, "mercato": false, "valori": [53.9]}, {"nome": "Asl Roma 4", "regione": "Lazio", "min": 53.9, "max": 53.9, "strutture": null, "mercato": false, "valori": [53.9]}, {"nome": "Asl Roma 5", "regione": "Lazio", "min": 53.9, "max": 53.9, "strutture": null, "mercato": false, "valori": [53.9]}, {"nome": "Asl Roma 6", "regione": "Lazio", "min": 53.9, "max": 53.9, "strutture": null, "mercato": false, "valori": [53.9]}, {"nome": "Ausl Imola", "regione": "Emilia Romagna", "min": 54.15, "max": 54.15, "strutture": null, "mercato": false, "valori": [54.15]}, {"nome": "Ast Ascoli Piceno", "regione": "Marche", "min": 42.5, "max": 42.5, "strutture": null, "mercato": false, "valori": [42.5]}, {"nome": "Asl Latina", "regione": "Lazio", "min": 33.73, "max": 33.73, "strutture": null, "mercato": false, "valori": [33.73]}, {"nome": "Ausl Ferrara", "regione": "Emilia Romagna", "min": 54.15, "max": 54.15, "strutture": null, "mercato": false, "valori": [54.15]}, {"nome": "Asrem", "regione": "Molise", "min": 23.0, "max": 23.0, "strutture": null, "mercato": false, "valori": [23.0]}, {"nome": "Asl Rieti", "regione": "Lazio", "min": 53.9, "max": 53.9, "strutture": null, "mercato": false, "valori": [53.9]}, {"nome": "Asl Viterbo", "regione": "Lazio", "min": 49.2, "max": 49.2, "strutture": null, "mercato": false, "valori": [49.2]}, {"nome": "Asl Pescara", "regione": "Abruzzo", "min": 38.65, "max": 38.65, "strutture": null, "mercato": false, "valori": [38.65]}, {"nome": "Asl Avellino", "regione": "Campania", "min": 55.31, "max": 55.31, "strutture": null, "mercato": false, "valori": [55.31]}, {"nome": "Asl Caserta", "regione": "Campania", "min": 27.66, "max": 27.66, "strutture": null, "mercato": false, "valori": [27.66]}, {"nome": "Asl Napoli 1 Centro", "regione": "Campania", "min": 110.62, "max": 110.62, "strutture": null, "mercato": false, "valori": [110.62]}, {"nome": "Asl Barletta Andria Trani", "regione": "Puglia", "min": 48.65, "max": 48.65, "strutture": null, "mercato": false, "valori": [48.65]}, {"nome": "Asl Brindisi", "regione": "Puglia", "min": 48.65, "max": 48.65, "strutture": null, "mercato": false, "valori": [48.65]}, {"nome": "Asl Foggia", "regione": "Puglia", "min": 48.65, "max": 48.65, "strutture": null, "mercato": false, "valori": [48.65]}, {"nome": "Asl Potenza", "regione": "Basilicata", "min": 22.56, "max": 22.56, "strutture": null, "mercato": false, "valori": [22.56]}, {"nome": "Asl Lecce", "regione": "Puglia", "min": 48.65, "max": 48.65, "strutture": null, "mercato": false, "valori": [48.65]}, {"nome": "Asl Matera", "regione": "Basilicata", "min": 22.56, "max": 22.56, "strutture": null, "mercato": false, "valori": [22.56]}, {"nome": "Asp Crotone", "regione": "Calabria", "min": 49.57, "max": 49.57, "strutture": null, "mercato": false, "valori": [49.57]}, {"nome": "Asp Agrigento", "regione": "Sicilia", "min": 59.0, "max": 59.0, "strutture": null, "mercato": false, "valori": [59.0]}, {"nome": "Asp Caltanissetta", "regione": "Sicilia", "min": 59.0, "max": 59.0, "strutture": null, "mercato": false, "valori": [59.0]}, {"nome": "Asp Messina", "regione": "Sicilia", "min": 59.0, "max": 59.0, "strutture": null, "mercato": false, "valori": [59.0]}, {"nome": "Asp Trapani", "regione": "Sicilia", "min": 59.0, "max": 59.0, "strutture": null, "mercato": false, "valori": [59.0]}, {"nome": "Asl Oristano", "regione": "Sardegna", "min": 61.0, "max": 61.0, "strutture": null, "mercato": false, "valori": [61.0]}, {"nome": "Asl Ogliastra", "regione": "Sardegna", "min": 61.0, "max": 61.0, "strutture": null, "mercato": false, "valori": [61.0]}, {"nome": "Asl Sulcis Iglesiente", "regione": "Sardegna", "min": 61.0, "max": 61.0, "strutture": null, "mercato": false, "valori": [61.0]}, {"nome": "Ares Sardegna", "regione": "Sardegna", "min": 61.0, "max": 61.0, "strutture": null, "mercato": false, "valori": [61.0]}, {"nome": "Azienda USL Valle d'Aosta", "regione": "Valle d'Aosta", "min": null, "max": null, "strutture": null, "valori": []}]};
+const it = d3.formatLocale({decimal: ',', thousands: '.', grouping: [3], currency: ['€', '']});
+const nDec = it.format(',.2f'), nTick = it.format(',');
+
+const sel = d3.select('#sel');
+const regioniMenu = DATA.regioni.map(d => d.nome).sort((a, b) => a.localeCompare(b, 'it'));
+sel.selectAll('option').data(['Tutte le regioni', ...regioniMenu]).join('option')
+  .attr('value', d => d).text(d => d);
+
+const wrapEl = document.getElementById('wrap');
+const chartEl = document.getElementById('chart');
+const tip = d3.select('#tip');
+const svg = d3.select('#chart').append('svg').attr('class', 'main');
+const gBg = svg.append('g');  // sfondo alternato delle righe, sotto a tutto
+const gGrid = svg.append('g').attr('class', 'axis');
+const gRows = svg.append('g');
+const gLabels = svg.append('g');
+
+function rows() {
+  const v = sel.property('value');
+  const base = v === 'Tutte le regioni'
+    ? DATA.regioni.map(d => ({...d, tipo: 'regione'}))
+    : DATA.aziende.filter(d => d.regione === v).map(d => ({...d, tipo: 'azienda'}));
+  // ordinate per il valore più alto mostrato (per le tariffe delle singole strutture, la struttura più cara);
+  // chi non paga nulla in fondo
+  return base.sort((a, b) => (b.max ?? -1) - (a.max ?? -1) || (b.min ?? -1) - (a.min ?? -1) || a.nome.localeCompare(b.nome, 'it'));
+}
+
+function wrapLabel(text, width) {
+  text.each(function () {
+    const t = d3.select(this), words = t.text().split(/\s+/);
+    t.text(null);
+    let line = [], lines = [];
+    const probe = t.append('tspan');
+    words.forEach(w => {
+      line.push(w); probe.text(line.join(' '));
+      if (probe.node().getComputedTextLength() > width && line.length > 1) {
+        line.pop(); lines.push(line.join(' ')); line = [w];
+      }
+    });
+    lines.push(line.join(' ')); probe.remove();
+    const lh = 1.1, y0 = -((lines.length - 1) * lh) / 2;
+    lines.forEach((l, i) => t.append('tspan').attr('x', t.attr('x')).attr('dy', (i === 0 ? y0 + 0.35 : lh) + 'em').text(l));
+  });
+}
+
+function tipHtml(d) {
+  const nome = d.tipo === 'azienda' ? `${d.nome} (${d.regione})` : d.nome;
+  const val = d.min == null ? CONFIG.gratuito : `<b>${nDec(d.min)} €</b>`;
+  return `<b>${nome}</b><br>Tariffa minima: ${val}`;
+}
+function showTip(event, d) {
+  gRows.selectAll('g.row').classed('on', o => o === d);
+  tip.html(tipHtml(d)).style('opacity', 1);
+  const [mx, my] = d3.pointer(event, chartEl);
+  const tw = tip.node().offsetWidth, th = tip.node().offsetHeight, cw = chartEl.clientWidth;
+  let x = mx + 12, y = my - th - 8;
+  if (x + tw > cw) x = Math.max(0, mx - tw - 12);
+  if (y < 0) y = my + 14;
+  tip.style('left', x + 'px').style('top', y + 'px');
+}
+function hideTip() { tip.style('opacity', 0); gRows.selectAll('g.row').classed('on', false); }
+
+let lastHeight = 0;
+function sendHeight() {
+  const h = Math.ceil(wrapEl.getBoundingClientRect().height);
+  if (h !== lastHeight && window.parent !== window) {
+    lastHeight = h;
+    window.parent.postMessage({altezza: h, height: h, id: EMBED_ID}, '*');
+  }
+}
+
+function draw() {
+  const data = rows();
+  const n = data.length;
+  const W = chartEl.clientWidth;
+  const narrow = W < 450;
+  const m = {top: 22, right: 16, bottom: 4};
+  chartEl.style.minHeight = (n * (narrow ? 20 : 16) + m.top + m.bottom) + 'px';
+  const H = chartEl.clientHeight;
+  svg.attr('viewBox', `0 0 ${W} ${H}`);
+
+  const fs = narrow ? 11 : 12;
+  const probe = svg.append('text').attr('class', 'label').style('font-size', fs + 'px');
+  const longest = d3.max(data, d => probe.text(d.nome).node().getComputedTextLength());
+  probe.remove();
+  m.left = Math.ceil(Math.min(longest + 16, W * 0.45));
+
+  const innerH = Math.min(H - m.top - m.bottom, n * 34);
+  const x = d3.scaleLinear().domain([0, d3.max(data, d => d.max ?? 0)]).nice().range([m.left, W - m.right]);
+  const y = d3.scaleBand().domain(data.map(d => d.nome)).range([m.top, m.top + innerH]).padding(0.2);
+  const cy = d => y(d.nome) + y.bandwidth() / 2;
+  const r = Math.max(3.5, Math.min(6, y.bandwidth() * 0.32));
+
+  gGrid.attr('transform', `translate(0,${m.top - 6})`)
+    .call(d3.axisTop(x).ticks(narrow ? 4 : 7).tickFormat(nTick).tickSize(-(innerH + 6)).tickPadding(4));
+  gGrid.selectAll('.tick line').attr('stroke', '#e3e3e3');
+
+  // una riga sì e una no con lo sfondo grigio chiaro, da bordo a bordo
+  gBg.selectAll('rect').data(data.filter((d, i) => i % 2 === 0), d => d.nome).join('rect').attr('class', 'stripe')
+    .attr('x', 0).attr('width', W).attr('y', d => y(d.nome) - y.step() * y.paddingInner() / 2).attr('height', y.step());
+
+  gRows.selectAll('g.row').data(data, d => d.nome).join(enter => {
+    const g = enter.append('g').attr('class', 'row');
+    g.append('line').attr('class', 'range');
+    g.append('g').attr('class', 'vals');
+    g.append('circle').attr('class', 'dotmax');
+    g.append('circle').attr('class', 'dot');
+    g.append('text').attr('class', 'free');
+    g.append('rect').attr('class', 'hit');
+    return g;
+  }).each(function (d) {
+    const g = d3.select(this);
+    const has = d.min != null, isRange = has && d.max > d.min;  // linea ogni volta che i valori sono diversi
+    g.select('.range').style('display', isRange ? null : 'none')
+      .attr('x1', has ? x(d.min) : 0).attr('x2', isRange ? x(d.max) : 0).attr('y1', cy(d)).attr('y2', cy(d));
+    // un pallino per ogni tariffa, con un piccolo spostamento verticale per far vedere dove si addensano
+    const jit = Math.max(0, y.bandwidth() / 2 - 2.6);
+    const interni = d.valori.length > 2 ? d.valori.slice(1, -1) : [];  // minimo e massimo hanno il pallino pieno
+    g.select('.dotmax').style('display', has && d.max > d.min ? null : 'none')
+      .attr('cx', has ? x(d.max) : 0).attr('cy', cy(d)).attr('r', r);
+    g.select('.vals').selectAll('circle').data(interni).join('circle').attr('class', 'val')
+      .attr('cx', v => x(v)).attr('r', 2.6)
+      .attr('cy', (v, i) => cy(d) + (interni.length > 1 ? (((i * 0.6180339887) % 1) * 2 - 1) * jit : 0));
+    g.select('.dot').style('display', has ? null : 'none').attr('cx', has ? x(d.min) : 0).attr('cy', cy(d)).attr('r', r);
+    g.select('.free').style('display', has ? 'none' : null).attr('x', x(0) + 4).attr('y', cy(d) + 4)
+      .style('font-size', (fs - 0.5) + 'px').text(CONFIG.gratuito);
+    g.select('.hit').attr('x', 0).attr('width', W).attr('y', y(d.nome) - y.step() * y.paddingInner() / 2).attr('height', y.step())
+      .on('pointerenter pointermove', e => showTip(e, d)).on('pointerleave', hideTip);
+  });
+
+  gLabels.style('font-size', fs + 'px').selectAll('text').data(data, d => d.nome).join('text')
+    .attr('class', 'label').attr('x', m.left - 8).attr('text-anchor', 'end').attr('y', null)
+    .text(d => d.nome).call(wrapLabel, m.left - 14)
+    .attr('transform', d => `translate(0,${cy(d)})`);
+
+  sendHeight();
+}
+
+sel.on('change', () => { hideTip(); draw(); });
+document.addEventListener('pointerdown', e => { if (!e.target.classList.contains('hit')) hideTip(); });
+let lastW = 0, lastH = 0;
+new ResizeObserver(() => {
+  const w = chartEl.clientWidth, h = chartEl.clientHeight;
+  if (w !== lastW || h !== lastH) { lastW = w; lastH = h; draw(); }
+}).observe(chartEl);
+new ResizeObserver(sendHeight).observe(wrapEl);
+document.fonts && document.fonts.ready.then(draw);
+draw();
+</script>
+</body>
+</html>

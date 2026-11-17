@@ -1,0 +1,78 @@
+Regione,Azienda sanitaria,Tipo di tariffa,Tariffa minima,Tariffa massima,Numero di tariffe
+Abruzzo,Asl Pescara,Tariffa dell'azienda sanitaria,38.65,38.65,1
+Basilicata,Asl Matera,Tariffa dell'azienda sanitaria,22.56,22.56,1
+Basilicata,Asl Potenza,Tariffa dell'azienda sanitaria,22.56,22.56,1
+Calabria,Asp Crotone,Tariffa dell'azienda sanitaria,49.57,49.57,1
+Campania,Asl Avellino,Tariffa dell'azienda sanitaria,55.31,55.31,1
+Campania,Asl Caserta,Tariffa dell'azienda sanitaria,27.66,27.66,1
+Campania,Asl Napoli 1 Centro,Tariffa dell'azienda sanitaria,110.62,110.62,1
+Emilia Romagna,Ausl Bologna,Tariffa dell'azienda sanitaria,54.15,54.15,1
+Emilia Romagna,Ausl Ferrara,Tariffa dell'azienda sanitaria,54.15,54.15,1
+Emilia Romagna,Ausl Imola,Tariffa dell'azienda sanitaria,54.15,54.15,1
+Emilia Romagna,Ausl Modena,Tariffa dell'azienda sanitaria,54.15,54.15,1
+Emilia Romagna,Ausl Parma,Tariffa dell'azienda sanitaria,54.15,54.15,1
+Emilia Romagna,Ausl Piacenza,Tariffa dell'azienda sanitaria,54.15,54.15,1
+Emilia Romagna,Ausl Reggio Emilia,Tariffa dell'azienda sanitaria,54.15,54.15,1
+Emilia Romagna,Ausl Romagna,Tariffa dell'azienda sanitaria,54.15,54.15,1
+Friuli Venezia Giulia,Asufo,Singole strutture,47.00,108.00,30
+Lazio,Asl Latina,Tariffa dell'azienda sanitaria,33.73,33.73,1
+Lazio,Asl Rieti,Tariffa dell'azienda sanitaria,53.90,53.90,1
+Lazio,Asl Roma 1,Tariffa dell'azienda sanitaria,53.90,53.90,1
+Lazio,Asl Roma 2,Tariffa dell'azienda sanitaria,53.90,53.90,1
+Lazio,Asl Roma 3,Tariffa dell'azienda sanitaria,53.90,53.90,1
+Lazio,Asl Roma 4,Tariffa dell'azienda sanitaria,53.90,53.90,1
+Lazio,Asl Roma 5,Tariffa dell'azienda sanitaria,53.90,53.90,1
+Lazio,Asl Roma 6,Tariffa dell'azienda sanitaria,53.90,53.90,1
+Lazio,Asl Viterbo,Tariffa dell'azienda sanitaria,49.20,49.20,1
+Liguria,Asl 1 Imperiese,Tariffa dell'azienda sanitaria,51.07,51.07,1
+Liguria,Asl 2 Savonese,Tariffa dell'azienda sanitaria,51.07,51.07,1
+Liguria,Asl 4 Chiavarese,Tariffa dell'azienda sanitaria,51.07,51.07,1
+Liguria,Asl 5 Spezzino,Tariffa dell'azienda sanitaria,51.07,51.07,1
+Lombardia,Ats Brianza,Singole strutture,49.35,115.50,66
+Lombardia,Ats Insubria,Singole strutture,55.23,120.00,108
+Lombardia,Ats Pavia,Singole strutture,43.00,90.00,82
+Lombardia,Ats Val Padana,Singole strutture,45.00,130.00,87
+Lombardia,Ats della Montagna,Singole strutture,49.32,95.00,38
+Lombardia,Ats di Bergamo,Tariffa dell'azienda sanitaria,65.14,65.14,1
+Lombardia,Ats di Brescia,Singole strutture,43.50,105.00,91
+Lombardia,Ats di Milano Città metropolitana,Singole strutture,1.19,131.00,152
+Marche,Ast Ancona,Tariffa dell'azienda sanitaria,40.57,40.57,1
+Marche,Ast Ascoli Piceno,Tariffa dell'azienda sanitaria,42.50,42.50,1
+Marche,Ast Fermo,Tariffa dell'azienda sanitaria,42.50,42.50,1
+Marche,Ast Macerata,Tariffa dell'azienda sanitaria,42.50,42.50,1
+Marche,Ast Pesaro Urbino,Tariffa dell'azienda sanitaria,42.60,42.60,1
+Molise,Asrem,Tariffa dell'azienda sanitaria,23.00,23.00,1
+Piemonte,Asl Città di Torino,Tariffa dell'azienda sanitaria,37.62,37.62,1
+Piemonte,Asl Torino 3,Tariffa dell'azienda sanitaria,37.62,37.62,1
+Piemonte,Asl Torino 4,Tariffa dell'azienda sanitaria,37.62,37.62,1
+Piemonte,Asl Torino 5,Tariffa dell'azienda sanitaria,37.62,37.62,1
+Piemonte,Asl VCO,Tariffa dell'azienda sanitaria,37.62,37.62,1
+Piemonte,Asl di Alessandria,Tariffa dell'azienda sanitaria,37.62,37.62,1
+Piemonte,Asl di Asti,Tariffa dell'azienda sanitaria,37.62,37.62,1
+Piemonte,Asl di Biella,Tariffa dell'azienda sanitaria,37.62,37.62,1
+Piemonte,Asl di Cuneo 1,Tariffa dell'azienda sanitaria,37.62,37.62,1
+Piemonte,Asl di Cuneo 2,Tariffa dell'azienda sanitaria,37.62,37.62,1
+Piemonte,Asl di Vercelli,Tariffa dell'azienda sanitaria,37.62,37.62,1
+Puglia,Asl Barletta Andria Trani,Tariffa dell'azienda sanitaria,48.65,48.65,1
+Puglia,Asl Brindisi,Tariffa dell'azienda sanitaria,48.65,48.65,1
+Puglia,Asl Foggia,Tariffa dell'azienda sanitaria,48.65,48.65,1
+Puglia,Asl Lecce,Tariffa dell'azienda sanitaria,48.65,48.65,1
+Sardegna,Ares Sardegna,Tariffa dell'azienda sanitaria,61.00,61.00,1
+Sardegna,Asl Ogliastra,Tariffa dell'azienda sanitaria,61.00,61.00,1
+Sardegna,Asl Oristano,Tariffa dell'azienda sanitaria,61.00,61.00,1
+Sardegna,Asl Sulcis Iglesiente,Tariffa dell'azienda sanitaria,61.00,61.00,1
+Sicilia,Asp Agrigento,Tariffa dell'azienda sanitaria,59.00,59.00,1
+Sicilia,Asp Caltanissetta,Tariffa dell'azienda sanitaria,59.00,59.00,1
+Sicilia,Asp Messina,Tariffa dell'azienda sanitaria,59.00,59.00,1
+Sicilia,Asp Trapani,Tariffa dell'azienda sanitaria,59.00,59.00,1
+Toscana,Azienda Usl Toscana Centro,Singole strutture,49.50,75.00,125
+Toscana,Azienda Usl Toscana Nord Ovest,Singole strutture,45.00,75.00,110
+Toscana,Azienda Usl Toscana Sud Est,Singole strutture,42.00,67.00,90
+Trentino Alto Adige,Asdaa,Singole strutture,53.00,53.00,1
+Trentino Alto Adige,Asuit,Singole strutture,46.00,61.10,50
+Umbria,Usl Umbria 1,Tariffa dell'azienda sanitaria,60.00,60.00,1
+Valle d'Aosta,Azienda USL Valle d'Aosta,Coperta dalla Regione,0.00,0.00,0
+Veneto,Ulss 3 Serenissima,Singole strutture,52.00,52.00,1
+Veneto,Ulss 4 Veneto Orientale,Singole strutture,52.00,52.00,1
+Veneto,Ulss 6 Euganea,Singole strutture,52.00,52.00,1
+Veneto,Ulss 8 Berica,Singole strutture,48.90,75.00,36

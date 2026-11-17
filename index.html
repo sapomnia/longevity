@@ -113,6 +113,25 @@
 &lt;/script&gt;</code></pre>
     </div>
   </section>
+  <section>
+    <h2><span class="n">5</span>Le tariffe delle case di riposo</h2>
+    <div class="frame"><iframe class="preview" src="tariffe-minime-case-di-riposo.html" title="Le tariffe delle case di riposo" scrolling="no" style="height:640px"></iframe></div>
+    <div class="embed">
+      <div class="bar"><span>Codice di embed</span><a href="tariffe-minime-case-di-riposo.html" target="_blank" rel="noopener">Apri il grafico</a><button type="button">Copia</button></div>
+      <pre><code>&lt;iframe id=&quot;longevity-tariffe-minime-case-di-riposo&quot; src=&quot;https://sapomnia.github.io/longevity/tariffe-minime-case-di-riposo.html&quot; title=&quot;Le tariffe delle case di riposo&quot; loading=&quot;lazy&quot; scrolling=&quot;no&quot; style=&quot;width:100%;height:640px;border:0;display:block&quot;&gt;&lt;/iframe&gt;
+&lt;script&gt;
+(function () {
+  var iframe = document.getElementById(&#x27;longevity-tariffe-minime-case-di-riposo&#x27;);
+  window.addEventListener(&#x27;message&#x27;, function (evento) {
+    if (evento.origin !== &#x27;https://sapomnia.github.io&#x27; || evento.source !== iframe.contentWindow) return;
+    var dati = evento.data || {};
+    var altezza = parseInt(dati.altezza || dati.height, 10);
+    if (altezza &gt; 100 &amp;&amp; altezza &lt; 8000) iframe.style.height = altezza + &#x27;px&#x27;;
+  });
+})();
+&lt;/script&gt;</code></pre>
+    </div>
+  </section>
 </main>
 <script>
   // Copia del codice di embed

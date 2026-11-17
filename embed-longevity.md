@@ -91,3 +91,24 @@ Indirizzo: <https://sapomnia.github.io/longevity/over-65-aumento-2026-2050.html>
 })();
 </script>
 ```
+
+---
+
+## 5. Le tariffe delle case di riposo
+
+Indirizzo: <https://sapomnia.github.io/longevity/tariffe-minime-case-di-riposo.html>
+
+```html
+<iframe id="longevity-tariffe-minime-case-di-riposo" src="https://sapomnia.github.io/longevity/tariffe-minime-case-di-riposo.html" title="Le tariffe delle case di riposo" loading="lazy" scrolling="no" style="width:100%;height:640px;border:0;display:block"></iframe>
+<script>
+(function () {
+  var iframe = document.getElementById('longevity-tariffe-minime-case-di-riposo');
+  window.addEventListener('message', function (evento) {
+    if (evento.origin !== 'https://sapomnia.github.io' || evento.source !== iframe.contentWindow) return;
+    var dati = evento.data || {};
+    var altezza = parseInt(dati.altezza || dati.height, 10);
+    if (altezza > 100 && altezza < 8000) iframe.style.height = altezza + 'px';
+  });
+})();
+</script>
+```

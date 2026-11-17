@@ -22,6 +22,7 @@ Per raccogliere i dati utilizzati in questa inchiesta è stata inviata un’ista
 | `persone-lista-attesa-per-posto-letto.html` | RSA, i posti letto e le liste d'attesa | Barre orizzontali; un menu a tendina passa dalle regioni alle province di una regione | `Persone in lista d'attesa per posto letto.csv` |
 | `rsa-posti-oggi-e-over-65-al-2050.html` | RSA: cosa succederà nel 2050? | Grafico a dispersione a bolle, con area proporzionale ai posti letto 2026 | `Posti letto e over 65 al 2050.csv` |
 | `over-65-aumento-2026-2050.html` | La popolazione over 65 nel 2050 | Barre orizzontali per regioni e province autonome, con la media nazionale evidenziata | `Aumento over 65 2026-2050.csv` |
+| `tariffe-minime-case-di-riposo.html` | Le tariffe delle case di riposo | Punti e intervalli: un pallino per ogni tariffa, con la più bassa e la più alta evidenziate; un menu a tendina passa dalle regioni alle aziende sanitarie di una regione | `Tariffe minime per azienda sanitaria.csv` |
 
 ## Pagina indice ed embed
 
@@ -45,6 +46,9 @@ Residenti con 65 anni e più per provincia al 1 gennaio 2026. Fonte: Istat.
 
 #### `Previsione popolazione over 65 al 2050.csv`
 Previsioni Istat della popolazione over 65 nel 2050, per regione e per le province autonome di Bolzano e Trento.
+
+#### `Tariffe.csv`
+Costo giornaliero del ricovero in RSA e quota a carico dell'utente, come comunicati dalle aziende sanitarie. Dove la tariffa è fissata a livello regionale le righe corrispondono alle tipologie di assistenza; dove ogni struttura stabilisce la propria retta, alle singole strutture.
 
 ### Dati elaborati
 
@@ -73,6 +77,16 @@ Aumento percentuale della popolazione over 65 tra il 2026 e il 2050, per regione
 - I residenti 2026 sono la somma dei residenti over 65 delle province di ciascuna regione. I residenti 2050 sono quelli dello scenario mediano delle previsioni Istat.
 - Il dato è solo demografico e non dipende dalle risposte delle aziende sanitarie: per questo comprende tutte le regioni.
 - L'ultima riga, Italia, è calcolata sulla somma delle regioni ed è la media nazionale mostrata nel grafico.
+
+#### `Tariffe minime per azienda sanitaria.csv`
+Quota alberghiera giornaliera a carico dell'utente, in euro, per azienda sanitaria. 77 righe.
+
+- Il valore considerato è il costo giornaliero a carico del paziente. Il costo totale non è confrontabile, perché manca nelle regioni in cui ogni struttura stabilisce la propria retta.
+- Per ogni struttura, o per ogni azienda sanitaria dove la tariffa è unica, si considera solo la tariffa più bassa tra le diverse tipologie: l'obiettivo è mostrare il costo minimo per ricoverare un anziano in struttura.
+- `Tariffa minima` e `Tariffa massima` sono la più bassa e la più alta di queste tariffe; `Numero di tariffe` indica quante sono.
+- Le righe con quota a carico del paziente pari a zero sono escluse. Per questo non compaiono l'Asp di Catanzaro, l'Asl di Nuoro e la Usl Umbria 2.
+- In Valle d'Aosta il costo è interamente coperto dalla Regione.
+- Nel grafico le regioni sono ordinate in base alla tariffa più alta.
 
 ## Contenuto cartella raw data
 
