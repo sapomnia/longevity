@@ -22,7 +22,7 @@ Per raccogliere i dati utilizzati in questa inchiesta è stata inviata un’ista
 | `persone-lista-attesa-per-posto-letto.html` | RSA, i posti letto e le liste d'attesa | Barre orizzontali; un menu a tendina passa dalle regioni alle province di una regione | `Persone in lista d'attesa per posto letto.csv` |
 | `rsa-posti-oggi-e-over-65-al-2050.html` | RSA: cosa succederà nel 2050? | Grafico a dispersione a bolle, con area proporzionale ai posti letto 2026 | `Posti letto e over 65 al 2050.csv` |
 | `over-65-aumento-2026-2050.html` | La popolazione over 65 nel 2050 | Barre orizzontali per regioni e province autonome, con la media nazionale evidenziata | `Aumento over 65 2026-2050.csv` |
-| `tariffe-minime-case-di-riposo.html` | Le tariffe delle case di riposo | Punti e intervalli: un pallino per ogni tariffa, con la più bassa e la più alta evidenziate; un menu a tendina passa dalle regioni alle aziende sanitarie di una regione | `Tariffe minime per azienda sanitaria.csv` |
+| `tariffe-minime-case-di-riposo.html` | Le tariffe delle case di riposo | Punti e intervalli: un pallino per ogni tariffa, con la più bassa e la più alta evidenziate, la mediana segnata da un trattino e le tariffe uniche in rosso; un menu a tendina passa dalle regioni alle aziende sanitarie di una regione | `Tariffe minime per azienda sanitaria.csv` |
 
 ## Pagina indice ed embed
 
@@ -86,7 +86,7 @@ Quota alberghiera giornaliera a carico dell'utente, in euro, per azienda sanitar
 - `Tariffa minima` e `Tariffa massima` sono la più bassa e la più alta di queste tariffe; `Numero di tariffe` indica quante sono.
 - Le righe con quota a carico del paziente pari a zero sono escluse. Per questo non compaiono l'Asp di Catanzaro, l'Asl di Nuoro e la Usl Umbria 2.
 - In Valle d'Aosta il costo è interamente coperto dalla Regione.
-- Nel grafico le regioni sono ordinate in base alla tariffa più alta.
+- Nel grafico le regioni sono ordinate in base alla tariffa più alta. Dove ci sono tariffe diverse, il trattino indica la mediana delle tariffe della regione o dell'azienda sanitaria.
 
 ## Contenuto cartella raw data
 

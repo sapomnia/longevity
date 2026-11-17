@@ -41,6 +41,8 @@
   .dot { fill: #174d99; stroke: #fff; stroke-width: 1.5; }
   .row.on .dot, .row.on .dotmax { stroke: #0d1f43; }
   .dotmax { fill: #174d99; stroke: #fff; stroke-width: 1.5; }
+  .dot.unica { fill: #e71e25; }
+  .med { stroke: #0d1f43; stroke-width: 2.5; stroke-linecap: round; }
   .free { font-size: 11.5px; font-style: italic; fill: #444; }
   .hit { fill: transparent; cursor: pointer; }
   .notes { font-size: 10.5px; line-height: 1.35; color: #333; margin-top: 6px; }
@@ -64,8 +66,9 @@
     <select id="sel"></select>
   </div>
   <div class="legend">
-    <span><svg width="14" height="12"><circle cx="7" cy="6" r="5" fill="#174d99"/></svg>Tariffa unica</span>
-    <span><svg width="50" height="12"><line x1="7" x2="43" y1="6" y2="6" stroke="#174d99" stroke-width="1.5"/><circle cx="16" cy="4.5" r="2.6" fill="#5296d0" fill-opacity=".4"/><circle cx="21" cy="7.5" r="2.6" fill="#5296d0" fill-opacity=".4"/><circle cx="26" cy="5" r="2.6" fill="#5296d0" fill-opacity=".4"/><circle cx="33" cy="7" r="2.6" fill="#5296d0" fill-opacity=".4"/><circle cx="7" cy="6" r="5" fill="#174d99" stroke="#fff" stroke-width="1.5"/><circle cx="43" cy="6" r="5" fill="#174d99" stroke="#fff" stroke-width="1.5"/></svg>Tariffa delle singole realtà</span>
+    <span><svg width="14" height="12"><circle cx="7" cy="6" r="5" fill="#e71e25"/></svg>Tariffa unica</span>
+    <span><svg width="50" height="12"><line x1="7" x2="43" y1="6" y2="6" stroke="#174d99" stroke-width="1.5"/><circle cx="16" cy="4.5" r="2.6" fill="#5296d0" fill-opacity=".4"/><circle cx="21" cy="7.5" r="2.6" fill="#5296d0" fill-opacity=".4"/><circle cx="26" cy="5" r="2.6" fill="#5296d0" fill-opacity=".4"/><circle cx="33" cy="7" r="2.6" fill="#5296d0" fill-opacity=".4"/><circle cx="7" cy="6" r="5" fill="#174d99" stroke="#fff" stroke-width="1.5"/><circle cx="43" cy="6" r="5" fill="#174d99" stroke="#fff" stroke-width="1.5"/></svg>Range delle tariffe delle singole RSA o Asl</span>
+    <span><svg width="8" height="14"><line x1="4" x2="4" y1="1.5" y2="12.5" stroke="#0d1f43" stroke-width="2.5" stroke-linecap="round"/></svg>Mediana</span>
   </div>
   <div class="chart" id="chart"><div class="tip" id="tip"></div></div>
   <div class="notes">
@@ -182,6 +185,7 @@ function draw() {
     const g = enter.append('g').attr('class', 'row');
     g.append('line').attr('class', 'range');
     g.append('g').attr('class', 'vals');
+    g.append('line').attr('class', 'med');
     g.append('circle').attr('class', 'dotmax');
     g.append('circle').attr('class', 'dot');
     g.append('text').attr('class', 'free');
@@ -200,9 +204,20 @@ function draw() {
     g.select('.vals').selectAll('circle').data(interni).join('circle').attr('class', 'val')
       .attr('cx', v => x(v)).attr('r', 2.6)
       .attr('cy', (v, i) => cy(d) + (interni.length > 1 ? (((i * 0.6180339887) % 1) * 2 - 1) * jit : 0));
-    g.select('.dot').style('display', has ? null : 'none').attr('cx', has ? x(d.min) : 0).attr('cy', cy(d)).attr('r', r);
+    g.select('.dot').style('display', has ? null : 'none').classed('unica', has && !isRange)
+      .attr('cx', has ? x(d.min) : 0).attr('cy', cy(d)).attr('r', r);
+    // mediana delle tariffe della riga, solo dove ci sono tariffe diverse
+    const med = isRange ? d3.median(d.valori) : null;
+    g.select('.med').style('display', isRange ? null : 'none')
+      .attr('x1', isRange ? x(med) : 0).attr('x2', isRange ? x(med) : 0)
+      .attr('y1', cy(d) - r * 1.3).attr('y2', cy(d) + r * 1.3);
     g.select('.free').style('display', has ? 'none' : null).attr('x', x(0) + 4).attr('y', cy(d) + 4)
-      .style('font-size', (fs - 0.5) + 'px').text(CONFIG.gratuito);
+      .style('font-size', (fs - 0.5) + 'px').text(CONFIG.gratuito)
+      .each(function () {  // se non entra nello spazio disponibile, riduce il corpo quanto basta
+        if (has) return;
+        const avail = W - m.right - x(0) - 4, len = this.getComputedTextLength();
+        if (len > avail) d3.select(this).style('font-size', Math.max(8, (fs - 0.5) * avail / len) + 'px');
+      });
     g.select('.hit').attr('x', 0).attr('width', W).attr('y', y(d.nome) - y.step() * y.paddingInner() / 2).attr('height', y.step())
       .on('pointerenter pointermove', e => showTip(e, d)).on('pointerleave', hideTip);
   });
